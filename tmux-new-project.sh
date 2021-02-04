@@ -1,5 +1,5 @@
 if ! tmux has-session -t newS; then
-echo "That's fine. Lets create a new session."
+echo "That's fine. Lets create a new session.\n"
 # // create new tmux session for the project called 'newS' (project session)
 # // with first window called 'command'
 tmux new -s newS -n command -d;
@@ -19,3 +19,9 @@ tmux new -s newS -n command -d;
     # // split the left pane into a top and bottom pane at 30/70 ratio
     tmux split-window -v -l 70% -t newS:2.0
 fi
+echo "Session should be good to attach to now:"
+echo "tmux attach -t <session-name>\n"
+echo "To see a list of all sessions type in:"
+echo "tmux ls"
+echo "You can rename the session if you want:"
+echo "tmux rename-session -t <old-session-name> <new-session-name>"
