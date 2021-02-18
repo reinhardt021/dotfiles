@@ -11,4 +11,4 @@ ln -s ~/dotfiles/init.vim ~/.config/nvim/init.vim
 
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 # // can then run the shell script for tmux setup for a new project
-
+# // run `:source ~/.tmux.conf` if already in tmux

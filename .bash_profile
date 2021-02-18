@@ -9,6 +9,7 @@
 # // to clear the command line
 # ctrl+l
 
+# TODO: ADD CHECK IF ON MAC OS
 PATH=$PATH:/usr/local/go/bin
 GOPATH=$(go env GOPATH)
 PATH=$PATH:$GOPATH/bin
@@ -27,6 +28,7 @@ alias cdm='echo "cd ~/HigherMe/monorepo"; cd ~/HigherMe/monorepo'
 alias cdr='cd /Users/reinhardtc/Downloads/0-cloud/0-learn-software/reinhardtcgr.github.io'
 
 alias cdz='cd /Users/reinhardtc/Downloads/0-cloud/0-learn-software/zero-one'
+# TODO: END CHECK IF ON MAC OS
 
 # // open trash bin 
 # $ open ~/.Trash/
@@ -60,8 +62,10 @@ alias nv='nvim'
 alias g='git'
 
 alias gb='git branch'
+# TODO: CHECK IF MAC OS
 alias gbc='git branch --show-current | pbcopy'
 alias gbc='git branch --show-current | pbcopy'
+# TODO END CHECK
 # git branch -d <branch-name> // to delete local branch
 # git branch -D <branch-name> // to force delete local branch
 
@@ -98,6 +102,7 @@ alias gl='git log'
 alias gld='echo "// git log diff b/w remote"; git log origin/master..master'
 
 # // to see which commits are on origin/master but not yet on master
+
 # git log master..origin/master
 
 # // git log graph
