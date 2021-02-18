@@ -212,10 +212,11 @@ call plug#begin('~/.config/nvim/plugged')
     " :PlugInstall //to install the plugin
 call plug#end()
 
-" prefered syntax color scheme
-colorscheme darcula
 " adds Truecolor to the terminal if supported
 set termguicolors
+" prefered syntax color scheme
+" TODO CHECK IF PLUGIN INSTALLED
+colorscheme darcula
 let g:lightline = { 'colorscheme': 'darculaOriginal' }
 
 " ctrl+o // to open nerd tree 

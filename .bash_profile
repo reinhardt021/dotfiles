@@ -9,10 +9,24 @@
 # // to clear the command line
 # ctrl+l
 
-# TODO: ADD CHECK IF ON MAC OS
-PATH=$PATH:/usr/local/go/bin
-GOPATH=$(go env GOPATH)
-PATH=$PATH:$GOPATH/bin
+
+# modifying the bash prompt to something simpler
+# PS1="\u@\W\$"
+color_prompt=yes
+if [ "$color_prompt" = yes ]; then
+  PS1="\[\033[35m\]@\W\[\033[37m\]\$ "
+else
+  PS1="@\W\$ "
+fi
+
+# modifying 'ls' command to default display all directory info
+alias ls='ls -aFG'
+alias l='ls'
+# -a for showing hidden files
+# -F for files vs directories
+# -G for colors
+
+
 
 alias cdd='echo "cd ~/Downloads"; cd ~/Downloads'
 alias cdH='echo "cd ~/HigherMe"; cd ~/HigherMe'
@@ -28,31 +42,20 @@ alias cdm='echo "cd ~/HigherMe/monorepo"; cd ~/HigherMe/monorepo'
 alias cdr='cd /Users/reinhardtc/Downloads/0-cloud/0-learn-software/reinhardtcgr.github.io'
 
 alias cdz='cd /Users/reinhardtc/Downloads/0-cloud/0-learn-software/zero-one'
-# TODO: END CHECK IF ON MAC OS
 
 # // open trash bin 
 # $ open ~/.Trash/
 # // empty trash bin
 # cmd + shift + del
 
-# modifying 'ls' command to default display all directory info
-alias l='ls'
-alias ls='ls -aFG'
-# -a for showing hidden files
-# -F for files vs directories
-# -G for colors
-
 # get working directory
 alias gwd='pwd |pbcopy'
+
+# TODO: END CHECK IF ON MAC OS
 
 # alias to open neovim quickly
 alias n='nvim'
 alias nv='nvim'
-
-
-
-
-
 
 
 
@@ -121,19 +124,13 @@ alias glshow='echo "// git log -p"; git log -p'
 
 
 
-
-
-
-
-
-# modifying the bash prompt to something simpler
-# PS1="\u@\W\$"
-color_prompt=yes
-if [ "$color_prompt" = yes ]; then
-  PS1="\[\033[35m\]@\W\[\033[37m\]\$ "
-else
-  PS1="@\W\$ "
+goDir='/usr/local/go/bin';
+if [ -d $goDir ]; then
+    PATH=$PATH:/usr/local/go/bin
+    GOPATH=$(go env GOPATH)
+    PATH=$PATH:$GOPATH/bin
 fi
+
 
 # // to change PHP versions
 # $ php -v 
@@ -149,6 +146,8 @@ fi
 # // to install PHP 7.4 with HomeBrew
 # $ brew install php@7.4
 
+# TODO: ADD CHECK IF path esists then add
+# TODO CREATE LOOP OF THESE PATHS TO CHECK AND APPAEND
 # Setting PATH for php@7.4 tools
 PATH="/usr/local/opt/php@7.4/bin:${PATH}"
 
