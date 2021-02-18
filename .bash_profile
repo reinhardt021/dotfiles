@@ -13,16 +13,20 @@ PATH=$PATH:/usr/local/go/bin
 GOPATH=$(go env GOPATH)
 PATH=$PATH:$GOPATH/bin
 
+alias cdd='echo "cd ~/Downloads"; cd ~/Downloads'
+alias cdH='echo "cd ~/HigherMe"; cd ~/HigherMe'
 # just making it easier to 
 # go between docker setup & monorepo setup 
-alias cdk='cd /Users/reinhardtc/HigherMe/higherme-docker'
-alias cdj='cd /Users/reinhardtc/HigherMe/higherme-docker/sites/higherme/higherme-laravel-5/resources/assets/js
+alias cdk='echo "cd ~/HigherMe/higherme-docker"; cd ~/HigherMe/higherme-docker'
+alias cdj='cd ~/HigherMe/higherme-docker/sites/higherme/higherme-laravel-5/resources/assets/js
 '
-alias cdh='cd /Users/reinhardtc/HigherMe/higherme-docker/sites/higherme'
-alias cdl='cd /Users/reinhardtc/HigherMe/higherme-docker/sites/highermeapi'
-alias cdm='cd /Users/reinhardtc/HigherMe/monorepo
-'
+alias cdh='cd ~/HigherMe/higherme-docker/sites/higherme'
+alias cdl='cd ~/HigherMe/higherme-docker/sites/highermeapi'
+alias cdm='echo "cd ~/HigherMe/monorepo"; cd ~/HigherMe/monorepo'
+
 alias cdr='cd /Users/reinhardtc/Downloads/0-cloud/0-learn-software/reinhardtcgr.github.io'
+
+alias cdz='cd /Users/reinhardtc/Downloads/0-cloud/0-learn-software/zero-one'
 
 # // open trash bin 
 # $ open ~/.Trash/
