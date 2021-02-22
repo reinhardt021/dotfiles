@@ -121,7 +121,9 @@ alias glshow='echo "// git log -p"; git log -p'
 # git reset --hard <commit-ID || HEAD>
 
 
-
+alias t='tmux '
+alias tls='tmux ls'
+alias tas='tmux attach-session -t '
 
 
 goDir='/usr/local/go/bin';
