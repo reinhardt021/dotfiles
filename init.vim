@@ -1,3 +1,6 @@
+" to format JSON in a .json file
+" :%!python -m json.tool
+
 " shows the file line numbers
 set number
 
