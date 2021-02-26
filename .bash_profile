@@ -124,6 +124,7 @@ alias glshow='echo "// git log -p"; git log -p'
 alias t='tmux '
 alias tls='tmux ls'
 alias tas='tmux attach-session -t '
+alias trs='tmux rename-session -t '
 
 
 goDir='/usr/local/go/bin';
