@@ -1,4 +1,6 @@
 # ITERM2
+# // for optimal use have the terminal app transparent and blurred
+
 # cmd+d // to vertically split a pane
 # cmd+shift+d // to horizontally split a pane
 
@@ -120,6 +122,10 @@ alias glshow='echo "// git log -p"; git log -p'
 # // to reset to a previous commit but careful as you lose everything 
 # git reset --hard <commit-ID || HEAD>
 
+# // to revert a certain commit or the last commit on HEAD
+# // the diff with reset is that this does the opposite of the given commit 
+# // note: must use full hash that you can get from git log 
+# git revert <commit-hash || HEAD>
 
 alias t='tmux '
 alias tls='tmux ls'
