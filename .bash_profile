@@ -30,7 +30,8 @@ alias l='ls'
 
 
 
-alias cdd='echo "cd ~/Downloads"; cd ~/Downloads'
+alias cdd='echo "cd ~/dotfiles"; cd ~/dotfiles'
+alias cdD='echo "cd ~/Downloads"; cd ~/Downloads'
 alias cdH='echo "cd ~/HigherMe"; cd ~/HigherMe'
 # just making it easier to 
 # go between docker setup & monorepo setup 
