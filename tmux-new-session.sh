@@ -1,3 +1,4 @@
+echo "Creating a new TMUX Session...\n"
 if ! tmux has-session -t newS; then
 echo "That's fine. Lets create a new session.\n"
 #// create new tmux session for the project called 'newS' (project session)
@@ -22,9 +23,9 @@ tmux new -s newS -n cmd -d;
     #// create a new window as a sandbax / tinkering / misc
     tmux new-window -t newS:3 -n misc 
 fi
-echo "Session should be good to attach to now:"
+echo "the new TMUX session (newS) should be good to attach to now:"
 echo "tmux attach -t <session-name>\n"
 echo "To see a list of all sessions type in:"
-echo "tmux ls"
+echo "tmux ls\n"
 echo "You can rename the session if you want:"
 echo "tmux rename-session -t <old-session-name> <new-session-name>"
