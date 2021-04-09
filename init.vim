@@ -181,7 +181,8 @@ call plug#begin('~/.config/nvim/plugged')
     " // requires ctags to be included
     " :TagbarToggle
 
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"// turning off for now bc of node server running out of memory
+    "Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " :CocInstall coc-tsserver coc-json coc-html coc-css
     " :CocInstall coc-phpls
 
@@ -214,7 +215,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'pangloss/vim-javascript'
 
     " :source % //to register a newly added plugin
-    " :PlugInstall //to install the plugin
+    " :PlugInstall //to install any plugins
+    " :PlugClean //to un-install any plugins
 call plug#end()
 
 " adds Truecolor to the terminal if supported
@@ -235,35 +237,38 @@ map <C-p> :Files<CR>
 map <C-i> :GitGutterSignsToggle<CR> 
 map <C-l> :GitGutterLineHighlightsToggle<CR>
 
+"// turning off for now bc of node server
+" // code completion (coc.vim) 
+" issues
+"inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-" // code completion (coc.vim)
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              "\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 " // GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+"nmap <silent> gd <Plug>(coc-definition)
+"nmap <silent> gy <Plug>(coc-type-definition)
+"nmap <silent> gi <Plug>(coc-implementation)
+"nmap <silent> gr <Plug>(coc-references)
 " // darcula links to coc.vim
-hi! link CocErrorSign ErrorSign
-hi! link CocWarningSign WarningSign
-hi! link CocInfoSign InfoSign
-hi! link CocHintSign InfoSign
-hi! link CocErrorFloat Pmenu
-hi! link CocWarningFloat Pmenu
-hi! link CocInfoFloat Pmenu
-hi! link CocHintFloat Pmenu
-hi! link CocHighlightText IdentifierUnderCaret
-hi! link CocHighlightRead IdentifierUnderCaret
-hi! link CocHighlightWrite IdentifierUnderCaretWrite
-hi! link CocErrorHighlight CodeError
-hi! link CocWarningHighlight CodeWarning
-hi! link CocInfoHighlight CodeInfo
-hi! link CocHintHighlight CodeHint
+"hi! link CocErrorSign ErrorSign
+"hi! link CocWarningSign WarningSign
+"hi! link CocInfoSign InfoSign
+"hi! link CocHintSign InfoSign
+"hi! link CocErrorFloat Pmenu
+"hi! link CocWarningFloat Pmenu
+"hi! link CocInfoFloat Pmenu
+"hi! link CocHintFloat Pmenu
+"hi! link CocHighlightText IdentifierUnderCaret
+"hi! link CocHighlightRead IdentifierUnderCaret
+"hi! link CocHighlightWrite IdentifierUnderCaretWrite
+"hi! link CocErrorHighlight CodeError
+"hi! link CocWarningHighlight CodeWarning
+"hi! link CocInfoHighlight CodeInfo
+"hi! link CocHintHighlight CodeHint
+
 " // following breaks other shortcuts
 " // Use K to show documentation in preview window.
 "nnoremap <silent> K :call <SID>show_documentation()<CR>

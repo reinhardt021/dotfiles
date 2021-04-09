@@ -1,3 +1,6 @@
+# // show hidden files
+# cmd + shift + .
+
 # ITERM2
 # // for optimal use have the terminal app transparent and blurred
 
@@ -217,3 +220,8 @@ export KUBECONFIG="$(k3d get-kubeconfig --name=k3s-default)"
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
 # note `$ brew install bat` created syntax highlights in preview
+
+export NODE_OPTIONS=--max_old_space_size=4096
+
+# END OF FILE
+
