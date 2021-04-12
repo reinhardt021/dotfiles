@@ -1,4 +1,4 @@
-# INSTALL APPs
+# INSTALL APPLICATIONS
 # note: these all will live in /Applications not the user specific one
 
 ## PERSONAL 
@@ -54,7 +54,7 @@
 # brew install --cask calibre #// e-books management software
 # Notion #// not until they have offline feature
 
-# discord
+# install discord
 # brew install --cask vlc #// video/audio playback
 # brew install --cask signal #// messaging app focusing on security
 # brew install --cask obs #// streaming
@@ -69,38 +69,47 @@
 
 # brew install --cask visual-studio-code #// optional backup IDE
     # PHPStorm #// no longer needed
-# brew install --cask postman #// api development
-
-# DATABASE CLIENT
-# brew install --cask dbeaver-community
-# brew install --cask sequel-pro
 
 # GIT CLIENT
 # // use tmux panes instead
 # brew install --cask fork #// optional backup git client
     # SourceTree #// no need as well
 
-# LOCAL DEV ENVIRONMENT BUILD
-# TODO: install git hub?
-# // TODO: have different users setup on github
-# TODO: save DB configs (DBeaver / Sequel Pro)
-# TODO: save Postman configs
+# PROJECT BUILD: LOCAL DEV ENVIRONMENT
+# // have different users setup on github >> see ~/.ssh/config
+# // pull from remote repository with the specified ssh config
+# git clone git@github-hm:higher-me/monorepo.git
+    # git fetch
+    # git branch -a # // get all branches shown
+    # git checkout <remote branch name>
 
-#docker through CLI not docker desktop
-# TODO: install kubernetes for the build and things
-# TODO: install istio
-# TODO: install helm
-# TODO: install tilt
-# TODO: install k3d
-# TODO: install sandboxfs
+# DATABASE CLIENT
+# brew install --cask dbeaver-community
+# brew install --cask sequel-pro
+    # import DB configs (DBeaver / Sequel Pro)
+    # copy the following file over from USB
+    # /Users/${USER}/Library/DBeaverData/workspace6/General/.dbeaver/
+    # Sequel Pro > settings (bottom left gear) > import (plist file)
+# TODO: double check that you have AWS access with new laptop
+
+# brew install --cask postman #// api development
+    # // just log in and it will all be there Collection + env vars
+    # save Postman configs >> might not need this if saved to account
+
+# install DOCKER: through CLI not docker desktop
+# install kubernetes for the build and things
+# install istio
+# install helm
+# install tilt
+# install k3d
+# install sandboxfs
 
 # VIDEO CLIENT
 # // install Zoom (video communication platform) through calendar event
 # Skype #// not really necessary I feel
 
 
-
-# OPEN APPs
+# OPEN APPLICATIONS
 
 ## PERSONAL
 open -a Evernote
