@@ -38,8 +38,13 @@
 # brew install --cask iterm2
     # Preferences > Appearances > General > Theme > Minimal # // adjust to minimal
     # Preferences > Profiles > Window > Transparencey # // adjust bg transparency
+        # 1/6 = (1/3 * 1/2)
     # Preferences > Profiles > Window > Blur # // adjust bg blur
+        # 25%
     # Preferences > Profiles > Colors > Color Presets > Pastel (Dark Background)
+    # Preferences > Profiles > Colors > Minimum Contrast: 50%
+    # Preferences > Profiles > Colors > Cursor Boost: 25%
+    # Preferences > Profiles > Colors > Cursor Colors > Cursor: 50% Gray
     # TODO: export these configs
 # brew install tmux
 # brew install neovim
@@ -95,6 +100,9 @@
 # brew install --cask postman #// api development
     # // just log in and it will all be there Collection + env vars
     # save Postman configs >> might not need this if saved to account
+
+# install PHP 7.4 # // current mac default is 7.3
+# brew install php@7.4
 
 # install DOCKER: through CLI not docker desktop
 # install kubernetes for the build and things
