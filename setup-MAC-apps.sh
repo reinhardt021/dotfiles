@@ -19,7 +19,10 @@
 # // git clone dotfiles/ into home directory ~ || /Users/reinhardtc
 # git clone git@github.com:reinhardtcgr/dotfiles.git
 # // fix global git username and email for personal commits
-# git config --global --edit 
+# git config --global user.name "Reinhardt"
+# git config --global user.email reinhardt.cgr@gmail.com
+# // if you need to reset a recent comment then run the following:
+# git commit --amend --reset=author
 
 # // install HOMEBREW:
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -91,6 +94,8 @@
     # git checkout <remote branch name>
 
 # // fix git config for project: username and email for commits
+# git config --local user.name "Reinhardt Cagara"
+# git config --local user.email reinhardt@higherme.com
 
 # DATABASE CLIENT
 # brew install --cask dbeaver-community
