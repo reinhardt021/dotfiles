@@ -16,8 +16,16 @@
 # save .ssh/ FILES to a USB stick <> onto computer
     # save .ssh/config to a USB stick <> onto computer
 # copy .ssh files
+
 # // git clone dotfiles/ into home directory ~ || /Users/reinhardtc
 # git clone git@github.com:reinhardtcgr/dotfiles.git
+# // can also set to specific ssh config
+# git clone git@github-personal:reinhardtcgr/dotfiles.git
+
+# // to change remote after the fact
+# git remote set-url origin git@github-personal:reinhardtcgr/dotfiles.git
+# git remote -v 
+
 # // fix global git username and email for personal commits
 # git config --global user.name "Reinhardt"
 # git config --global user.email reinhardt.cgr@gmail.com
