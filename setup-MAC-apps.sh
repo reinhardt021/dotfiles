@@ -58,14 +58,22 @@
     # Preferences > Profiles > Colors > Minimum Contrast: 50%
     # Preferences > Profiles > Colors > Cursor Boost: 25%
     # Preferences > Profiles > Colors > Cursor Colors > Cursor: 50% Gray
+    # // disable mouse reporting
+    # Preferences > Profiles > Terminal > Enable Mouse Reporting: NO / disabled / unchecked
+    # // how to scroll tmux and vim without scrolling window
+    # Preferences > Advanced > Mouse > Scroll wheel sends arrow keys when in alternate screen mode: YES
     # TODO: export these configs
+
 # brew install tmux
 # brew install neovim
 # // configure all with the setup-config-MAC.sh
     # chsh -s /bin/bash #// change default shell to bash
+# brew install ripgrep # // used for fzf.vim
+# brew install bat # // used for fzf.vim preview 
+
 # // restart iTerm to get new changes
 
-# brew install bash 
+# brew install bash  # // to get latest bash
 # exec bash # // reload bash
 # bash --version # // verify update
 
@@ -128,7 +136,6 @@
 # install PHP 7.4 
 # // current mac default is 7.3
 # brew install php@7.4
-
 # // link php 7.4
 # php -v # // should show old version
 # brew unlink php # // will error if old php didn't use homebrew
@@ -146,9 +153,11 @@
 # // install KUBERNETES CLI for the build and things
 # brew install kubectl
 # kubectl version --client # // to check install worked
-# // install istio >> check if still necessary
+# // install istio >> check if still necessary // yeah no longer needed
 # brew install helm
 # helm version # // to check install worked
+# helm repo add # // check .ssh folder for those details
+
 # // install DOCKER
     # // required for TILT
     # // try through CLI not docker desktop >> complicated will just do desktop for now
@@ -182,13 +191,13 @@
 # OPEN APPLICATIONS
 
 ## PERSONAL
-open -a Evernote
-open -a Firefox
+# open -a Evernote
+# open -a Firefox
 
 ## DEV CRAFT
-open -a iTerm
-open -a "Google Chrome"
-open -a "Sequel Pro"
-open -a Postman
+# open -a iTerm
+# open -a "Google Chrome"
+# open -a "Sequel Pro"
+# open -a Postman
 
 
