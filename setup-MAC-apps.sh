@@ -61,9 +61,13 @@
     # TODO: export these configs
 # brew install tmux
 # brew install neovim
-# configure all with the setup-config-MAC.sh
+# // configure all with the setup-config-MAC.sh
     # chsh -s /bin/bash #// change default shell to bash
-# restart iTerm to get new changes
+# // restart iTerm to get new changes
+
+# brew install bash 
+# exec bash # // reload bash
+# bash --version # // verify update
 
 # brew install --cask evernote
     # Note > Note Width > Optimize for Readability
@@ -112,22 +116,63 @@
     # copy the following file over from USB
     # /Users/${USER}/Library/DBeaverData/workspace6/General/.dbeaver/
     # Sequel Pro > settings (bottom left gear) > import (plist file)
-# TODO: double check that you have AWS access with new laptop
+    # use environment variables on AWS S3 higherme.environment
 
 # brew install --cask postman #// api development
     # // just log in and it will all be there Collection + env vars
     # save Postman configs >> might not need this if saved to account
 
-# install PHP 7.4 # // current mac default is 7.3
+# install openssl for .bash_profile requirements and php@7.4 dependency
+# brew install openssl
+
+# install PHP 7.4 
+# // current mac default is 7.3
 # brew install php@7.4
 
-# install DOCKER: through CLI not docker desktop
-# install kubernetes for the build and things
-# install istio
-# install helm
-# install tilt
-# install k3d
-# install sandboxfs
+# // link php 7.4
+# php -v # // should show old version
+# brew unlink php # // will error if old php didn't use homebrew
+# brewk link --overwrite --force php@7.4
+# php -v 
+
+# install COMPOSER
+# php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+# php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+# php composer-setup.php --version=1.10.20
+# php -r "unlink('composer-setup.php');"
+# // move composer to use globally
+# mv ./composer.phar /usr/local/bin/composer
+
+# // install KUBERNETES CLI for the build and things
+# brew install kubectl
+# kubectl version --client # // to check install worked
+# // install istio >> check if still necessary
+# brew install helm
+# helm version # // to check install worked
+# // install DOCKER
+    # // required for TILT
+    # // try through CLI not docker desktop >> complicated will just do desktop for now
+    # // install through website
+# // install TILT from website
+# tilt verison # // to check install worked
+# // install K3D 
+# wget -q -O - https://raw.githubusercontent.com/rancher/k3d/main/install.sh | TAG=v1.7.0 bash
+     # // may need to install wget first
+     # brew install wget
+     # k3d -v # // to check install worked
+# // install SANDBOXFS >> check if still needed
+
+# HIGHERME WORK SETUP (use the gitlab wiki)
+# // may need to install YARN
+    # brew install yarn
+    # yarn -v # // check install worked
+# // may need to install BAZEL
+    # brew install bazel
+    # bazel --version # // check install worked
+# // will need AWS to build and setup 
+    # go through the installer from the website >> simplest way
+    # aws --version # // check install worked
+    # which aws
 
 # VIDEO CLIENT
 # // install Zoom (video communication platform) through calendar event

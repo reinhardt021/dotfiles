@@ -145,6 +145,8 @@ if [ -d $goDir ]; then
     PATH=$PATH:$GOPATH/bin
 fi
 
+# // to install PHP 7.4 with HomeBrew
+# $ brew install php@7.4
 
 # // to change PHP versions
 # $ php -v 
@@ -157,8 +159,6 @@ fi
 # // to see PHP versions on HomeBrew
 # $ brew list |grep php
 
-# // to install PHP 7.4 with HomeBrew
-# $ brew install php@7.4
 
 # TODO: ADD CHECK IF path esists then add
 # TODO CREATE LOOP OF THESE PATHS TO CHECK AND APPAEND
