@@ -18,6 +18,8 @@
 # copy .ssh files
 # // git clone dotfiles/ into home directory ~ || /Users/reinhardtc
 # git clone git@github.com:reinhardtcgr/dotfiles.git
+# // fix global git username and email for personal commits
+# git config --global --edit 
 
 # // install HOMEBREW:
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -87,6 +89,8 @@
     # git fetch
     # git branch -a # // get all branches shown
     # git checkout <remote branch name>
+
+# // fix git config for project: username and email for commits
 
 # DATABASE CLIENT
 # brew install --cask dbeaver-community
