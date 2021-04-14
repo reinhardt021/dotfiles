@@ -71,6 +71,8 @@
 # brew install ripgrep # // used for fzf.vim
 # brew install bat # // used for fzf.vim preview 
 
+# brew install tree 
+
 # // restart iTerm to get new changes
 
 # brew install bash  # // to get latest bash
