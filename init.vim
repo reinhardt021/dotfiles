@@ -93,6 +93,9 @@ set nofoldenable "defaults no folding on first open
 " O // to open new live above the current line
 " o // to open new line below the current line
 
+" EDIT
+" J // to simplify and merge the next line with your current line
+
 " DELETE
 " x // to delete a character
 " dw // to delete a word
