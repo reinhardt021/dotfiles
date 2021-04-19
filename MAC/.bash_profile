@@ -41,8 +41,10 @@ alias cdH='echo "cd ~/HigherMe"; cd ~/HigherMe'
 alias cdk='echo "cd ~/HigherMe/higherme-docker"; cd ~/HigherMe/higherme-docker'
 alias cdj='cd ~/HigherMe/higherme-docker/sites/higherme/higherme-laravel-5/resources/assets/js
 '
-alias cdh='cd ~/HigherMe/higherme-docker/sites/higherme'
-alias cdl='cd ~/HigherMe/higherme-docker/sites/highermeapi'
+alias cdh='cd ~/HigherMe/higherme'
+# // no longer have these directories after laptop reset
+#alias cdh='cd ~/HigherMe/higherme-docker/sites/higherme'
+#alias cdl='cd ~/HigherMe/higherme-docker/sites/highermeapi'
 alias cdm='echo "cd ~/HigherMe/monorepo"; cd ~/HigherMe/monorepo'
 
 alias cdr='cd /Users/reinhardtc/Downloads/0-cloud/0-learn-software/reinhardtcgr.github.io'
@@ -99,9 +101,39 @@ alias gsdrop='echo "// git stash drop <number>"; git stash drop '
 
 alias gf='git fetch'
 #alias gp='git pull'
-# // to rebase from the remote branch
+
+## GIT MERGE
+
+# // to merge another branch into your current branch
+# git merge incomingBranch
+
+## GIT REBASE
+
+# // to rebase your current branch with another branch
+# git rebase incomingBranch
+
+# // to rebase your current branch from the remote branch
 # git fetch
 # git rebase origin/master
+
+## Squash Commits on your branch
+
+# // to find the number of commits to squash
+# git log
+# // to open interactive to squash commits and give a better commit message
+# git rebase -i HEAD~<number-of-commits>
+# git rebase -i HEAD~9
+# // To push up the changes
+# git push --force origin feature/COR-7412-edocs-re-write-create-feature-switch
+
+### Rebase your branch to resolve merge conflicts 
+#&& to consolidate your changes on top of the branch you want to merge into
+#"git rebase feature/DEP-118"
+#>>
+#Make sure your local has all the latest changes of the destination branch (ex: DEP-118) 
+#>>
+#Then change back to your branch to rebase
+
 
 alias gl='git log'
 # git log // to see if your current changes match the remote
@@ -205,6 +237,7 @@ alias k='kubectl'
 # 2> if the service isnt outputting logs, just reboot it
 # (sometime tilt just doesnt recognize the pods after a reboot and it can't capture the logs)
 
+alias kssh='kubectl exec --stdin --tty '
 
 # HigherMe Monorepo Path
 MONOREPO_PATH='/Users/reinhardtc/HigherMe/monorepo'
@@ -222,6 +255,30 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden'
 # note `$ brew install bat` created syntax highlights in preview
 
 export NODE_OPTIONS=--max_old_space_size=4096
+
+# // for GIT auto completion
+# // note need to run the following first
+# curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+if [ -f ~/.git-completion.bash ]; then 
+    . ~/.git-completion.bash
+fi
+
+
+# // note: done for bash completion v2
+export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
+# // docker CLI completion doesn't seem to work
+# // main docker compose eh
+
+# // kubectl CLI completion doesn't seem to work either
+# // for kubectl bash completion
+source <(kubectl completion bash)
+complete -F __start_kubectl k
 
 # END OF FILE
 
