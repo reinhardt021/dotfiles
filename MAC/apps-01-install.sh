@@ -79,6 +79,11 @@
 # exec bash # // reload bash
 # bash --version # // verify update
 
+# // GIT auto completion
+# // note need to run the following first
+# curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+
+
 # brew install --cask evernote
     # Note > Note Width > Optimize for Readability
 # Ommwriter #// disk image in dropbox
@@ -90,7 +95,7 @@
 # brew install --cask vlc #// video/audio playback
 # brew install --cask signal #// messaging app focusing on security
 # brew install --cask obs #// streaming
-# qBittorrent
+# brew install --cask qbittorrent
 
 
 ## DEV CRAFT 
