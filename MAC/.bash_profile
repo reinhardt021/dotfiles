@@ -238,6 +238,7 @@ alias k='kubectl'
 # (sometime tilt just doesnt recognize the pods after a reboot and it can't capture the logs)
 
 alias kssh='kubectl exec --stdin --tty '
+alias kc='kubectl config '
 
 # HigherMe Monorepo Path
 MONOREPO_PATH='/Users/reinhardtc/HigherMe/monorepo'
@@ -251,7 +252,7 @@ export KUBECONFIG="$(k3d get-kubeconfig --name=k3s-default)"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-export FZF_DEFAULT_COMMAND='rg --files --hidden'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --heading'
 # note `$ brew install bat` created syntax highlights in preview
 
 export NODE_OPTIONS=--max_old_space_size=4096
