@@ -71,7 +71,9 @@
 # brew install ripgrep # // used for fzf.vim
 # brew install bat # // used for fzf.vim preview 
 
-# brew install tree 
+# brew install tree # // to show directory tree
+# brew install watch # // to run shell to repeatedly run a cmd 
+# watch -n 10 <command + arguments> # // watches every 10 seconds
 
 # // restart iTerm to get new changes
 
