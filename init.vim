@@ -217,6 +217,10 @@ call plug#begin('~/.config/nvim/plugged')
     " // provides syntax highlighting and improved indentation
     Plug 'pangloss/vim-javascript'
 
+    " // to allow CSV parsing
+    "Plug 'chrisbra/csv.vim'
+    " // looks weird so commenting out for now
+
     " :source % //to register a newly added plugin
     " :PlugInstall //to install any plugins
     " :PlugClean //to un-install any plugins
