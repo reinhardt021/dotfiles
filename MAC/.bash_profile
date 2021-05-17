@@ -216,10 +216,10 @@ PATH="/Users/reinhardtc/istio-1.7.3/bin:${PATH}"
 # HIGHERME docker setup
 # CLI aliases
 alias dp='docker ps'
-alias dck='docker-compose up -d'
-alias dcj='docker-compose down'
+#alias dck='docker-compose up -d'
+#alias dcj='docker-compose down'
 alias ds='docker stop '
-alias dsn='docker stop higherme-node'
+#alias dsn='docker stop higherme-node'
 # alias hm='/Users/reinhardtc/HigherMe/monorepo/develop/assistant/hmcli'
 alias hm='/Users/reinhardtc/HigherMe/assistant-cli/cli/hmcli'
 alias hmcli='/Users/reinhardtc/HigherMe/assistant-cli/cli/hmcli'
@@ -239,6 +239,8 @@ alias k='kubectl'
 
 alias kssh='kubectl exec --stdin --tty '
 alias kc='kubectl config '
+alias kcuc='kubectl config use-context '
+alias kcucdefault='kubectl config use-context k3s-default'
 
 # HigherMe Monorepo Path
 MONOREPO_PATH='/Users/reinhardtc/HigherMe/monorepo'
@@ -247,8 +249,8 @@ export MONOREPO_PATH="$MONOREPO_PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig:"${PKG_CONFIG_PATH}""
 
-
-export KUBECONFIG="$(k3d get-kubeconfig --name=k3s-default)"
+# // for kubernetes setup need to run this
+#export KUBECONFIG="$(k3d get-kubeconfig --name=k3s-default)"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
