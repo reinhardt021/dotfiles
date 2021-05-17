@@ -17,7 +17,7 @@
     # save .ssh/config to a USB stick <> onto computer
 # copy .ssh files
 
-# // git clone dotfiles/ into home directory ~ || /Users/reinhardtc
+# // CLONE DOTFILES into home/root directory ~ || /Users/reinhardtc
 # git clone git@github.com:reinhardtcgr/dotfiles.git
 # // can also set to specific ssh config
 # git clone git@github-personal:reinhardtcgr/dotfiles.git
