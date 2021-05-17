@@ -3,6 +3,8 @@ NC='\033[0m' # No Color
 BOLD=$(tput bold)
 NORM=$(tput sgr0)
 
-echo "\n\n ${RED} Have you made this code ${BOLD} EASY TO CHANGE? ${NORM} ${NC} \n"
-echo "Future you wants to know if they should smack you :P \n\n"
+echo "\n\n"
+echo "${RED}Have you made this code ${BOLD} EASY TO CHANGE?${NORM}${NC}"
+echo "Future you wants to know if they should smack you :P"
+echo "\n\n"
 
