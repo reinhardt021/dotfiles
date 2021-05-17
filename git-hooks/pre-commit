@@ -1,2 +1,8 @@
-echo "\n\n Have you made this code EASY TO CHANGE? \n\n"
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+BOLD=$(tput bold)
+NORM=$(tput sgr0)
+
+echo "\n\n ${RED} Have you made this code ${BOLD} EASY TO CHANGE? ${NORM} ${NC} \n"
+echo "Future you wants to know if they should smack you :P \n\n"
 
