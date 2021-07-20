@@ -209,4 +209,7 @@
 # open -a "Sequel Pro"
 # open -a Postman
 
+# LINK Apple Calendar to Google Calendar
+# so can have offline information
+
 

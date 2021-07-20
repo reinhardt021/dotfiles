@@ -283,5 +283,24 @@ fi
 source <(kubectl completion bash)
 complete -F __start_kubectl k
 
+
+#PHP LINES OF CODE for quick check on size and analyzing structure of php project
+#$ wget https://phar.phpunit.de/phploc.phar
+#$ php phploc.phar --version
+#$ php phploc.phar services/classic/app/
+
+#PHP Copy Paste Detector for duplicate lines of code
+#$ wget https://phar.phpunit.de/phpcpd.phar
+#$ php phpcpd.phar --version
+#$ php phpcpd.phar services/classic/app/
+
+#PHP CODE SNIFFER
+#The default coding standard used by PHP_CodeSniffer is the PEAR coding standard
+#$ phpcs --standard=PSR12 /path/to/code-directory
+#$ wget https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
+#$ php phpcs.phar -h
+#$ php phpcs.phar services/classic/app/Classes/AccessComputers/
+
+
 # END OF FILE
 
