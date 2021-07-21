@@ -251,6 +251,8 @@ export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig:"${PKG_CONFIG_P
 
 # // for kubernetes setup need to run this
 #export KUBECONFIG="$(k3d get-kubeconfig --name=k3s-default)"
+# EXAMPLE:
+#export KUBECONFIG="/Users/reinhardtc/.config/k3d/k3s-default/kubeconfig.yaml"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
