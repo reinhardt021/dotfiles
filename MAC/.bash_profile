@@ -31,21 +31,30 @@ alias l='ls'
 # -F for files vs directories
 # -G for colors
 
+#// alias to always prompt before overwriting and to be verbose"
+alias mv='mv -iv '
 
+# open -a /Applications/VLC.app ./movie.mkv
+# to open the file with a certain application
 
-alias cdd='echo "cd ~/dotfiles"; cd ~/dotfiles'
-alias cdD='echo "cd ~/Downloads"; cd ~/Downloads'
-alias cdH='echo "cd ~/HigherMe"; cd ~/HigherMe'
+# to see the volumes mounted
+# diskutil list
+# to umount a volume that is partitioned
+# diskutil unmountDrive /dev/disk2
+
+alias cdd='echo "// cd ~/dotfiles"; cd ~/dotfiles'
+alias cdD='echo "// cd ~/Downloads"; cd ~/Downloads'
+alias cdH='echo "// cd ~/HigherMe"; cd ~/HigherMe'
 # just making it easier to 
 # go between docker setup & monorepo setup 
-alias cdk='echo "cd ~/HigherMe/higherme-docker"; cd ~/HigherMe/higherme-docker'
+alias cdk='echo "// cd ~/HigherMe/higherme-docker"; cd ~/HigherMe/higherme-docker'
 alias cdj='cd ~/HigherMe/higherme-docker/sites/higherme/higherme-laravel-5/resources/assets/js
 '
 alias cdh='cd ~/HigherMe/higherme'
 # // no longer have these directories after laptop reset
 #alias cdh='cd ~/HigherMe/higherme-docker/sites/higherme'
 #alias cdl='cd ~/HigherMe/higherme-docker/sites/highermeapi'
-alias cdm='echo "cd ~/HigherMe/monorepo"; cd ~/HigherMe/monorepo'
+alias cdm='echo "// cd ~/HigherMe/monorepo"; cd ~/HigherMe/monorepo'
 
 alias cdr='cd /Users/reinhardtc/Downloads/0-cloud/0-learn-software/reinhardtcgr.github.io'
 
@@ -57,35 +66,34 @@ alias cdz='cd /Users/reinhardtc/Downloads/0-cloud/0-learn-software/zero-one'
 # cmd + shift + del
 
 # get working directory
-alias gwd='pwd |pbcopy'
+alias gwd='echo "// pwd |pbcopy"; pwd |pbcopy'
 
 # TODO: END CHECK IF ON MAC OS
 
 # alias to open neovim quickly
-alias n='nvim'
-alias nv='nvim'
+alias n='echo "// nvim <command>"; nvim'
+alias nv='echo "// nvim <command>"; nvim'
 
 
 
 
 
 # GIT
-alias g='git'
+alias g='echo "// git <command>"; git'
 
-alias gb='git branch'
+alias gb='echo "// git branch"; git branch'
 # TODO: CHECK IF MAC OS
-alias gbc='git branch --show-current | pbcopy'
-alias gbc='git branch --show-current | pbcopy'
+alias gbc='echo "// git branch --show-current | pbcopy"; git branch --show-current | pbcopy'
 # TODO END CHECK
 # git branch -d <branch-name> // to delete local branch
 # git branch -D <branch-name> // to force delete local branch
 
-alias gc='git checkout'
+alias gc='echo "// git checkout <branch>"; git checkout'
 
-alias ga='git add' 
-alias gs='git status'
-alias gd='git diff'
-alias gdc='git diff --cached' #// to see staged (added) changes (hunk)
+alias ga='echo "// git add <files>"; git add ' 
+alias gs='echo "// git status"; git status'
+alias gd='echo "// git diff";git diff'
+alias gdc='echo "// git diff --cached"; git diff --cached' #// to see staged (added) changes (hunk)
 
 #// to see a list of stashed patches
 alias gslist='echo "// git stash list"; git stash list'
@@ -99,7 +107,7 @@ alias gspush='echo "// git stash push"; git stash push'
 # git stash push -m "message" <path>
 alias gsdrop='echo "// git stash drop <number>"; git stash drop '
 
-alias gf='git fetch'
+alias gf='echo "// git fetch"; git fetch'
 #alias gp='git pull'
 
 ## GIT MERGE
@@ -135,7 +143,7 @@ alias gf='git fetch'
 #Then change back to your branch to rebase
 
 
-alias gl='git log'
+alias gl='echo "// git log"; git log'
 # git log // to see if your current changes match the remote
 
 # // to see which commits are on your master which you haven't yet pushed
@@ -147,7 +155,7 @@ alias gld='echo "// git log diff b/w remote"; git log origin/master..master'
 # git log master..origin/master
 
 # // git log graph
-alias glg='git log --pretty=format:"%C(dim white)%d%C(reset) %s %C(dim white)[%h %ae %cr]%C(reset)" --graph'
+alias glg='echo "// git log --graph --pretty=format:.."; git log --pretty=format:"%C(dim white)%d%C(reset) %s %C(dim white)[%h %ae %cr]%C(reset)" --graph'
 
 # // git log patches to see the diffs in each
 alias glp='echo "// git log -p"; git log -p'
@@ -163,11 +171,11 @@ alias glshow='echo "// git log -p"; git log -p'
 # // note: must use full hash that you can get from git log 
 # git revert <commit-hash || HEAD>
 
-alias t='tmux '
-alias tls='tmux ls'
-alias tns='sh ~/dotfiles/tmux-new-session.sh'
-alias tas='tmux attach-session -t '
-alias trs='tmux rename-session -t '
+alias t='echo "// tmux <command>"; tmux '
+alias tls='echo "// tmux ls"; tmux ls'
+alias tns='echo "// tmux-new-session.sh"; sh ~/dotfiles/tmux-new-session.sh'
+alias tas='echo "// tmux attach-session -t <name>"; tmux attach-session -t '
+alias trs='echo "// tmux rename-session -t <name>"; tmux rename-session -t '
 
 
 goDir='/usr/local/go/bin';
@@ -200,25 +208,25 @@ PATH="/usr/local/opt/php@7.4/bin:${PATH}"
 # Setting PATH for Python 3.8
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
-# export PATH
 
 # Setting PATH for pip related cli tools
 PATH="/Users/reinhardtc/Library/Python/3.8/bin:${PATH}"
-# export PATH
-
 
 # Setting PATH for Julia cli tools
 PATH="/Applications/Julia-1.4.app/Contents/Resources/julia/bin:${PATH}"
-# export PATH
 
 PATH="/Users/reinhardtc/istio-1.7.3/bin:${PATH}"
 
+# Docker-Machine aliases
+#alias dm='echo "// docker-machine <command>": docker-machine '
+# // this doesn't work for `docker-machine ls`  bc of the alias for ls
+
 # HIGHERME docker setup
 # CLI aliases
-alias dp='docker ps'
+alias dp='echo "// docker ps";docker ps'
 #alias dck='docker-compose up -d'
 #alias dcj='docker-compose down'
-alias ds='docker stop '
+alias ds='echo "// docker stop <container>": docker stop '
 #alias dsn='docker stop higherme-node'
 # alias hm='/Users/reinhardtc/HigherMe/monorepo/develop/assistant/hmcli'
 alias hm='/Users/reinhardtc/HigherMe/assistant-cli/cli/hmcli'
@@ -231,19 +239,24 @@ alias hmcli='/Users/reinhardtc/HigherMe/assistant-cli/cli/hmcli'
 # `yarn run dev`
 
 # alias for kubectl to make it easier to remember
-alias k='kubectl'
+alias k='echo "// kubectl <command>"; kubectl'
 # easier to do `kubectl get pods` && `kubectl delete pod <name>`
 # 1> usually the invalid response from upstream is when the pod is crashing and cant start up
 # 2> if the service isnt outputting logs, just reboot it
 # (sometime tilt just doesnt recognize the pods after a reboot and it can't capture the logs)
 
-alias kssh='kubectl exec --stdin --tty '
-alias kc='kubectl config '
-alias kcuc='kubectl config use-context '
-alias kcucdefault='kubectl config use-context k3s-default'
+alias kssh='echo "// kubectl exec --stdin --tty <podname> -- <shell command>"; kubectl exec --stdin --tty '
+alias kc='echo "// kubectl config <command>"; kubectl config '
+alias kcuc='echo "// kubectl config use-context <context>"; kubectl config use-context '
+alias kcucdefault='echo "// kubectl config use-context k3s-default"; kubectl config use-context k3s-default'
 
 # HigherMe Monorepo Path
 MONOREPO_PATH='/Users/reinhardtc/HigherMe/monorepo'
+
+# // this is for homebrew gcc >> don't need anymore should use Xcode CLT
+#PATH="/usr/local/Cellar/gcc/11.2.0/bin:${PATH}"
+PATH="/Applications/Xcode.app/Contents/Developer/usr/bin:${PATH}"
+PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:${PATH}"
 
 export MONOREPO_PATH="$MONOREPO_PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
@@ -302,6 +315,8 @@ complete -F __start_kubectl k
 #$ wget https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
 #$ php phpcs.phar -h
 #$ php phpcs.phar services/classic/app/Classes/AccessComputers/
+
+export CODECOV_TOKEN="3da7afe8-0804-45ef-936e-2a0969bbeee3"
 
 
 # END OF FILE
