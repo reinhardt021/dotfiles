@@ -132,7 +132,7 @@ nnoremap <C-a> ggVG
 " u // to undo recent change
 " ctrl+r // to redo change
 
-" to make the <Leader> key the ',' key
+" to make the <Leader> key the ',' key (tilda ~ key)
 let mapleader = ','
 
 " scrolling down and up, respectively
@@ -152,9 +152,9 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
     Plug 'doums/darcula' " my prefered syntax color scheme 
-    Plug 'preservim/nerdtree'
-    Plug 'airblade/vim-gitgutter'
-    Plug 'preservim/nerdcommenter'
+    Plug 'preservim/nerdtree' " to see filetree
+    Plug 'airblade/vim-gitgutter' " to see git if line changed
+    Plug 'preservim/nerdcommenter' " allows commenting out 
     "Plug 'ctrlpvim/ctrlp.vim' " using fzf instead now
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
@@ -211,8 +211,10 @@ call plug#begin('~/.config/nvim/plugged')
 
     " // dim paragraphs above and below the active paragraph
     Plug 'junegunn/limelight.vim'
+    " :Limelight!
     " // Distraction free writing by removing UI elements and centering everything
     Plug 'junegunn/goyo.vim'
+    " :Goyo // to toggle
 
     " // provides syntax highlighting and improved indentation
     Plug 'pangloss/vim-javascript'
