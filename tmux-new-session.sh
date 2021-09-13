@@ -2,16 +2,19 @@ echo "Creating a new TMUX Session...\n"
 
 SESSION_ID="newS"
 INPUT="$1"
-echo "//test inputs [$INPUT]"
+#echo "//test inputs [$INPUT]"
 #INPUT="${1##*( )}"
-if ! [$INPUT == ""]
+#TODO: solve bug
+#/Users/reinhardtc/dotfiles/tmux-new-session.sh: line 7: [AAA: command not found
+#if ! ["$INPUT" == ""]
+if ! ["$INPUT" -eq ""]
 then
     echo "Let's try making the session named [$INPUT]."
     SESSION_ID="$INPUT"
 fi
 
 if ! tmux has-session -t $SESSION_ID; then
-echo "\nThat's fine. Lets create a new session.\n"
+echo "No worries if we can't find your session. Lets create a new session.\n"
 #// create new tmux session for the project called '$SESSION_ID' (project session)
 #// with first window called cmd (aka command center)
 tmux new -s $SESSION_ID -n cmd -d;
@@ -38,9 +41,12 @@ tmux new -s $SESSION_ID -n cmd -d;
     #// create a new window as a sandbax / tinkering / misc
     tmux new-window -t $SESSION_ID:4 -n misc 
 fi
-echo "the new TMUX session ($SESSION_ID) should be good to attach to now:"
-echo "tmux attach -t <session-name>\n"
-echo "To see a list of all sessions type in:"
-echo "tmux ls\n"
-echo "You can rename the session if you want:"
-echo "tmux rename-session -t <old-session-name> <new-session-name>"
+echo "The new TMUX session ($SESSION_ID) is ready to ATTACH to now:"
+echo "$ tmux attach -t <session-name>"
+echo "To LIST of all sessions:"
+echo "$ tmux ls"
+echo "To RENAME a session:"
+echo "$ tmux rename-session -t <old-session-name> <new-session-name>\n"
+
+echo "// tmux sessions"
+tmux ls;
