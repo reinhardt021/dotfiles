@@ -35,13 +35,16 @@
 # // install HOMEBREW:
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# // install ExpressVPN from website + login
-# // install f.lux from website (command doesn't work)
-    # brew install --cask flux #// screen color temperature 
-# // have screenshots moved to the Downloads folder; note: absolute path
-    # defaults write com.apple.screencapture location /Users/reinhardtc/Downloads
-# // make the Notifications shortcut cmd + shift + =
-    # System Preferences > Keyboard > Shortcuts > Mission Control > Show Notification Center 
+#// install ExpressVPN from website + login
+#// install f.lux from website (command doesn't work)
+#$ brew install --cask flux #// screen color temperature 
+
+#// have screenshots moved to the Downloads folder; note: absolute path
+#$ mkdir ~/Downloads/SCREENSHOTS
+#$ defaults write com.apple.screencapture location /Users/reinhardtc/Downloads/SCREENSHOTS
+
+#// make the Notifications shortcut cmd + shift + =
+# System Preferences > Keyboard > Shortcuts > Mission Control > Show Notification Center 
 
 #brew install --cask caffeine #// prevents system from going to sleep
 #brew install --cask rescuetime #// time optimizing application
