@@ -173,10 +173,12 @@ alias glshow='echo "// git log -p"; git log -p'
 
 alias t='echo "// tmux <command>"; tmux '
 alias tls='echo "// tmux ls"; tmux ls'
-alias tns='echo "// tmux-new-session.sh"; sh ~/dotfiles/tmux-new-session.sh'
+alias tns='echo "// sh ~/dotfiles/tmux-new-session.sh"; sh ~/dotfiles/tmux-new-session.sh'
 alias tas='echo "// tmux attach-session -t <name>"; tmux attach-session -t '
-alias trs='echo "// tmux rename-session -t <name>"; tmux rename-session -t '
+alias trs='echo "// tmux rename-session -t <old-name> <new-name>"; tmux rename-session -t '
+alias tkill='echo "// tmux kill-session -t <name>"; tmux kill-session -t '
 
+alias wn='echo "// watch -n <secs-delay> <command+params>"; watch -n '
 
 goDir='/usr/local/go/bin';
 if [ -d $goDir ]; then
@@ -265,7 +267,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig:"${PKG_CONFIG_P
 # // for kubernetes setup need to run this
 #export KUBECONFIG="$(k3d get-kubeconfig --name=k3s-default)"
 # EXAMPLE:
-#export KUBECONFIG="/Users/reinhardtc/.config/k3d/k3s-default/kubeconfig.yaml"
+export KUBECONFIG="/Users/reinhardtc/.config/k3d/k3s-default/kubeconfig.yaml"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
