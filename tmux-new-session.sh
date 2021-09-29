@@ -25,18 +25,18 @@ tmux new -s $SESSION_ID -n cmd -d;
     #tmux split-window -h -l 60% -t $SESSION_ID:1.1;
     #// TODO: figure out why the resize is not working for the panes
 
-    #// WINDOW: CODE
-    #// create a new window for coding called 'CODE' (at window index 1 on session 'ps')
-    tmux new-window -t $SESSION_ID:2 -n CODE
-
     #// WINDOW: GIT
     #// create a new window for source control called 'git' (at window index 2 on session 'ps')
-    tmux new-window -t $SESSION_ID:3 -n git
+    tmux new-window -t $SESSION_ID:2 -n git
     #// split the window into a left and right pane at 27/73 ratio
-    tmux split-window -h -l 73% -t $SESSION_ID:3
+    tmux split-window -h -l 73% -t $SESSION_ID:2
     #// split the left pane into a top and bottom pane at 30/70 ratio
-    tmux split-window -v -l 70% -t $SESSION_ID:3.1
+    tmux split-window -v -l 70% -t $SESSION_ID:2.1
     
+    #// WINDOW: CODE
+    #// create a new window for coding called 'CODE' (at window index 1 on session 'ps')
+    tmux new-window -t $SESSION_ID:3 -n CODE
+
     #// WINDOW: MISC
     #// create a new window as a sandbax / tinkering / misc
     tmux new-window -t $SESSION_ID:4 -n misc 
