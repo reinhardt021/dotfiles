@@ -247,6 +247,9 @@ alias k='echo "// kubectl <command>"; kubectl'
 # 2> if the service isnt outputting logs, just reboot it
 # (sometime tilt just doesnt recognize the pods after a reboot and it can't capture the logs)
 
+alias kpods='echo "// kubectl get pod -o custom-columns=NAME:.metadata.name"; kubectl get pod -o custom-columns=NAME:.metadata.name'
+alias klog='echo "// kubectl logs -f --tail=10 <podname>"; kubectl logs -f --tail=10 '
+alias klogs='echo "// kubectl logs -f --tail=10 <podname>"; kubectl logs -f --tail=10 '
 alias kssh='echo "// kubectl exec --stdin --tty <podname> -- <shell command>"; kubectl exec --stdin --tty '
 alias kc='echo "// kubectl config <command>"; kubectl config '
 alias kcuc='echo "// kubectl config use-context <context>"; kubectl config use-context '
