@@ -219,6 +219,9 @@ call plug#begin('~/.config/nvim/plugged')
     " // provides syntax highlighting and improved indentation
     Plug 'pangloss/vim-javascript'
 
+    " // svelte syntax highlighting
+    Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
     " // to allow CSV parsing
     "Plug 'chrisbra/csv.vim'
     " // looks weird so commenting out for now
