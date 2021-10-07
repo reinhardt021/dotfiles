@@ -95,6 +95,9 @@ alias gs='echo "// git status"; git status'
 alias gd='echo "// git diff";git diff'
 alias gdc='echo "// git diff --cached"; git diff --cached' #// to see staged (added) changes (hunk)
 
+#// to push changes into the stash
+alias gspush='echo "// git stash push"; git stash push'
+
 #// to see a list of stashed patches
 alias gslist='echo "// git stash list"; git stash list'
 alias gsshow='echo "// git stash show -p"; git stash show -p'
@@ -103,7 +106,9 @@ alias gsshow='echo "// git stash show -p"; git stash show -p'
 # git show stash@{0} // to show tracked files stashed in index 0
 # git show stash@{0}^3 // to show untracked files stashed in index 0
 
-alias gspush='echo "// git stash push"; git stash push'
+#// to apply changes from a certain stash index (0 being at the top)
+# git stash apply <stash-index>
+
 # git stash push -m "message" <path>
 alias gsdrop='echo "// git stash drop <number>"; git stash drop '
 
@@ -170,6 +175,9 @@ alias glshow='echo "// git log -p"; git log -p'
 # // the diff with reset is that this does the opposite of the given commit 
 # // note: must use full hash that you can get from git log 
 # git revert <commit-hash || HEAD>
+
+#// to cherry pick a commit from another branch
+# git cherry-pick <commmit-hash>
 
 
 
