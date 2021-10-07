@@ -171,6 +171,9 @@ alias glshow='echo "// git log -p"; git log -p'
 # // note: must use full hash that you can get from git log 
 # git revert <commit-hash || HEAD>
 
+
+
+# TMUX
 alias t='echo "// tmux <command>"; tmux '
 alias tls='echo "// tmux ls"; tmux ls'
 alias tns='echo "// sh ~/dotfiles/tmux-new-session.sh"; function foo(){ sh ~/dotfiles/tmux-new-session.sh $1; unset -f foo; }; foo'
@@ -178,7 +181,40 @@ alias tas='echo "// tmux attach-session -t <name>"; tmux attach-session -t '
 alias trs='echo "// tmux rename-session -t <old-name> <new-name>"; tmux rename-session -t '
 alias tkill='echo "// tmux kill-session -t <name>"; tmux kill-session -t '
 
+
+# WATCH
 alias wn='echo "// watch -n <secs-delay> <command+params>"; watch -n '
+
+
+# POSTGRESQL
+#* `psql postgres`
+
+#* // to see users aka roles
+#* `\du`  or `\du+` to see more information
+
+#* // to create the needed users to create the database
+#* `create role surveycraft with createdb login password '<password>';`
+
+#* // to list all the databases
+#* `\l` or `\l+` to see more information
+
+#* // to change the database
+#* `\c <database_name>`
+
+#* // to see all the tables in the database
+#* `\dt` OR `\dt+` to see more information
+
+
+#// to run commands in postgres from CLI 
+#$ psql -U <user-name> -d <database-name> -c "<command>"
+#// example (list databases):
+#$ psql -U surveycraft -d SurveyCraft_development -c "\l+"
+
+#// to run sql in postgres from CLI
+#$ psql -U <user-name> -d <database-name> -f <file-path>
+#// example:
+#$ psql -U surveycraft -d SurveyCraft_development -f test.sql
+
 
 goDir='/usr/local/go/bin';
 if [ -d $goDir ]; then
