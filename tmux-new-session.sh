@@ -33,13 +33,20 @@ tmux new -s $SESSION_ID -n cmd -d;
     #// split the left pane into a top and bottom pane at 30/70 ratio
     tmux split-window -v -l 70% -t $SESSION_ID:2.1
     
+    #// WINDOW: DB 
+    tmux new-window -t $SESSION_ID:3 -n db
+    #// split the 'database' window into a top and bottom pane (vertical split) 
+    tmux split-window -v -t $SESSION_ID:3;
+    #// split the top 'database' window again (vertical split) 
+    tmux split-window -v -t $SESSION_ID:3.1;
+    
     #// WINDOW: CODE
     #// create a new window for coding called 'CODE' (at window index 1 on session 'ps')
-    tmux new-window -t $SESSION_ID:3 -n CODE
+    tmux new-window -t $SESSION_ID:4 -n CODE
 
     #// WINDOW: MISC
     #// create a new window as a sandbax / tinkering / misc
-    tmux new-window -t $SESSION_ID:4 -n misc 
+    tmux new-window -t $SESSION_ID:5 -n misc 
 fi
 echo "The new TMUX session ($SESSION_ID) is ready to ATTACH to now:"
 echo "$ tmux attach -t <session-name>"
