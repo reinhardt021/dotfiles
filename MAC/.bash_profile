@@ -162,6 +162,10 @@ alias gld='echo "// git log diff b/w remote"; git log origin/master..master'
 
 # // git log graph
 alias glg='echo "// git log --graph --pretty=format:.."; git log --pretty=format:"%C(dim white)%d%C(reset) %s %C(dim white)[%h %ae %cr]%C(reset)" --graph'
+# // to limit the amount of commits shown use the following:
+# $ glg -<number of commits>
+# OR
+# $ glg -n <number of commits>
 
 # // git log patches to see the diffs in each
 alias glp='echo "// git log -p"; git log -p'
