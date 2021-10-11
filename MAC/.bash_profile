@@ -1,3 +1,5 @@
+# SHELL SETUP
+
 # // show hidden files
 # cmd + shift + .
 
@@ -80,7 +82,6 @@ alias nv='echo "// nvim <command>"; nvim'
 
 # GIT
 alias g='echo "// git <command>"; git'
-
 alias gb='echo "// git branch"; git branch'
 # TODO: CHECK IF MAC OS
 alias gbc='echo "// git branch --show-current | pbcopy"; git branch --show-current | pbcopy'
