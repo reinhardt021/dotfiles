@@ -22,6 +22,10 @@ alias l='ls'
 #// alias to always prompt before overwriting and to be verbose"
 alias mv='mv -iv '
 
+#// Go directly to the Dotfiles folder
+alias cdd='echo "// cd ~/dotfiles"; cd ~/dotfiles'
+
+
 # get working directory
 alias gwd='echo "// pwd |pbcopy"; pwd |pbcopy'
 
