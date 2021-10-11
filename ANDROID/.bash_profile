@@ -8,6 +8,9 @@ else
   PS1="@\W\$ "
 fi
 
+#// Go directly to the Dotfiles folder
+alias cdd='echo "// cd ~/dotfiles"; cd ~/dotfiles'
+
 # modifying 'ls' command to default display all directory info
 alias ls='ls -aFG'
 alias l='ls'
