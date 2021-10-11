@@ -4,7 +4,10 @@
 # PS1="\u@\W\$"
 color_prompt=yes
 if [ "$color_prompt" = yes ]; then
-  PS1="\[\033[35m\]@\W\[\033[37m\]\$ "
+  #PS1="\[\033[35m\]@\W\[\033[37m\]\$ "
+  #PS1 = ${debian_chroot:+($debian_chroot)}\u@\h:\w\$
+  #ex: = root@ubuntu-s-1vcpu-1gb-sfo3-01:~#
+  PS1="${debian_chroot:+($debian_chroot)}\[\033[35m\]\u@\h:\w\[\033[37m\]\$ "
 else
   PS1="@\W\$ "
 fi
