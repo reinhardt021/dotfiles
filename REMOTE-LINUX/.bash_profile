@@ -1,5 +1,12 @@
 # SHELL SETUP
 
+# // to see OS from command line
+# $ uname
+# $ echo $OSTYPE
+
+# // to see OS version from linux
+# $ lsb_release -a
+
 # modifying the bash prompt to something simpler
 # PS1="\u@\W\$"
 color_prompt=yes

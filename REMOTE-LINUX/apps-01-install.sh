@@ -31,5 +31,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # // see the website: https://www.rust-lang.org/tools/install
 
 # .
-# GOTO apps-02-configh.sh
+# GOTO apps-02-config.sh
 
+# // install mosh to allow using mosh to tunnel into the server from any computer
+sudo apt-get install mosh
