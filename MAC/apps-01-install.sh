@@ -67,6 +67,9 @@
     # Preferences > Advanced > Mouse > Scroll wheel sends arrow keys when in alternate screen mode: YES
     # TODO: export these configs
 
+# // for better SSH when on mobile or just for spotty connections
+# brew install mosh
+
 # brew install tmux
 # brew install neovim
 # // configure all with the setup-config-MAC.sh
