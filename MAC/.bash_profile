@@ -89,8 +89,14 @@ alias gb='echo "// git branch"; git branch'
 # TODO: CHECK IF MAC OS
 alias gbc='echo "// git branch --show-current | pbcopy"; git branch --show-current | pbcopy'
 # TODO END CHECK
+
 # git branch -d <branch-name> // to delete local branch
 # git branch -D <branch-name> // to force delete local branch
+
+# // to delete the remote branch (merged or unmerged)
+# git push <remote> --delete <branch-name>
+# example:
+# git push origin --delete <branch-name>
 
 alias gc='echo "// git checkout <branch>"; git checkout'
 
