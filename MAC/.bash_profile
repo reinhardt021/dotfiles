@@ -1,5 +1,8 @@
 # SHELL SETUP
 
+# // to see the cpu cores on MAC
+# $ sysctl hw.physicalcpu hw.logicalcpu
+
 # // show hidden files
 # cmd + shift + .
 
