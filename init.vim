@@ -38,6 +38,13 @@ set nofoldenable "defaults no folding on first open
 " // toggle text WRAP
 " :set wrap!
 
+" // to CLOSE a VIM window
+" :q
+" // to save changes from a buffer
+" :w
+" // to CLOSE ALL of VIM
+" :qa
+
 " SESSIONS
 " // to save session (all buffers /panes as before)
 " :mksession path/to/file/<filename>.vim
@@ -45,18 +52,22 @@ set nofoldenable "defaults no folding on first open
 " :source path/to/file/<filename>.vim
 
 " TABS
+" // to list the tabs open
+" :tabs
 " // to create a new tab
 " :tabnew
 " // to go to next tab
 " gt (or :tabn)
 " // to go to previous tab
 " gT (or :tabp)
-" // to list the tabs open
-" :tabs
+
 " // to open current window (pane) into new tab
 " ctrl-w T
 " // to open current window (pane) into new tab but keep old window as is
 " :tabnew %
+
+" // to move current tab to a certain index
+" :tabmove <index>
 
 " NAVIGATION
 "   WINDOWS
