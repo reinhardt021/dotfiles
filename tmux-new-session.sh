@@ -43,11 +43,11 @@ tmux new -s $SESSION_ID -n cmd -d;
     #// WINDOW: CODE
     #// create a new window for coding called 'CODE' (at window index 1 on session 'ps')
     #tmux new-window -t $SESSION_ID:4 -n CODE
-    tmux new-window -t $SESSION_ID:4 -n 4
+    tmux new-window -t $SESSION_ID:4 -n app
 
     #// WINDOW: MISC
     #// create a new window as a sandbax / tinkering / misc
-    tmux new-window -t $SESSION_ID:5 -n 5 
+    tmux new-window -t $SESSION_ID:5 -n x 
 fi
 echo "The new TMUX session ($SESSION_ID) is ready to ATTACH to now:"
 echo "$ tmux attach -t <session-name>"
