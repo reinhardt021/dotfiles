@@ -208,34 +208,68 @@ alias tkill='echo "// tmux kill-session -t <name>"; tmux kill-session -t '
 alias wn='echo "// watch -n <secs-delay> <command+params>"; watch -n '
 
 
+# MYSQL
+#-- // to run commands in mysql from CLI 
+#-- $ mysql -h 127.0.0.1 -P 3306 -u root -p higherme -e "SHOW DATABASES;"
+
+#-- // Database creation
+#-- mysql> CREATE DATABASE <database_name>;
+#-- // to see users aka roles
+#-- mysql> SELECT user FROM mysql.user;
+#-- // to create the needed users to create the database
+#-- mysql> CREATE user <username>@<host> identified by '<password>';
+#-- // to see user priviledges
+#-- mysql> SELECT * FROM mysql.user;
+#-- // might also be good to check table columns with the DESCRIBE so we can pinpoint parts
+
+#-- // to list all the databases
+#-- mysql> SHOW DATABASES;
+#-- // to change the database
+#-- mysql> USE <database_name>;
+
+#-- // to see all the tables in the database
+#-- mysql> SHOW TABLES;
+#-- // to see table column names
+#-- mysql> DESCRIBE <database(optional)>.<table>;
+
+#SELECT *
+#FROM users u
+#WHERE u.email LIKE 'reinhardt%'
+#LIMIT 200
+#;
+
+#-- // $ mysql -h <host> -P <port> -u <username> -p <database>
+#-- // $ mysql -h 127.0.0.1 -P 3306 -u root -p higherme
+
+
 # POSTGRESQL
-#* `psql postgres`
-
-#* // to see users aka roles
-#* `\du`  or `\du+` to see more information
-
-#* // to create the needed users to create the database
-#* `create role surveycraft with createdb login password '<password>';`
-
-#* // to list all the databases
-#* `\l` or `\l+` to see more information
-
-#* // to change the database
-#* `\c <database_name>`
-
-#* // to see all the tables in the database
-#* `\dt` OR `\dt+` to see more information
-
-
 #// to run commands in postgres from CLI 
 #$ psql -U <user-name> -d <database-name> -c "<command>"
 #// example (list databases):
 #$ psql -U surveycraft -d SurveyCraft_development -c "\l+"
 
-#// to run sql in postgres from CLI
+#$ psql postgres
+
+# // to see users aka roles
+# `\du`  or `\du+` to see more information
+# // to create the needed users to create the database
+# `create role surveycraft with createdb login password '<password>';`
+
+# // to list all the databases
+# `\l` or `\l+` to see more information
+# // to change the database
+# `\c <database_name>`
+
+# // to see all the tables in the database
+# `\dt` OR `\dt+` to see more information
+# // to see table column names
+# `SELECT column_name FROM information_schema.columns WHERE table_name = '<table>';`
+
+
+#// to run .sql in postgres from CLI
 #$ psql -U <user-name> -d <database-name> -f <file-path>
 #// example:
-#$ psql -U surveycraft -d SurveyCraft_development -f test.sql
+#$ psql -U surveycraft -d SurveyCraft_development -f cli-db-queries.sql
 
 
 goDir='/usr/local/go/bin';
