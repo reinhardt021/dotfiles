@@ -238,8 +238,10 @@ alias wn='echo "// watch -n <secs-delay> <command+params>"; watch -n '
 #LIMIT 200
 #;
 
-#-- // $ mysql -h <host> -P <port> -u <username> -p <database>
-#-- // $ mysql -h 127.0.0.1 -P 3306 -u root -p higherme
+#-- // to run .sql in mysql from CLI
+#-- $ mysql -h <host> -P <port> -u <username> -p <database> < path/to/file.sql
+#-- // example:
+#-- $ mysql -h 127.0.0.1 -P 3306 -u root -p higherme < ./queries/cli-db-queries.sql
 
 
 # POSTGRESQL
