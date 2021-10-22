@@ -36,9 +36,10 @@ tmux new -s $SESSION_ID -n cmd -d;
     #// create a new window for source control called 'git' (at window index 2 on session 'ps')
     tmux new-window -t $SESSION_ID:3 -n git
     #// split the window into a left and right pane at 27/73 ratio
-    tmux split-window -h -l 73% -t $SESSION_ID:3
+    tmux split-window -h -l 27% -t $SESSION_ID:3
+    #tmux split-window -h -l 73% -t $SESSION_ID:3
     #// split the left pane into a top and bottom pane at 30/70 ratio
-    tmux split-window -v -l 70% -t $SESSION_ID:3.1
+    tmux split-window -v -l 70% -t $SESSION_ID:3.2
     
     #// WINDOW: CODE
     #// create a new window for coding called 'CODE' (at window index 1 on session 'ps')
