@@ -17,6 +17,30 @@
     # save .ssh/config to a USB stick <> onto computer
 # copy .ssh files
 
+# // MULTIPLE SSH KEY SETUP
+#$ ssh-keygen -t ed25519 -C "<your@email.com>"
+# // you will get the following prompt:
+# Generating public/private ed25519 key pair.
+# Enter file in which to save the key (/home/user/.ssh/id_ed25519):
+# // you then enter the /path/to/new/file/custom_file_name
+# // example: ~/.ssh/id_ed25519_custom
+# // then you must enter a passphrase
+# Enter passphrase (empty for no passphrase):
+# Enter same passphrase again:
+# // then you update the ~/.ssh/config file to include the new ssh-key
+#example:
+#Host github-hm
+    #HostName github.com
+    #User git
+    #IdentityFile ~/.ssh/id_ed25519_custom
+    #IdentitiesOnly yes
+
+# // add the ssh key to gitlab or github
+# // note: I usually name it <device-name> <email> <date> 
+# // example: MBP reinhardt.cgr@gmail.com 202101026
+# // clone the repo now
+#git clone @github-hm:user-name/project-repo.git
+
 # // CLONE DOTFILES into home/root directory ~ || /Users/reinhardtc
 # git clone git@github.com:reinhardtcgr/dotfiles.git
 # // can also set to specific ssh config
