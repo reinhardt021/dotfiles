@@ -1,5 +1,7 @@
 echo "Creating a new TMUX Session...\n"
 
+#sh=$SHELL
+#echo "note: The Shell being used is $sh";
 SESSION_ID="newS"
 INPUT="$1"
 #echo "//test inputs [$INPUT]"
@@ -22,11 +24,15 @@ tmux new -s $SESSION_ID -n cmd -d;
     #// split the 'command' window into a top and bottom pane (vertical split) 
     tmux split-window -v -t $SESSION_ID:1;
     #// split the 'command' window's top pane into a left & right pane (horizontal split) at 40/60 ratio
+    tmux split-window -v -t $SESSION_ID:1.1;
+    tmux send-keys -t $SESSION_ID:1.2 "watch -n 10 kubectl config get-contexts" Enter;
+    #tmux split-window -v -t $session_id:1.1 "echo 'run: watch -n 10 kubectl config get-contexts'; $sh -i";
+    #// doesn't work right now save commands to run later
     #tmux split-window -h -l 60% -t $SESSION_ID:1.1;
     #// TODO: figure out why the resize is not working for the panes
 
     #// WINDOW: DB 
-    tmux new-window -t $SESSION_ID:2 -n db
+    tmux new-window -t $SESSION_ID:2 -n db;
     #// split the 'database' window into a top and bottom pane (vertical split) 
     tmux split-window -v -t $SESSION_ID:2;
     #// split the top 'database' window again (vertical split) 
@@ -34,21 +40,28 @@ tmux new -s $SESSION_ID -n cmd -d;
     
     #// WINDOW: GIT
     #// create a new window for source control called 'git' (at window index 2 on session 'ps')
-    tmux new-window -t $SESSION_ID:3 -n git
+    tmux new-window -t $SESSION_ID:3 -n git;
     #// split the window into a left and right pane at 27/73 ratio
-    tmux split-window -h -l 27% -t $SESSION_ID:3
-    #tmux split-window -h -l 73% -t $SESSION_ID:3
+    tmux split-window -h -l 27% -t $SESSION_ID:3;
+    #tmux split-window -h -l 73% -t $SESSION_ID:3;
     #// split the left pane into a top and bottom pane at 30/70 ratio
-    tmux split-window -v -l 70% -t $SESSION_ID:3.2
+    #tmux set-option remain-on-exit on
+    tmux split-window -v -l 70% -t $SESSION_ID:3.2;
+    tmux send-keys -t $SESSION_ID:3.1 "glg" Enter;
+    tmux send-keys -t $SESSION_ID:3.1 "q";
+    tmux send-keys -t $SESSION_ID:3.2 "watch -n 10 git branch" Enter;
+    tmux send-keys -t $SESSION_ID:3.3 "watch -n 10 git stash list" Enter;
     
     #// WINDOW: CODE
     #// create a new window for coding called 'CODE' (at window index 1 on session 'ps')
     #tmux new-window -t $SESSION_ID:4 -n CODE
-    tmux new-window -t $SESSION_ID:4 -n app
+    tmux new-window -t $SESSION_ID:4 -n app;
+    tmux send-keys -t $SESSION_ID:4.1 "nv" Enter;
+    #tmux send-keys -t $SESSION_ID:4.1 "C-o"; # // can't seem to send this second command right away
 
     #// WINDOW: MISC
     #// create a new window as a sandbax / tinkering / misc
-    tmux new-window -t $SESSION_ID:5 -n x 
+    tmux new-window -t $SESSION_ID:5 -n x; 
 fi
 echo "The new TMUX session ($SESSION_ID) is ready to ATTACH to now:"
 echo "$ tmux attach -t <session-name>"
