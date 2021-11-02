@@ -170,7 +170,8 @@ alias gld='echo "// git log diff b/w remote"; git log origin/master..master'
 # git log master..origin/master
 
 # // git log graph
-alias glg='echo "// git log --graph --pretty=format:.."; git log --pretty=format:"%C(dim white)%d%C(reset) %s %C(dim white)[%ae %h %cr]%C(reset)" --graph'
+alias glg='echo "// git log --graph --format=.."; git log --format="%C(dim white)%d%C(reset) %s %C(dim white)[%ae %h %cr]%C(reset)" --graph'
+#@monorepo$ watch -n 5 'git log --format="%C(dim white)%d%C(reset) %s %C(dim white)[%ae %h %cr]%C(reset)" --graph'
 # // to limit the amount of commits shown use the following:
 # $ glg -<number of commits>
 # OR
