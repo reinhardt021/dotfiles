@@ -67,7 +67,11 @@ set nofoldenable "defaults no folding on first open
 " :tabnew %
 
 " // to move current tab to a certain index
-" :tabmove <index>
+" :tabmove <index|relative-index>
+" :tabm <index|relative-index>
+" ex:
+" :tabmove 2
+" :tabm -1
 
 " NAVIGATION
 "   WINDOWS
@@ -194,23 +198,32 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'jparise/vim-graphql' " graphQL syntax highlighting
     Plug 'StanAngeloff/php.vim' " php syntax highlighting
     Plug 'adoy/vim-php-refactoring-toolbox'
-        "<Leader>rlv //rename local variable
-        "<L>rcv //rename class variable
-        "<L>rm //rename method
-        "<L>eu //extract use statement
-        "<L>du //detect unused use statment
-        "<L>ec //extract const
-        "<L>ep //extract class property
-        "<L>em //extract method
-        "<L>cp //create property
-        "<L>== //align assignments (equals)
-        "<L>sg //create getters & setters
-        "<L>cog //create getters
-        "<L>da //document all using your document plugin
+    "<Leader>rlv //rename local variable
+    "<L>rcv //rename class variable
+    "<L>rm //rename method
+    "<L>eu //extract use statement
+    "<L>du //detect unused use statment
+    "<L>ec //extract const
+    "<L>ep //extract class property
+    "<L>em //extract method
+    "<L>cp //create property
+    "<L>== //align assignments (equals)
+    "<L>sg //create getters & setters
+    "<L>cog //create getters
+    "<L>da //document all using your document plugin
 
     Plug 'tpope/vim-fugitive'
     " :Git blame // to view the commit history
     "   <enter> // to view the selected commit 
+    " :Gclog // to view a list of commits and what you did in them
+    " // to manage git branches
+    Plug 'sodapopcan/vim-twiggy'
+    " :Twiggy
+    " ERROR: Unknown function FugitiveShellCommand()
+    " // a git commit browser
+    Plug 'junegunn/gv.vim' 
+    " :GV
+    " ERROR: Vim(let):E117: Unknown function: FugitiveShellCommand
 
     " // don't want to include tags just yet
     "Plug 'majutsushi/tagbar'
@@ -259,9 +272,12 @@ call plug#begin('~/.config/nvim/plugged')
     "Plug 'chrisbra/csv.vim'
     " // looks weird so commenting out for now
 
+    " //to install any plugins
     " :source % //to register a newly added plugin
-    " :PlugInstall //to install any plugins
-    " :PlugClean //to un-install any plugins
+    " :PlugInstall 
+    " //to un-install any plugins
+    " :source % 
+    " :PlugClean 
 call plug#end()
 
 " adds Truecolor to the terminal if supported
