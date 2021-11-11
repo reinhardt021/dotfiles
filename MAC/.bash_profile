@@ -107,6 +107,8 @@ alias gdc='echo "// git diff --cached"; git diff --cached' #// to see staged (ad
 
 #// to push changes into the stash
 alias gspush='echo "// git stash push"; git stash push'
+#// to push even untracked changes
+# git stash push --include-untracked <file>
 
 #// to see a list of stashed patches
 alias gslist='echo "// git stash list"; git stash list'
@@ -146,6 +148,9 @@ alias gf='echo "// git fetch"; git fetch'
 # // to open interactive to squash commits and give a better commit message
 # git rebase -i HEAD~<number-of-commits>
 # git rebase -i HEAD~9
+# // NOTE: should NOT have the file open in vim when rebasing
+# // change the 'pick' to 'reword' (or some other command like squash) then :wq
+# // once new editor opened you can make the new changes
 # // To push up the changes
 # git push --force origin feature/COR-7412-edocs-re-write-create-feature-switch
 
@@ -342,7 +347,7 @@ alias k='echo "// kubectl <command>"; kubectl'
 # 2> if the service isnt outputting logs, just reboot it
 # (sometime tilt just doesnt recognize the pods after a reboot and it can't capture the logs)
 
-alias kpods='echo "// kubectl get pod -o custom-columns=NAME:.metadata.name"; kubectl get pod -o custom-columns=NAME:.metadata.name'
+alias kpods='echo "// kubectl get pod -o custom-columns=NAME:.metadata.name |grep "; kubectl get pod -o custom-columns=NAME:.metadata.name |grep '
 alias klog='echo "// kubectl logs -f --tail=10 <podname>"; kubectl logs -f --tail=10 '
 alias klogs='echo "// kubectl logs -f --tail=10 <podname>"; kubectl logs -f --tail=10 '
 alias kssh='echo "// kubectl exec --stdin --tty <podname> -- <shell command>"; kubectl exec --stdin --tty '
