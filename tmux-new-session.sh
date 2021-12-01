@@ -48,7 +48,7 @@ tmux new -s $SESSION_ID -n cmd -d;
     tmux split-window -v -l 70% -t $SESSION_ID:3.2;
     #tmux send-keys -t $SESSION_ID:3.1 "watch -n 5 'git log --format=\"%C(dim white)%d%C(reset) %s %C(dim white)[%ae %h %cr]%C(reset)\" --graph'" Enter;
     tmux send-keys -t $SESSION_ID:3.1 "git log --format=\"%C(dim white)%d%C(reset) %s %C(dim white)[%ae %h %cr]%C(reset)\" --graph" Enter;
-    #tmux send-keys -t $SESSION_ID:3.1 "q";
+    tmux send-keys -t $SESSION_ID:3.1 "q" Enter;
     tmux send-keys -t $SESSION_ID:3.2 "watch -n 10 git branch" Enter;
     tmux send-keys -t $SESSION_ID:3.3 "watch -n 10 git stash list" Enter;
     tmux send-keys -t $SESSION_ID:3.4 "clear" Enter;
