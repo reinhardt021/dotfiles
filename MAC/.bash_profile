@@ -67,6 +67,7 @@ alias cdz='cd /Users/reinhardtc/Downloads/0-cloud/0-learn-software/zero-one'
 
 # // open trash bin 
 # $ open ~/.Trash/
+alias otrash='open ~/.Trash/'
 # // empty trash bin
 # cmd + shift + del
 
