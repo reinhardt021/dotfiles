@@ -226,18 +226,25 @@
 # // install Zoom (video communication platform) through calendar event
 # Skype #// not really necessary I feel
 
+# INSTALL ANDROID STUDIO
+# INSTALL GENYMOTION
+
+# INSTALL BRAVE BROWSER
+
 
 # OPEN APPLICATIONS
-
-## PERSONAL
-# open -a Evernote
-# open -a Firefox
 
 ## DEV CRAFT
 # open -a iTerm
 # open -a "Google Chrome"
+# open -a "Brave"
 # open -a "Sequel Pro"
 # open -a Postman
+
+## PERSONAL
+# open -a Evernote
+# open -a Firefox
+# open -a Brave
 
 # LINK Apple Calendar to Google Calendar
 # so can have offline information

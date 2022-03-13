@@ -363,6 +363,7 @@ MONOREPO_PATH='/Users/reinhardtc/HigherMe/monorepo'
 #PATH="/usr/local/Cellar/gcc/11.2.0/bin:${PATH}"
 PATH="/Applications/Xcode.app/Contents/Developer/usr/bin:${PATH}"
 PATH="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:${PATH}"
+PATH="/usr/bin:${PATH}"
 
 export MONOREPO_PATH="$MONOREPO_PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
@@ -427,3 +428,4 @@ export CODECOV_TOKEN="3da7afe8-0804-45ef-936e-2a0969bbeee3"
 
 # END OF FILE
 
+. "$HOME/.cargo/env"

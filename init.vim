@@ -272,6 +272,15 @@ call plug#begin('~/.config/nvim/plugged')
     "Plug 'chrisbra/csv.vim'
     " // looks weird so commenting out for now
 
+    " // to allow rust-lang parsing
+    Plug 'rust-lang/rust.vim'
+
+    " // to change surrounding (matching) tags or quotations
+    Plug 'tpope/vim-surround'
+    " cs"] // to change from " to ]
+    " cs'<q> // to change from ' to <q> and </q>
+    " cst{ // to change from <any-tag> to } with a space
+
     " //to install any plugins
     " :source % //to register a newly added plugin
     " :PlugInstall 
@@ -279,6 +288,10 @@ call plug#begin('~/.config/nvim/plugged')
     " :source % 
     " :PlugClean 
 call plug#end()
+
+" for full rust-lang parsing functionality
+syntax enable
+filetype plugin indent on
 
 " adds Truecolor to the terminal if supported
 set termguicolors
