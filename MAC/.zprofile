@@ -39,16 +39,16 @@ if [ "$color_prompt" = yes ]; then
   #37 is foreground white
   #m is used to set the sequence
   #\] is to end a sequence of non-printing characters
-  #\W is current working directory
-  PS1="%F{5}@%~ %f%F{15}$ " # // zsh
+  #\W is the basename of the current working directory
+  PS1="%F{5}@%. %f%F{15}$ " # // zsh
   # %F is foreground color start
   # %f is foreground color end
   # 5 is purple
-  # %~ is current working directory
+  # %. is basename of the current working directory
   # 15 is white
 else
   #PS1="@\W\$ " # // bash
-  PS1="@%~ $ " # // zsh
+  PS1="@%. $ " # // zsh
 fi
 
 # modifying 'ls' command to default display all directory info
