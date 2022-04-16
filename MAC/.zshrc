@@ -284,18 +284,27 @@ alias wn='echo "// watch -n <secs-delay> <command+params>"; watch -n '
 # // to see users aka roles
 # `\du`  or `\du+` to see more information
 # // to create the needed users to create the database
-# `create role surveycraft with createdb login password '<password>';`
+# `CREATE ROLE surveycraft WITH createdb login password '<password>';`
+# // to login with the new role just get out of psql and log back in
+# $ psql postgres -U <new_role>
 
 # // to list all the databases
 # `\l` or `\l+` to see more information
 # // to change the database
 # `\c <database_name>`
+# // to create database
+# CREATE DATABASE <database_name>;
 
 # // to see all the tables in the database
 # `\dt` OR `\dt+` to see more information
 # // to see table column names
 # `SELECT column_name FROM information_schema.columns WHERE table_name = '<table>';`
 
+# SELECT * FROM "<table>":
+
+# // insert example
+# INSERT INTO "<table>" (col1, col2, ...) VALUES (val1, 'val2', ...), (valA, valB, ...);
+# note: single quote for values and double for table name
 
 #// to run .sql in postgres from CLI
 #$ psql -U <user-name> -d <database-name> -f <file-path>
