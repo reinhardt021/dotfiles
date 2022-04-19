@@ -60,6 +60,9 @@ set nofoldenable "defaults no folding on first open
 " gt (or :tabn)
 " // to go to previous tab
 " gT (or :tabp)
+" // to go to tab i
+" <i>gt 
+" //ex: 3gt to go to tab 3
 
 " // to open current window (pane) into new tab
 " ctrl-w T
@@ -267,6 +270,9 @@ call plug#begin('~/.config/nvim/plugged')
 
     " // svelte syntax highlighting
     Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
+    " // vue syntax highlighting
+    Plug 'posva/vim-vue'
 
     " // to allow CSV parsing
     "Plug 'chrisbra/csv.vim'
