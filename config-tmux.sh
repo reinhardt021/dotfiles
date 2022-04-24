@@ -9,3 +9,6 @@
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 # // can then run the shell script for tmux setup for a new project
 # // run `:source ~/.tmux.conf` if already in tmux
+
+# // TODO: create folders ~/.tmux/config
+# // TODO: $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/config/tpm
