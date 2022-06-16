@@ -14,6 +14,13 @@
 # // show hidden files
 # cmd + shift + .
 
+# SSH
+# # // NOTE: We can just use the ~/.ssh/config as a shortcut to ssh into servers
+# $ ssh <Host>
+# // you will then be asked either for the username and password or the ssh passphrase
+# // to copy a file from the server to your local
+# $ scp <username>@<IPorHostName>:/remote/path/to/file ./loca/path/to/file
+
 # ITERM2
 # // for optimal use have the terminal app transparent and blurred
 
