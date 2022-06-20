@@ -245,6 +245,9 @@ alias wn='echo "// watch -n <secs-delay> <command+params>"; watch -n '
 
 
 # MYSQL
+#-- // to run mysql on mac
+#-- $ brew services start mysql
+#
 #-- // to run commands in mysql from CLI 
 #-- $ mysql -h 127.0.0.1 -P 3306 -u root -p higherme -e "SHOW DATABASES;"
 
@@ -254,9 +257,13 @@ alias wn='echo "// watch -n <secs-delay> <command+params>"; watch -n '
 #-- mysql> SELECT user FROM mysql.user;
 #-- // to create the needed users to create the database
 #-- mysql> CREATE user <username>@<host> identified by '<password>';
+#-- mysql> CREATE user <username>@localhost identified by '<password>';
 #-- // to see user priviledges
 #-- mysql> SELECT * FROM mysql.user;
 #-- // might also be good to check table columns with the DESCRIBE so we can pinpoint parts
+#-- // to see current user
+#-- mysql> SELECT user();
+#-- mysql> SELECT current_user();
 
 #-- // to list all the databases
 #-- mysql> SHOW DATABASES;
@@ -265,8 +272,10 @@ alias wn='echo "// watch -n <secs-delay> <command+params>"; watch -n '
 
 #-- // to see all the tables in the database
 #-- mysql> SHOW TABLES;
-#-- // to see table column names
+
+#-- // to see table columns names and other data
 #-- mysql> DESCRIBE <database(optional)>.<table>;
+#-- mysql> DESCRIBE users;
 
 #SELECT *
 #FROM users u
@@ -344,7 +353,9 @@ fi
 # TODO: ADD CHECK IF path esists then add
 # TODO CREATE LOOP OF THESE PATHS TO CHECK AND APPAEND
 # Setting PATH for php@7.4 tools
-PATH="/usr/local/opt/php@7.4/bin:${PATH}"
+#PATH="/usr/local/opt/php@7.4/bin:${PATH}"
+# PATH for php@8.0
+PATH="/usr/local/opt/php@8.0/bin:${PATH}"
 
 # Setting PATH for Python 3.8
 # The original version is saved in .bash_profile.pysave
