@@ -287,6 +287,7 @@ alias wn='echo "// watch -n <secs-delay> <command+params>"; watch -n '
 #-- $ mysql -h <host> -P <port> -u <username> -p <database> < path/to/file.sql
 #-- // example:
 #-- $ mysql -h 127.0.0.1 -P 3306 -u root -p higherme < ./queries/cli-db-queries.sql
+#-- $ mysql -h localhost -P 3306 -u innoiapa_green -p audiome_db < /Users/reinhardtc/Downloads/AUDIO-ME/audiome_db.sql
 
 
 # POSTGRESQL
