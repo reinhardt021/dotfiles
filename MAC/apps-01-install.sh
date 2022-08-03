@@ -3,21 +3,25 @@
 
 ## PERSONAL 
 
-# install Magnet from App Store #// for screen partitioning
-# install Firefox from Safari
+# []- install Magnet from App Store #// for screen partitioning
+# []- install Firefox from Safari
     # Manage Extensions > Settings > Auto Tab Discard > Discard Tab: cmd + shift + space
-# install Chrome from Safari
+# []- install Brave (chromium) from Safari
 # SETUP browsers
-    # login to both browsers to sync the tabs
-    # login to gmail 
-    # login to zoho for creds // firefox only
-    # change default search to duck duck go // both
+    # []- login to both browsers to sync the tabs
+    # []- login to raindrop.io on both browsers to sync the bookmarks accross devices / browsers
+    # []- login to gmail (brave)
+    # []- login to protonmail (firefox)
+    # []- login to zoho for creds // firefox only
+    # []- change default search to duck duck go // both
 
 # save .ssh/ FILES to a USB stick <> onto computer
     # save .ssh/config to a USB stick <> onto computer
 # copy .ssh files
 
 # // MULTIPLE SSH KEY SETUP
+#// might be able to find copy of .ssh/ folder in one of your USBs to bypass all this
+
 #$ ssh-keygen -t ed25519 -C "<your@email.com>"
 # // you will get the following prompt:
 # Generating public/private ed25519 key pair.
@@ -42,12 +46,12 @@
 #git clone @github-hm:user-name/project-repo.git
 
 # // CLONE DOTFILES into home/root directory ~ || /Users/reinhardtc
-# git clone git@github.com:reinhardtcgr/dotfiles.git
+# git clone git@github.com:reinhardt021/dotfiles.git
 # // can also set to specific ssh config
-# git clone git@github-personal:reinhardtcgr/dotfiles.git
+# git clone git@github-personal:reinhardt021/dotfiles.git
 
 # // to change remote after the fact
-# git remote set-url origin git@github-personal:reinhardtcgr/dotfiles.git
+# git remote set-url origin git@github-personal:reinhardt021/dotfiles.git
 # git remote -v 
 
 # // fix global git username and email for personal commits
@@ -56,78 +60,82 @@
 # // if you need to reset a recent comment then run the following:
 # git commit --amend --reset=author
 
-# // install HOMEBREW:
+#// []- install HOMEBREW:
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-#// install ExpressVPN from website + login
-#// install f.lux from website (command doesn't work)
+#// []- install ExpressVPN from website + login
+#// https://www.expressvpn.com/latest?utm_source=mac_app
+
+#// []- install f.lux from website (command doesn't work)
 #$ brew install --cask flux #// screen color temperature 
 
-#// have screenshots moved to the Downloads folder; note: absolute path
+#// []- have screenshots moved to the Downloads folder; note: absolute path not relative
 #$ mkdir ~/Downloads/SCREENSHOTS
 #$ defaults write com.apple.screencapture location /Users/reinhardtc/Downloads/SCREENSHOTS
 
-#// make the Notifications shortcut cmd + shift + =
+#// []- make the Notifications shortcut cmd + shift + =
 # System Preferences > Keyboard > Shortcuts > Mission Control > Show Notification Center 
 
-#brew install --cask caffeine #// prevents system from going to sleep
-#brew install --cask rescuetime #// time optimizing application
+# []- brew install --cask caffeine #// prevents system from going to sleep
+# []- brew install --cask rescuetime #// time optimizing application
     # // login to turn it on for system and firefox
 
 # // install ITERM(2)
-# brew install --cask iterm2
-    # Preferences > Appearances > General > Theme > Minimal # // adjust to minimal
-    # Preferences > Profiles > Window > Transparencey # // adjust bg transparency
+#  []- brew install --cask iterm2
+    #  []- Preferences > Appearances > General > Theme > Minimal # // adjust to minimal
+    #  []- Preferences > Profiles > Window > Transparencey # // adjust bg transparency
         # 1/6 = (1/3 * 1/2)
-    # Preferences > Profiles > Window > Blur # // adjust bg blur
+    #  []- Preferences > Profiles > Window > Blur # // adjust bg blur
         # 25%
-    # Preferences > Profiles > Colors > Color Presets > Pastel (Dark Background)
-    # Preferences > Profiles > Colors > Minimum Contrast: 50%
-    # Preferences > Profiles > Colors > Cursor Boost: 25%
-    # Preferences > Profiles > Colors > Cursor Colors > Cursor: 50% Gray
+    #  []- Preferences > Profiles > Colors > Color Presets > Pastel (Dark Background)
+    #  []- Preferences > Profiles > Colors > Minimum Contrast: 50%
+    #  []- Preferences > Profiles > Colors > Cursor Boost: 25%
+    #  []- Preferences > Profiles > Colors > Cursor Colors > Cursor: 50% Gray
     # // disable mouse reporting
-    # Preferences > Profiles > Terminal > Enable Mouse Reporting: NO / disabled / unchecked
+    #  []- Preferences > Profiles > Terminal > Enable Mouse Reporting: NO / disabled / unchecked
     # // how to scroll tmux and vim without scrolling window
-    # Preferences > Advanced > Mouse > Scroll wheel sends arrow keys when in alternate screen mode: YES
+    #  []- Preferences > Advanced > Mouse > Scroll wheel sends arrow keys when in alternate screen mode: YES
     # TODO: export these configs
 
 # // for better SSH when on mobile or just for spotty connections
-# brew install mosh
+#  []- brew install mosh
 
-# brew install tmux
-# brew install neovim
-# // configure all with the setup-config-MAC.sh
+#  []- brew install tmux
+#  []- brew install neovim
+# //  []- configure all with the setup-config-MAC.sh
     # chsh -s /bin/bash #// change default shell to bash
-# brew install ripgrep # // used for fzf.vim
-# brew install bat # // used for fzf.vim preview 
+#  []- brew install ripgrep # // used for fzf.vim
+#  []- brew install bat # // used for fzf.vim preview 
 
-# brew install tree # // to show directory tree
-# brew install watch # // to run shell to repeatedly run a cmd 
+#  []- brew install tree # // to show directory tree
+#  []- brew install watch # // to run shell to repeatedly run a cmd 
 # watch -n 10 <command + arguments> # // watches every 10 seconds
 
 # // restart iTerm to get new changes
 
-# brew install bash  # // to get latest bash
-# exec bash # // reload bash
-# bash --version # // verify update
+#  []- brew install bash  # // to get latest bash
+#// may need to update this to setup zsh
+#  []- exec bash # // reload bash
+#  []- bash --version # // verify update
 
-# // GIT auto completion
+# // []- GIT auto completion
 # // note need to run the following first
 # curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 
 
-# brew install --cask evernote
+#  []- brew install --cask evernote
     # Note > Note Width > Optimize for Readability
-# Ommwriter #// disk image in dropbox
+# Ommwriter #// disk image in dropbox or through APP STORE
+#  []- install NOTION
+# Notion #// not until they have offline feature .. w/e super helpful anyway
 
-# brew install --cask calibre #// e-books management software
-# Notion #// not until they have offline feature
+# brew install --cask calibre #// e-books management software (optional)
 
-# install discord
-# brew install --cask vlc #// video/audio playback
-# brew install --cask signal #// messaging app focusing on security
-# brew install --cask obs #// streaming
-# brew install --cask qbittorrent
+# install discord // just use browser
+# brew install --cask vlc #// video/audio playback (optional)
+# []- brew install --cask signal #// messaging app focusing on security
+# []- brew install --cask obs #// streaming
+# brew install --cask qbittorrent (optional)
 
 
 ## DEV CRAFT 
@@ -137,15 +145,17 @@
 #VirtualBox #// possibly for dev work
 
 # brew install --cask visual-studio-code #// optional backup IDE
-    # PHPStorm #// no longer needed
+    # PHPStorm #// no longer needed as using VIM
 
-# GIT CLIENT
+# GIT CLIENT (optional)
 # // use tmux panes instead
 # brew install --cask fork #// optional backup git client
     # SourceTree #// no need as well
 
 # PROJECT BUILD: LOCAL DEV ENVIRONMENT
+# // copy .ssh/ from backup USB
 # // have different users setup on github >> see ~/.ssh/config
+
 # // pull from remote repository with the specified ssh config
 # git clone git@github-hm:higher-me/monorepo.git
     # git fetch
@@ -156,7 +166,7 @@
 # git config --local user.name "Reinhardt Cagara"
 # git config --local user.email reinhardt@higherme.com
 
-# DATABASE CLIENT
+# DATABASE CLIENT (optional as using command line now)
 # brew install --cask dbeaver-community
 # brew install --cask sequel-pro
     # import DB configs (DBeaver / Sequel Pro)
@@ -168,9 +178,11 @@
 # brew install --cask postman #// api development
     # // just log in and it will all be there Collection + env vars
     # save Postman configs >> might not need this if saved to account
-
+    # optional as using httpie in commandline now
+    
 # install openssl for .bash_profile requirements and php@7.4 dependency
 # brew install openssl
+# []- investigate if this is still needed
 
 # install PHP 7.4 
 # // current mac default is 7.3
@@ -223,30 +235,28 @@
     # which aws
 
 # VIDEO CLIENT
-# // install Zoom (video communication platform) through calendar event
+# // []- install Zoom (video communication platform) through calendar event
 # Skype #// not really necessary I feel
 
-# INSTALL ANDROID STUDIO
-# INSTALL GENYMOTION
+# []- INSTALL XCode
+# []- INSTALL ANDROID STUDIO
+# INSTALL GENYMOTION (optional - haven't used it recently)
 
-# INSTALL BRAVE BROWSER
-
+# []- INSTALL HP Easy Start to use the HP Deskjet 2131 (print scan copy)
 
 # OPEN APPLICATIONS
 
 ## DEV CRAFT
-# open -a iTerm
-# open -a "Google Chrome"
 # open -a "Brave"
-# open -a "Sequel Pro"
-# open -a Postman
+# open -a iTerm
+# open -a Postman (deprecated)
+# open -a Firefox
 
 ## PERSONAL
-# open -a Evernote
+# open -a Evernote (deprecated)
+# open -a Notion
 # open -a Firefox
-# open -a Brave
 
 # LINK Apple Calendar to Google Calendar
 # so can have offline information
-
 
