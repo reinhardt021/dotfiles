@@ -13,6 +13,19 @@
     # []- login to gmail (brave)
     # []- login to protonmail (firefox)
     # []- login to zoho for creds // firefox only
+    # []- add extension: bitwarden // both
+    # []- login to BITWARDEN for creds // both
+    # []- add extension: pocket // both
+    # []- add extension: auto tab discard // both
+    # []- add extension: momentum // both
+    # []- add extension: rescuetime // both
+    # []- add extension: vimium // both
+    # []- add extension: honey // both
+    # []- add extension: colorzilla // both
+    # []- add extension: tubebuddy // both
+    # []- add extension: adblock plus - free ad blocker // both
+    # []- add extension: cookie autodelete // both
+    # []- add extension: disconnect // both
     # []- change default search to duck duck go // both
 
 # save .ssh/ FILES to a USB stick <> onto computer
@@ -126,6 +139,7 @@
 #  []- brew install --cask evernote
     # Note > Note Width > Optimize for Readability
 # Ommwriter #// disk image in dropbox or through APP STORE
+# Ommbits #// disk image in dropbox or through APP STORE
 #  []- install NOTION
 # Notion #// not until they have offline feature .. w/e super helpful anyway
 
@@ -140,9 +154,9 @@
 
 ## DEV CRAFT 
 
-#xcode-select --install #// Command Line Tools
-# // install XCODE 12 client as well from website
-#VirtualBox #// possibly for dev work
+# []- xcode-select --install #// Command Line Tools
+# // []- install XCODE 12 client as well from website
+# []- VirtualBox #// possibly for dev work
 
 # brew install --cask visual-studio-code #// optional backup IDE
     # PHPStorm #// no longer needed as using VIM
@@ -235,8 +249,10 @@
     # which aws
 
 # VIDEO CLIENT
-# // []- install Zoom (video communication platform) through calendar event
+# // []- install Zoom zoom ZOOM (video communication platform) through calendar event
 # Skype #// not really necessary I feel
+
+# // optional install of LOOM for screen recording
 
 # []- INSTALL XCode
 # []- INSTALL ANDROID STUDIO
