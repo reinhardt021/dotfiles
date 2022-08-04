@@ -1,22 +1,74 @@
-# INSTALL APPLICATIONS
-# note: these all will live in /Applications not the user specific one
+# MACBOOK SETUP
+# // ca. MacOS Monterey 12.5
 
-## PERSONAL 
+# []- Authorize Apple ID // iCloud sync and for access to TV / Notes / ...
+# []- turn ON FileVault // file encryption
 
-# []- install Magnet from App Store #// for screen partitioning
-# []- install Firefox from Safari
-    # Manage Extensions > Settings > Auto Tab Discard > Discard Tab: cmd + shift + space
+
+# // SYSTEM PREFERENCES
+# []- change background (Desktop & ScreenSaver) to adaptive landscape // for light & dark modes) 
+# []- change all active notifactions to banner & no sound (Notifications & Focus) // so they show but are then hidden
+
+# []- remove all apps from the dock
+# []- do NOT show recent apps (Dock & Menu Bar)
+# []- Automatically hide and show the Dock
+# []- Automatically hide and show the menu bar on desktop
+# []- do NOT show in Menu Bar: Display
+# []- DO show in Menu Bar the Battery: Percentage
+# []- DO show in Menu Bar the Clock: Use a 24-hour Clock
+# []- DO show in Menu Bar the Clock: Display the time with seconds
+# []- do NOT show in Menu Bar: Spotlight
+# []- DO show in Menu Bar: Time Machine
+
+# []- Battery: Enable Power Nap while on battery power
+# []- Battery: Low power mode
+# []- Power Adapter: Prevent your Mac from automatically sleeping when the display is off
+# []- Power Adapter: Low power mode
+
+# []- Language & Region > General: Time Format: 24-Hour Time
+
+# []- make Notifications shortcut: cmd + shift + =
+	# System Preferences > Keyboard > Shortcuts > Mission Control > Show Notification Center 
+# []- make LaunchPad shortcut: cmd + shift + -
+	# System Preferences > Keyboard > Shortcuts > Launchpad & Dock > Show Launchpad 
+
+# []- edit Notification Center: Clock widget to show times of 4 cities relevant to you
+
+# // FINDER PREFERENCES
+# []- default new tab to Downloads folder: General > New Finder windows show: Downloads
+# []- Sidebar: uncheck recent documents
+# []- Sidebar: uncheck documents
+# []- Advanced: show all filename extensions
+# []- show all hidden files: cmd + shift + .
+
+
+# // install PERSONAL applications
+# // note: these all will live in /Applications not the user specific one
+
+# // INSTALL from APP STORE
+# []- install Magnet // for screen partitioning
+# []- install OmmWriter // for writing
+# []- install XCode // for iOS App development
+
+# //  INSTALL from BROWSER downloads
 # []- install Brave (chromium) from Safari
-# SETUP browsers
-    # []- login to both browsers to sync the tabs
-    # []- login to raindrop.io on both browsers to sync the bookmarks accross devices / browsers
-    # []- login to gmail (brave)
-    # []- login to protonmail (firefox)
-    # []- login to zoho for creds // firefox only
+# []- install Firefox from Safari
+# // SETUP browsers
     # []- add extension: bitwarden // both
     # []- login to BITWARDEN for creds // both
-    # []- add extension: pocket // both
+    # []- login to zoho sheets for creds // firefox only
+    # []- login to both browsers to sync the tabs
+    # []- login to raindrop.io // on both browsers to sync the bookmarks accross devices / browsers
+    # []- login to gmail (brave)
+    # []- login to protonmail (firefox)
+    # []- login to spotify // for focus sessions - https://open.spotify.com/
+    # []- add extension: bitwarden // both
     # []- add extension: auto tab discard // both
+    # []- set hotkey keyboard shortcut for discarding tab:
+	    # brave://extensions/shortcuts => Auto Tab Discard > Discard Tab set: cmd + shift + space
+	    # Firefox: Manage Extensions > Settings > Auto Tab Discard > Discard Tab: cmd + shift + space
+    # []- add extension: raindrop // both
+    # []- add extension: pocket // both
     # []- add extension: momentum // both
     # []- add extension: rescuetime // both
     # []- add extension: vimium // both
@@ -27,129 +79,132 @@
     # []- add extension: cookie autodelete // both
     # []- add extension: disconnect // both
     # []- change default search to duck duck go // both
+# []- install ExpressVPN // to protect internet traffic - https://www.expressvpn.com/latest?utm_source=mac_app
+    # []- Preferences > Advanced > Appearance: Show ExpressVPN icon in Menu Bar only 
+# []- install f.lux // for less blue light at night [brew install --cask flux - brew command doesn't work]
 
-# save .ssh/ FILES to a USB stick <> onto computer
-    # save .ssh/config to a USB stick <> onto computer
-# copy .ssh files
 
-# // MULTIPLE SSH KEY SETUP
-#// might be able to find copy of .ssh/ folder in one of your USBs to bypass all this
+# []- make screenshots default to save into custom Downloads folder; note: absolute path not relative
+# $ mkdir ~/Downloads/SCREENSHOTS
+# $ defaults write com.apple.screencapture location /Users/reinhardt021/Downloads/SCREENSHOTS
 
-#$ ssh-keygen -t ed25519 -C "<your@email.com>"
+# []- install NOTION // not until they have offline feature .. w/e super helpful anyway
+# []- install Ommwriter // disk image in dropbox or through APP STORE
+# []- install Ommbits // disk image in dropbox or through APP STORE (optional)
+# []- brew install --cask evernote // Note > Note Width > Optimize for Readability (optional)
+
+# []- brew install --cask signal // messaging app focusing on security
+# []- install discord // just use browser
+
+# []- brew install --cask vlc // video/audio playback (optional)
+# []- brew install --cask obs // streaming
+# []- brew install --cask qbittorrent (optional)
+# []- brew install --cask calibre // e-books management software (optional)
+
+# []- brew install --cask caffeine // prevents system from going to sleep
+# []- brew install --cask rescuetime // time optimizing application - login to turn it on for system and firefox
+
+# []- install Zoom zoom ZOOM // video communication platform - through calendar event
+# []- insatll Skype skype SKYPE // not really necessary I feel
+
+# []- install Loom loom LOOM (optional) // for screen recording
+
+# []- install XCode
+# []- install ANDROID STUDIO
+# []- install GENYMOTION (optional - haven't used it recently)
+
+# []- install HP Easy Start to use the HP Deskjet 2131 (print scan copy)
+
+
+## MULTIPLE SSH KEY SETUP
+# // might be able to find copy of .ssh/ folder in one of your USBs to bypass all this
+# []- save .ssh/ FILES to a USB stick <> onto computer
+# []- save .ssh/config to a USB stick <> onto computer
+# []- copy .ssh files
+
+# $ ssh-keygen -t ed25519 -C "<your@email.com>"
 # // you will get the following prompt:
 # Generating public/private ed25519 key pair.
 # Enter file in which to save the key (/home/user/.ssh/id_ed25519):
-# // you then enter the /path/to/new/file/custom_file_name
-# // example: ~/.ssh/id_ed25519_custom
+# // you then enter the /absolute_path/to/new/file/custom_file_name OR just press enter to take default
+# example: ~/.ssh/id_ed25519_custom
 # // then you must enter a passphrase
 # Enter passphrase (empty for no passphrase):
 # Enter same passphrase again:
 # // then you update the ~/.ssh/config file to include the new ssh-key
-#example:
-#Host github-hm
+# example:
+# Host github-hm
     #HostName github.com
     #User git
     #IdentityFile ~/.ssh/id_ed25519_custom
     #IdentitiesOnly yes
 
-# // add the ssh key to gitlab or github
+# // ADD the SSH KEY to CLOUD SERVICE (ex: gitlab or github)
 # // note: I usually name it <device-name> <email> <date> 
 # // example: MBP reinhardt.cgr@gmail.com 202101026
 # // clone the repo now
-#git clone @github-hm:user-name/project-repo.git
+# $ git clone @github-hm:user-name/project-repo.git
 
 # // CLONE DOTFILES into home/root directory ~ || /Users/reinhardtc
-# git clone git@github.com:reinhardt021/dotfiles.git
+# $ git clone git@github.com:reinhardt021/dotfiles.git
 # // can also set to specific ssh config
-# git clone git@github-personal:reinhardt021/dotfiles.git
+# $ git clone git@github-personal:reinhardt021/dotfiles.git
 
 # // to change remote after the fact
-# git remote set-url origin git@github-personal:reinhardt021/dotfiles.git
-# git remote -v 
+# $ git remote set-url origin git@github-personal:reinhardt021/dotfiles.git
+# $ git remote -v 
 
 # // fix global git username and email for personal commits
-# git config --global user.name "Reinhardt"
-# git config --global user.email reinhardt.cgr@gmail.com
+# $ git config --global user.name "Reinhardt"
+# $ git config --global user.email reinhardt.cgr@gmail.com
 # // if you need to reset a recent comment then run the following:
-# git commit --amend --reset=author
+# $ git commit --amend --reset=author
 
-#// []- install HOMEBREW:
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# []- install HOMEBREW:
+# $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-#// []- install ExpressVPN from website + login
-#// https://www.expressvpn.com/latest?utm_source=mac_app
 
-#// []- install f.lux from website (command doesn't work)
-#$ brew install --cask flux #// screen color temperature 
-
-#// []- have screenshots moved to the Downloads folder; note: absolute path not relative
-#$ mkdir ~/Downloads/SCREENSHOTS
-#$ defaults write com.apple.screencapture location /Users/reinhardtc/Downloads/SCREENSHOTS
-
-#// []- make the Notifications shortcut cmd + shift + =
-# System Preferences > Keyboard > Shortcuts > Mission Control > Show Notification Center 
-
-# []- brew install --cask caffeine #// prevents system from going to sleep
-# []- brew install --cask rescuetime #// time optimizing application
-    # // login to turn it on for system and firefox
-
-# // install ITERM(2)
-#  []- brew install --cask iterm2
-    #  []- Preferences > Appearances > General > Theme > Minimal # // adjust to minimal
-    #  []- Preferences > Profiles > Window > Transparencey # // adjust bg transparency
+# install ITERM(2)
+# []- brew install --cask iterm2
+    # []- Preferences > Appearances > General > Theme > Minimal # // adjust to minimal
+    # []- Preferences > Profiles > Window > Transparencey # // adjust bg transparency
         # 1/6 = (1/3 * 1/2)
-    #  []- Preferences > Profiles > Window > Blur # // adjust bg blur
+    # []- Preferences > Profiles > Window > Blur # // adjust bg blur
         # 25%
-    #  []- Preferences > Profiles > Colors > Color Presets > Pastel (Dark Background)
-    #  []- Preferences > Profiles > Colors > Minimum Contrast: 50%
-    #  []- Preferences > Profiles > Colors > Cursor Boost: 25%
-    #  []- Preferences > Profiles > Colors > Cursor Colors > Cursor: 50% Gray
+    # []- Preferences > Profiles > Colors > Color Presets > Pastel (Dark Background)
+    # []- Preferences > Profiles > Colors > Minimum Contrast: 50%
+    # []- Preferences > Profiles > Colors > Cursor Boost: 25%
+    # []- Preferences > Profiles > Colors > Cursor Colors > Cursor: 50% Gray
     # // disable mouse reporting
-    #  []- Preferences > Profiles > Terminal > Enable Mouse Reporting: NO / disabled / unchecked
+    # []- Preferences > Profiles > Terminal > Enable Mouse Reporting: NO / disabled / unchecked
     # // how to scroll tmux and vim without scrolling window
-    #  []- Preferences > Advanced > Mouse > Scroll wheel sends arrow keys when in alternate screen mode: YES
+    # []- Preferences > Advanced > Mouse > Scroll wheel sends arrow keys when in alternate screen mode: YES
     # TODO: export these configs
 
-# // for better SSH when on mobile or just for spotty connections
-#  []- brew install mosh
-
-#  []- brew install tmux
-#  []- brew install neovim
-# //  []- configure all with the setup-config-MAC.sh
+# []- brew install tmux
+# []- brew install neovim
+# []- configure all with the setup-config-MAC.sh
     # chsh -s /bin/bash #// change default shell to bash
-#  []- brew install ripgrep # // used for fzf.vim
-#  []- brew install bat # // used for fzf.vim preview 
+# []- brew install ripgrep # // used for fzf.vim
+# []- brew install bat # // used for fzf.vim preview 
 
-#  []- brew install tree # // to show directory tree
-#  []- brew install watch # // to run shell to repeatedly run a cmd 
-# watch -n 10 <command + arguments> # // watches every 10 seconds
+# []- brew install tree # // to show directory tree
+# []- brew install watch # // to run shell to repeatedly run a cmd 
+	# watch -n 10 <command + arguments> # // watches every 10 seconds
+# []- brew install mosh // for better SSH when on mobile or just for spotty connections
 
-# // restart iTerm to get new changes
+# []- RESTART ITERM // to get new changes
 
-#  []- brew install bash  # // to get latest bash
-#// may need to update this to setup zsh
-#  []- exec bash # // reload bash
-#  []- bash --version # // verify update
 
-# // []- GIT auto completion
+# // may need to update this to setup zsh
+# []- brew install bash // to get latest bash (DEPRECATED)
+# []- exec bash // reload bash
+# []- bash --version // verify update
+
+# []- GIT auto completion
 # // note need to run the following first
 # curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 
-
-#  []- brew install --cask evernote
-    # Note > Note Width > Optimize for Readability
-# Ommwriter #// disk image in dropbox or through APP STORE
-# Ommbits #// disk image in dropbox or through APP STORE
-#  []- install NOTION
-# Notion #// not until they have offline feature .. w/e super helpful anyway
-
-# brew install --cask calibre #// e-books management software (optional)
-
-# install discord // just use browser
-# brew install --cask vlc #// video/audio playback (optional)
-# []- brew install --cask signal #// messaging app focusing on security
-# []- brew install --cask obs #// streaming
-# brew install --cask qbittorrent (optional)
 
 
 ## DEV CRAFT 
@@ -248,17 +303,6 @@
     # aws --version # // check install worked
     # which aws
 
-# VIDEO CLIENT
-# // []- install Zoom zoom ZOOM (video communication platform) through calendar event
-# Skype #// not really necessary I feel
-
-# // optional install of LOOM for screen recording
-
-# []- INSTALL XCode
-# []- INSTALL ANDROID STUDIO
-# INSTALL GENYMOTION (optional - haven't used it recently)
-
-# []- INSTALL HP Easy Start to use the HP Deskjet 2131 (print scan copy)
 
 # OPEN APPLICATIONS
 
@@ -269,10 +313,9 @@
 # open -a Firefox
 
 ## PERSONAL
-# open -a Evernote (deprecated)
+# open -a Firefox (optional)
 # open -a Notion
-# open -a Firefox
+# open -a Evernote (deprecated)
 
-# LINK Apple Calendar to Google Calendar
-# so can have offline information
+# []- LINK Apple Calendar to Google Calendar (optional) // so can have offline information
 
