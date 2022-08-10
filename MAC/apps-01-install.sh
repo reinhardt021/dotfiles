@@ -1,16 +1,16 @@
 # MACBOOK SETUP
 # // ca. MacOS Monterey 12.5
 
-# []- Authorize Apple ID // iCloud sync and for access to TV / Notes / ...
-# []- turn ON FileVault // file encryption
+# [x]- Authorize Apple ID // iCloud sync and for access to TV / Notes / ...
+# [x]- turn ON FileVault // file encryption
 
 
 # // SYSTEM PREFERENCES
-# []- change background (Desktop & ScreenSaver) to adaptive landscape // for light & dark modes) 
-# []- change all active notifactions to banner & no sound (Notifications & Focus) // so they show but are then hidden
+# [x]- change background (Desktop & ScreenSaver) to adaptive landscape // for light & dark modes) 
+# [x]- change all active notifactions to banner & no sound (Notifications & Focus) // so they show but are then hidden
 
-# []- remove all apps from the dock
-# []- do NOT show recent apps (Dock & Menu Bar)
+# [x]- remove all apps from the dock
+# [x]- do NOT show recent apps (Dock & Menu Bar)
 # []- Automatically hide and show the Dock
 # []- Automatically hide and show the menu bar on desktop
 # []- do NOT show in Menu Bar: Display
@@ -83,15 +83,36 @@
     # []- Preferences > Advanced > Appearance: Show ExpressVPN icon in Menu Bar only 
 # []- install f.lux // for less blue light at night [brew install --cask flux - brew command doesn't work]
 
+# [x]- install NOTION // not until they have offline feature .. w/e super helpful anyway
+# [x]- install Ommwriter // disk image in dropbox or through APP STORE
+# []- install Ommbits // disk image in dropbox or through APP STORE (optional)
+# []- brew install --cask evernote // Note > Note Width > Optimize for Readability (optional)
 
-# []- make screenshots default to save into custom Downloads folder; note: absolute path not relative
+# [x]- install HP Easy Start to use the HP Deskjet 2130 (print scan copy)
+
+
+# // TERMINAL || SHELL
+
+# [x]- make screenshots default to save into custom Downloads folder; note: absolute path not relative
 # $ mkdir ~/Downloads/SCREENSHOTS
 # $ defaults write com.apple.screencapture location /Users/reinhardt021/Downloads/SCREENSHOTS
 
-# []- install NOTION // not until they have offline feature .. w/e super helpful anyway
-# []- install Ommwriter // disk image in dropbox or through APP STORE
-# []- install Ommbits // disk image in dropbox or through APP STORE (optional)
-# []- brew install --cask evernote // Note > Note Width > Optimize for Readability (optional)
+# [x]- install HOMEBREW:
+# // can check website -> https://brew.sh/
+# $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# [x]- brew install --cask caffeine // prevents system from going to sleep
+# [x]- brew install --cask rescuetime // time optimizing application - login to turn it on for system and firefox
+# []- install RescueTime Assistant // to have better control of focus sessions
+
+# [x]- install Zoom zoom ZOOM // video communication platform - through calendar event
+# []- insatll Skype skype SKYPE (optional) // not really necessary I feel
+
+# []- install Loom loom LOOM (optional) // for screen recording
+
+# []- install XCode
+# []- install ANDROID STUDIO
+# []- install GENYMOTION (optional - haven't used it recently)
 
 # []- brew install --cask signal // messaging app focusing on security
 # []- install discord // just use browser
@@ -100,20 +121,6 @@
 # []- brew install --cask obs // streaming
 # []- brew install --cask qbittorrent (optional)
 # []- brew install --cask calibre // e-books management software (optional)
-
-# []- brew install --cask caffeine // prevents system from going to sleep
-# []- brew install --cask rescuetime // time optimizing application - login to turn it on for system and firefox
-
-# []- install Zoom zoom ZOOM // video communication platform - through calendar event
-# []- insatll Skype skype SKYPE // not really necessary I feel
-
-# []- install Loom loom LOOM (optional) // for screen recording
-
-# []- install XCode
-# []- install ANDROID STUDIO
-# []- install GENYMOTION (optional - haven't used it recently)
-
-# []- install HP Easy Start to use the HP Deskjet 2131 (print scan copy)
 
 
 ## MULTIPLE SSH KEY SETUP
@@ -160,11 +167,8 @@
 # // if you need to reset a recent comment then run the following:
 # $ git commit --amend --reset=author
 
-# []- install HOMEBREW:
-# $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-
-# install ITERM(2)
+# install ITERM(2) (optional - can just use Terminal with tmux)
 # []- brew install --cask iterm2
     # []- Preferences > Appearances > General > Theme > Minimal # // adjust to minimal
     # []- Preferences > Profiles > Window > Transparencey # // adjust bg transparency
