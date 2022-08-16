@@ -34,8 +34,8 @@
 
 # []- edit Notification Center: Clock widget to show times of 4 cities relevant to you
 
-# []- uncheck Lookup in Dictionary for mouse click
-# // System Preferences > Keyboard > Shortcuts > Services > "Lookup in Dictionary"
+# []- disable Lookup for 'force' mouse click
+# // System Preferences > Trackpad > Point & Click > Lookup & Data Detectors > change to 'Tap with three fingers'
 
 # // FINDER PREFERENCES
 # []- default new tab to Downloads folder: General > New Finder windows show: Downloads
