@@ -278,8 +278,13 @@ call plug#begin('~/.config/nvim/plugged')
     "Plug 'chrisbra/csv.vim'
     " // looks weird so commenting out for now
 
-    " // to allow rust-lang parsing
+    " // to allow rust-lang parsing and syntax highlighting
     Plug 'rust-lang/rust.vim'
+
+    " // to allow ruby lang parsing and syntax highlighting
+    Plug 'vim-ruby/vim-ruby'
+    " // to allow ruby lang parsing and syntax highlighting
+    Plug 'tpope/vim-rails'
 
     " // to change surrounding (matching) tags or quotations
     Plug 'tpope/vim-surround'
