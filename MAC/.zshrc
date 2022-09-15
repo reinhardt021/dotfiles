@@ -484,3 +484,6 @@ export CODECOV_TOKEN="3da7afe8-0804-45ef-936e-2a0969bbeee3"
 # END OF FILE
 
 . "$HOME/.cargo/env"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

@@ -310,13 +310,27 @@
     # aws --version # // check install worked
     # which aws
 
+# install RUBY ON RAILS ruby on rails
+
+# // install RVM to have the proper version ~2.7.0
+# $ curl -sSL https://get.rvm.io | bash -s stable --ruby
+# // reference: https://rvm.io/rvm/install
+
+# // install rails
+# $ gem install rails
+
+# // start a new rails project
+# $ rails new blog 
+# // start up the web server
+# $ bin/rails server
+
 
 # OPEN APPLICATIONS
 
 ## DEV CRAFT
 # open -a "Brave"
 # open -a iTerm
-# open -a Postman (deprecated)
+# open -a Postman (deprecated => using HTTPIE)
 # open -a Firefox
 
 ## PERSONAL
