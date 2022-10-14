@@ -64,6 +64,9 @@ alias l='ls'
 # -a for showing hidden files
 # -F for files vs directories
 # -G for colors
+#export LSCOLORS=exfxcxdxbxegedabagacad # default ls colors
+export LSCOLORS=Hxfxcxdxbxegedabagacad # default ls colors to have directories as bold light grey
+
 
 #// alias to always prompt before overwriting and to be verbose"
 alias mv='mv -iv '
