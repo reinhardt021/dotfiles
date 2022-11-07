@@ -82,6 +82,7 @@ alias mv='mv -iv '
 alias cdd='echo "// cd ~/dotfiles"; cd ~/dotfiles'
 alias cdD='echo "// cd ~/Downloads"; cd ~/Downloads'
 alias cdH='echo "// cd ~/HigherMe"; cd ~/HigherMe'
+alias cdO='echo "// cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/OBSIDIAN"; cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/OBSIDIAN'
 # just making it easier to 
 # go between docker setup & monorepo setup 
 alias cdk='echo "// cd ~/HigherMe/higherme-docker"; cd ~/HigherMe/higherme-docker'
