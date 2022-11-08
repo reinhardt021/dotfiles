@@ -25,6 +25,8 @@ for x in arr [do]
 end
 ```
 
+- diff: for-in keeps variable after loop
+
 - EACH
 ```
 (0..5).each do |item|
