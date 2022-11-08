@@ -24,6 +24,7 @@ alias gb='git branch'
 alias gc='git checkout' 
 
 alias gp='git pull'
+alias gpom='git push origin main'
 alias gf='git fetch' 
 alias ga='git add' 
 alias gs='git status'
