@@ -2,8 +2,14 @@
 
 ## SEMANTIC TAGS
 
+<!DOCTYPE html>
+// need this even before anything else
+
 <mark> // for highlighting
 <video> // for youtube videos
+
+// self closing tags no longer need forward slash
+<img>
 
 ## textarea sizing
 
