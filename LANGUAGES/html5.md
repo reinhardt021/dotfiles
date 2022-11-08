@@ -5,6 +5,10 @@
 <mark> // for highlighting
 <video> // for youtube videos
 
+## textarea sizing
+
+<textarea id="w3review" name="w3review" rows="4" cols="50">
+
 ## Grouping Table Headers
 
 ```
