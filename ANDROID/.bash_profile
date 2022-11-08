@@ -70,6 +70,11 @@ alias glshow='echo "// git log -p"; git log -p'
 # // to reset to a previous commit but careful as you lose everything 
 # git reset --hard <commit-ID || HEAD>
 
+# SAVE TO SSH AGENT
+#// to never need to enter passphrase again
+#eval $(ssh-agent)
+#ssh-add
+#// enter passphrase
 
 alias cdh='cd ~'
 alias cdx='cd /data/data/com.termux/files/home/storage/downloads/_esc'
