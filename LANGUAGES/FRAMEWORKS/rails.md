@@ -16,13 +16,50 @@ $ rails console
 
 ## ACTIVE MODEL
 
+`bin/rails g model User email:string password_digest:string`
+
 ## ACTIVE RECORD
+
+### ActiveRecord#MIGRATION
+
+- rename_column(table_name, old_name, new_name) // keeps type & content
 
 ## ACTION CABLE
 
 websockets
 
+## MIDDLEWARE
+
+- RACK interface: between the web server (Puma) and the app (Rails)
+    - RACK middleware (multiple make a middleware stack - pipeline design pattern)
+    - [ref](https://www.rubyguides.com/2018/09/rack-middleware/)
+    - [ref](https://cdragon.medium.com/what-is-ruby-rack-build-your-first-rack-app-32771cde34d9)
+    - [ref](https://medium.com/whynotio/what-is-rack-in-ruby-7e0615f1d9b6)
+    - [ref](https://www.solutelabs.com/blog/what-is-rack-a-ruby-on-rails-webserver-interface)
+
 ## ACTION CONTROLLER
+
+### ROUTING
+
+- namespace vs scope: difference is the naming; namespace adds a prefix
+
+```
+namespace :blog do
+  // automatically add :as as well as :module and :path prefixes
+  // scope "/blog", as: "blog", module: "blog" do
+  resources :contexts
+end
+// config/routes.rb
+blog_context GET    /blog/contexts/:id(.:format)      {:action=>"show", :controller=>"blog/contexts"}
+
+scope :module => 'blog' do
+  resources :contexts
+end
+// config/routes.rb
+context GET    /contexts/:id(.:format)       {:action=>"show", :controller=>"blog/contexts"}
+
+
+```
 
 ## ACTIVE JOBS
 
