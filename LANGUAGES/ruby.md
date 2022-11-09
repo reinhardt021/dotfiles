@@ -1,5 +1,11 @@
 # RUBY
 
+## ARRAYS
+
+arr = []
+arr << item
+arr.join("\n")
+
 ## LOOPS
 
 - WHILE
