@@ -135,10 +135,12 @@ alias gf='echo "// git fetch"; git fetch'
 alias gpull='echo "// git pull <branch>"; git pull'
 alias gpush='echo "// git push <branch>"; git push'
 
-alias ga='echo "// git add <files>"; git add ' 
 alias gs='echo "// git status"; git status'
 alias gd='echo "// git diff";git diff'
 alias gdc='echo "// git diff --cached"; git diff --cached' #// to see staged (added) changes (hunk)
+
+alias ga='echo "// git add <files>"; git add ' 
+alias gcm='echo "// git commit -m <text>"; git commit -m ' 
 
 #// to push changes into the stash
 alias gspush='echo "// git stash push"; git stash push'

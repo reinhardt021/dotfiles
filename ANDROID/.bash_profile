@@ -33,11 +33,12 @@ alias gpull='echo "// git pull <branch>"; git pull'
 alias gpush='echo "// git push <branch>"; git push'
 alias gpom='echo "// git push origin main"; git push origin main'
 
-alias ga='git add' 
 alias gs='git status'
-
 alias gd='git diff' 
 alias gdc='git diff --cached' #// to see staged (added) changes (hunk)
+
+alias ga='git add' 
+alias gcm='echo "// git commit -m <text>"; git commit -m ' 
 
 #// to see a list of stashed patches
 alias gslist='echo "// git stash list"; git stash list'
