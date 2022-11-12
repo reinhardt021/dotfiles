@@ -21,13 +21,16 @@ alias l='ls'
 # GIT
 alias g='git'
 alias gb='git branch'
-alias gc='git checkout' 
+alias gc='echo "// git checkout <branch>"; git checkout'
 
 alias gp='git pull'
-alias gpom='git push origin main'
-alias gf='git fetch' 
+alias gpull='echo "// git pull <branch>"; git pull'
+alias gpush='echo "// git push <branch>"; git push'
+alias gpom='echo "// git push origin main"; git push origin main'
+
 alias ga='git add' 
 alias gs='git status'
+
 alias gd='git diff' 
 alias gdc='git diff --cached' #// to see staged (added) changes (hunk)
 
@@ -54,7 +57,7 @@ alias gl='git log'
 
 # // to see which commits are on your master which you haven't yet pushed
 # git log origin/master..master
-alias gld='echo "// git log diff b/w remote"; git log origin/master..master'
+alias gld='echo "// git log diff b/w remote"; git log origin/main..main'
 
 # // to see which commits are on origin/master but not yet on master
 # git log master..origin/master
@@ -67,6 +70,9 @@ alias glp='echo "// git log -p"; git log -p'
 # // can add --author='Reinhardt' to see changes  by specific people
 # // just another alias to make t easier to view changes
 alias glshow='echo "// git log -p"; git log -p'
+
+# // git log FILES to see which files were updated
+alias glf='echo "// git log --name-only --oneline"; git log --name-only --oneline'
 
 # // to reset to a previous commit but careful as you lose everything 
 # git reset --hard <commit-ID || HEAD>

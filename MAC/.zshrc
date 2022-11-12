@@ -88,15 +88,14 @@ alias cdO='echo "// cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/
 alias cdk='echo "// cd ~/HigherMe/higherme-docker"; cd ~/HigherMe/higherme-docker'
 alias cdj='cd ~/HigherMe/higherme-docker/sites/higherme/higherme-laravel-5/resources/assets/js
 '
-alias cdh='cd ~/HigherMe/higherme'
+#alias cdh='cd ~/HigherMe/higherme'
 # // no longer have these directories after laptop reset
 #alias cdh='cd ~/HigherMe/higherme-docker/sites/higherme'
 #alias cdl='cd ~/HigherMe/higherme-docker/sites/highermeapi'
-alias cdm='echo "// cd ~/HigherMe/monorepo"; cd ~/HigherMe/monorepo'
+#alias cdm='echo "// cd ~/HigherMe/monorepo"; cd ~/HigherMe/monorepo'
 
-alias cdr='cd /Users/reinhardtc/Downloads/0-cloud/0-learn-software/reinhardtcgr.github.io'
-
-alias cdz='cd /Users/reinhardtc/Downloads/0-cloud/0-learn-software/zero-one'
+#alias cdr='cd /Users/reinhardtc/Downloads/0-cloud/0-learn-software/reinhardtcgr.github.io'
+#alias cdz='cd /Users/reinhardtc/Downloads/0-cloud/0-learn-software/zero-one'
 
 # // open trash bin 
 # $ open ~/.Trash/
@@ -133,6 +132,9 @@ alias gbc='echo "// git branch --show-current | pbcopy"; git branch --show-curre
 # git push origin --delete <branch-name>
 
 alias gc='echo "// git checkout <branch>"; git checkout'
+
+alias gpull='echo "// git pull <branch>"; git pull'
+alias gpush='echo "// git push <branch>"; git push'
 
 alias ga='echo "// git add <files>"; git add ' 
 alias gs='echo "// git status"; git status'
@@ -202,7 +204,7 @@ alias gl='echo "// git log"; git log'
 
 # // to see which commits are on your master which you haven't yet pushed
 # git log origin/master..master
-alias gld='echo "// git log diff b/w remote"; git log origin/master..master'
+alias gld='echo "// git log diff b/w remote"; git log origin/main..main'
 
 # // to see which commits are on origin/master but not yet on master
 
@@ -215,6 +217,9 @@ alias glg='echo "// git log --graph --format=.."; git log --format="%C(dim white
 # $ glg -<number of commits>
 # OR
 # $ glg -n <number of commits>
+
+# // git log FILES to see which files were updated
+alias glf='echo "// git log --name-only --oneline"; git log --name-only --oneline'
 
 # // git log patches to see the diffs in each
 alias glp='echo "// git log -p"; git log -p'
