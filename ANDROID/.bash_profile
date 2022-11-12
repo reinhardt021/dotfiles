@@ -23,6 +23,11 @@ alias g='git'
 alias gb='git branch'
 alias gc='echo "// git checkout <branch>"; git checkout'
 
+alias gf='git fetch'
+# // to rebase from the remote branch
+# git fetch
+# git rebase origin/master
+
 alias gp='git pull'
 alias gpull='echo "// git pull <branch>"; git pull'
 alias gpush='echo "// git push <branch>"; git push'
@@ -46,33 +51,29 @@ alias gspush='echo "// git stash push"; git stash push'
 # git stash push -m "message" <path>
 alias gsdrop='echo "// git stash drop <number>"; git stash drop '
 
-alias gf='git fetch'
-#alias gp='git pull'
-# // to rebase from the remote branch
-# git fetch
-# git rebase origin/master
-
-alias gl='git log'
 # git log // to see if your current changes match the remote
+alias gl='echo "// git log"; git log'
+alias glog='echo "// git log"; git log'
 
 # // to see which commits are on your master which you haven't yet pushed
 # git log origin/master..master
 alias gld='echo "// git log diff b/w remote"; git log origin/main..main'
 
-# // to see which commits are on origin/master but not yet on master
+# // to see which commits are on origin/master (remote) but not yet on master (local)
 # git log master..origin/master
 
-# // git log graph
-alias glg='git log --pretty=format:"%C(dim white)%d%C(reset) %s %C(dim white)[%h %ae %cr]%C(reset)" --graph'
+# // git log GRAPH
+alias glg='echo "// git log --graph --format=.."; git log --pretty=format:"%C(dim white)%d%C(reset) %s %C(dim white)[%h %ae %cr]%C(reset)" --graph'
+alias glgraph='echo "// git log --graph"; git log --graph'
 
-# // git log patches to see the diffs in each
+# // git log FILES to see which files were updated
+alias glf='echo "// git log --name-only --oneline"; git log --name-only --oneline'
+
+# // git log PATCHES to see the diffs in each
 alias glp='echo "// git log -p"; git log -p'
 # // can add --author='Reinhardt' to see changes  by specific people
 # // just another alias to make t easier to view changes
 alias glshow='echo "// git log -p"; git log -p'
-
-# // git log FILES to see which files were updated
-alias glf='echo "// git log --name-only --oneline"; git log --name-only --oneline'
 
 # // to reset to a previous commit but careful as you lose everything 
 # git reset --hard <commit-ID || HEAD>

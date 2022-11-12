@@ -127,6 +127,11 @@ alias gbc='echo "// git branch --show-current | pbcopy"; git branch --show-curre
 
 alias gc='echo "// git checkout <branch>"; git checkout'
 
+alias gf='echo "// git fetch"; git fetch'
+# // to rebase from the remote branch
+# git fetch
+# git rebase origin/master
+
 alias gpull='echo "// git pull <branch>"; git pull'
 alias gpush='echo "// git push <branch>"; git push'
 
@@ -153,9 +158,6 @@ alias gsshow='echo "// git stash show -p"; git stash show -p'
 
 # git stash push -m "message" <path>
 alias gsdrop='echo "// git stash drop <number>"; git stash drop '
-
-alias gf='echo "// git fetch"; git fetch'
-#alias gp='git pull'
 
 ## GIT MERGE
 
@@ -192,20 +194,21 @@ alias gf='echo "// git fetch"; git fetch'
 #>>
 #Then change back to your branch to rebase
 
-
-alias gl='echo "// git log"; git log'
 # git log // to see if your current changes match the remote
+alias gl='echo "// git log"; git log'
+alias glog='echo "// git log"; git log'
 
 # // to see which commits are on your master which you haven't yet pushed
 # git log origin/master..master
 alias gld='echo "// git log diff b/w remote"; git log origin/main..main'
 
-# // to see which commits are on origin/master but not yet on master
-
+# // to see which commits are on origin/master (remote) but not yet on master (local)
 # git log master..origin/master
 
-# // git log graph
+# // git log GRAPH
 alias glg='echo "// git log --graph --format=.."; git log --format="%C(dim white)%d%C(reset) %s %C(dim white)[%ae %h %cr]%C(reset)" --graph'
+alias glgraph='echo "// git log --graph"; git log --graph'
+
 #@monorepo$ watch -n 5 'git log --format="%C(dim white)%d%C(reset) %s %C(dim white)[%ae %h %cr]%C(reset)" --graph'
 # // to limit the amount of commits shown use the following:
 # $ glg -<number of commits>
@@ -215,7 +218,7 @@ alias glg='echo "// git log --graph --format=.."; git log --format="%C(dim white
 # // git log FILES to see which files were updated
 alias glf='echo "// git log --name-only --oneline"; git log --name-only --oneline'
 
-# // git log patches to see the diffs in each
+# // git log PATCHES to see the diffs in each
 alias glp='echo "// git log -p"; git log -p'
 # // can add --author='Reinhardt' to see changes  by specific people
 # // just another alias to make t easier to view changes
