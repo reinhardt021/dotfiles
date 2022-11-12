@@ -34,7 +34,6 @@
 # // to clear the command line
 # ctrl+l
 
-
 # modifying the bash prompt to something simpler
 # PS1="\u@\W\$"
 color_prompt=yes
@@ -66,7 +65,6 @@ alias l='ls'
 # -G for colors
 #export LSCOLORS=exfxcxdxbxegedabagacad # default ls colors
 export LSCOLORS=Hxfxcxdxbxegedabagacad # default ls colors to have directories as bold light grey
-
 
 #// alias to always prompt before overwriting and to be verbose"
 alias mv='mv -iv '
@@ -111,10 +109,6 @@ alias gwd='echo "// pwd |pbcopy"; pwd |pbcopy'
 # alias to open neovim quickly
 alias n='echo "// nvim <command>"; nvim'
 alias nv='echo "// nvim <command>"; nvim'
-
-
-
-
 
 # GIT
 alias g='echo "// git <command>"; git'
