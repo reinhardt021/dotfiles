@@ -9,6 +9,7 @@
 # [x]- change background (Desktop & ScreenSaver) to adaptive landscape // for light & dark modes) 
 # [x]- change all active notifactions to banner & no sound (Notifications & Focus) // so they show but are then hidden
 
+# []- Desktop & Dock: Automatically rearrange Spaces based on most recent use = OFF
 # [x]- remove all apps from the dock
 # [x]- do NOT show recent apps (Dock & Menu Bar)
 # []- Automatically hide and show the Dock
@@ -98,7 +99,11 @@
 
 # [x]- make screenshots default to save into custom Downloads folder; note: absolute path not relative
 # $ mkdir ~/Downloads/SCREENSHOTS
+# OR
+# $ mkdir ~/Library/Mobile Documents/com~apple~CloudDocs/SCREENSHOTS
+# 
 # $ defaults write com.apple.screencapture location /Users/reinhardt021/Downloads/SCREENSHOTS
+# $ defaults write com.apple.screencapture location /Users/reinhardt021/Library/Mobile\ Documents/com~apple~CloudDocs/SCREENSHOTS
 
 # [x]- install HOMEBREW:
 # // can check website -> https://brew.sh/
