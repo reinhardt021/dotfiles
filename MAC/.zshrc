@@ -202,10 +202,11 @@ alias glog='echo "// git log"; git log'
 
 # // to see which commits are on your master which you haven't yet pushed
 # git log origin/master..master
-alias gld='echo "// git log diff b/w remote"; git log origin/main..main'
+alias gld='echo "// git log diff on local not remote"; git log origin/main..main'
 
 # // to see which commits are on origin/master (remote) but not yet on master (local)
 # git log master..origin/master
+alias glr='echo "// git log diff on remote not local"; git log main..origin/main'
 
 # // git log GRAPH
 alias glg='echo "// git log --graph --format=.."; git log --format="%C(dim white)%d%C(reset) %s %C(dim white)[%ae %h %cr]%C(reset)" --graph'
@@ -432,7 +433,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig:"${PKG_CONFIG_P
 # EXAMPLE:
 export KUBECONFIG="/Users/reinhardtc/.config/k3d/k3s-default/kubeconfig.yaml"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --heading'
 # note `$ brew install bat` created syntax highlights in preview
@@ -499,3 +500,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
