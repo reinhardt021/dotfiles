@@ -1,11 +1,11 @@
 # MACBOOK SETUP
-# // ca. MacOS Monterey 12.5
+# // ca. MacOS Ventura 13.0.1
 
 # [x]- Authorize Apple ID // iCloud sync and for access to TV / Notes / ...
 # [x]- turn ON FileVault // file encryption
 
 
-# // SYSTEM PREFERENCES
+# // SYSTEM SETTINGS
 # [x]- change background (Desktop & ScreenSaver) to adaptive landscape // for light & dark modes) 
 # [x]- change all active notifactions to banner & no sound (Notifications & Focus) // so they show but are then hidden
 
@@ -20,6 +20,7 @@
 # []- DO show in Menu Bar the Clock: Display the time with seconds
 # []- do NOT show in Menu Bar: Spotlight
 # []- DO show in Menu Bar: Time Machine
+# []- Shortcuts... : Show Desktop = '-'
 
 # []- Battery: Enable Power Nap while on battery power
 # []- Battery: Low power mode
@@ -53,10 +54,11 @@
 # []- install Magnet // for screen partitioning
 # []- install OmmWriter // for writing
 # []- install XCode // for iOS App development
+# []- install Twitter // for inspiration generators on dedicated desktop space
 
 # //  INSTALL from BROWSER downloads
-# []- install Brave (chromium) from Safari
-# []- install Firefox from Safari
+# []- install Brave (chromium) from Safari (primary browser)
+# []- install Firefox from Safari (optional secondary browser)
 # // SETUP browsers
     # []- add extension: bitwarden // both
     # []- login to BITWARDEN for creds // both
@@ -83,6 +85,7 @@
     # []- add extension: cookie autodelete // both
     # []- add extension: disconnect // both
     # []- change default search to duck duck go // both
+
 # []- install ExpressVPN // to protect internet traffic - https://www.expressvpn.com/latest?utm_source=mac_app
     # []- Preferences > Advanced > Appearance: Show ExpressVPN icon in Menu Bar only 
 # []- install f.lux // for less blue light at night [brew install --cask flux - brew command doesn't work]
@@ -92,6 +95,8 @@
 # []- install Ommbits // disk image in dropbox or through APP STORE (optional)
 # []- brew install --cask evernote // Note > Note Width > Optimize for Readability (optional)
 
+# []- install Discord // for inspiration generators on dedicated desktop space
+
 # [x]- install HP Easy Start to use the HP Deskjet 2130 (print scan copy)
 
 
@@ -99,10 +104,9 @@
 
 # [x]- make screenshots default to save into custom Downloads folder; note: absolute path not relative
 # $ mkdir ~/Downloads/SCREENSHOTS
+# $ defaults write com.apple.screencapture location /Users/reinhardt021/Downloads/SCREENSHOTS
 # OR
 # $ mkdir ~/Library/Mobile Documents/com~apple~CloudDocs/SCREENSHOTS
-# 
-# $ defaults write com.apple.screencapture location /Users/reinhardt021/Downloads/SCREENSHOTS
 # $ defaults write com.apple.screencapture location /Users/reinhardt021/Library/Mobile\ Documents/com~apple~CloudDocs/SCREENSHOTS
 
 # [x]- install HOMEBREW:
@@ -118,12 +122,10 @@
 
 # []- install Loom loom LOOM (optional) // for screen recording
 
-# []- install XCode
 # []- install ANDROID STUDIO
 # []- install GENYMOTION (optional - haven't used it recently)
 
 # []- brew install --cask signal // messaging app focusing on security
-# []- install discord // just use browser
 
 # []- brew install --cask vlc // video/audio playback (optional)
 # []- brew install --cask obs // streaming
@@ -192,6 +194,7 @@
     # // how to scroll tmux and vim without scrolling window
     # []- Preferences > Advanced > Mouse > Scroll wheel sends arrow keys when in alternate screen mode: YES
     # TODO: export these configs
+    # TODO: save config to cloud & USB backups
 
 # []- brew install tmux
 # []- brew install neovim
@@ -330,18 +333,27 @@
 # $ bin/rails server
 
 
-# OPEN APPLICATIONS
+# MISE EN PLACE - OPEN APPLICATIONS
+# // virtual dedicated spaces to compartmentalize better
 
-## DEV CRAFT
+## INSPO - desktop 1
+# open -a Discord
+# open -a Twitter
+
+## DEV CRAFT - desktop 2
 # open -a "Brave"
-# open -a iTerm
+# open -a Firefox (deprecated optional)
 # open -a Postman (deprecated => using HTTPIE)
-# open -a Firefox
+# open -a Finder
 
-## PERSONAL
-# open -a Firefox (optional)
+## full screen
+# open -a iTerm
+
+## PERSONAL - desktop 3
+# open -a Obsidian
 # open -a Notion
 # open -a Evernote (deprecated)
+# open -a Firefox (optional)
 
 # []- LINK Apple Calendar to Google Calendar (optional) // so can have offline information
 
