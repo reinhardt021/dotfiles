@@ -238,6 +238,9 @@ alias glshow='echo "// git log -p"; git log -p'
 #// to cherry pick a commit from another branch
 # git cherry-pick <commmit-hash>
 
+# GIT CHANGE REMOTE 
+# git remote set-url <remote-name> <ssh-remote-url>
+# git remote set-url origin git@github.com:reinhardt021/x-spotify.git
 
 
 # TMUX
