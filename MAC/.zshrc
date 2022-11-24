@@ -134,6 +134,7 @@ alias gf='echo "// git fetch"; git fetch'
 
 alias gpull='echo "// git pull <branch>"; git pull'
 alias gpush='echo "// git push <branch>"; git push'
+alias gpom='echo "// git push origin main"; git push origin main'
 
 alias gs='echo "// git status"; git status'
 alias gd='echo "// git diff";git diff'
