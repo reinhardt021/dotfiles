@@ -3,6 +3,8 @@
 
 " shows the file line numbers
 set number
+" enable relative line numbers
+set relativenumber
 
 " set line length soft limit
 set colorcolumn=80,120
@@ -140,6 +142,23 @@ set nofoldenable "defaults no folding on first open
 " x // to delete a character
 " dw // to delete a word
 " dd // to delete a line
+
+" ADVANCED COMMANDS
+" ~ // toggle character casing
+" 0 // go to start of line
+" $ // go to end of line
+" ctrl+a // increment number
+" ctrl+x // decrement number
+" t<char> // till character
+" f<char> // on character
+" vi<char> // visual mode (select) in character
+" ci<char> // change in character 
+"     - ex: ci" means change (replace characters in ")
+" di<char> // delete in character - ex: di{ means delete all within {}
+" da<char> // delete all in and including character 
+"     - ex: da{ means delete {} and everything in them
+" vi{~ // COMBO: select everything in { and toggle casing
+" f.ct( // COMBO: on character . change everything until (
 
 " SELECT + INDENT/ COPY/ CUT/ PASTE
 " v // to select a character
