@@ -38,6 +38,7 @@ alias gd='git diff'
 alias gdc='git diff --cached' #// to see staged (added) changes (hunk)
 
 alias ga='git add' 
+alias grs='echo "// git restore --staged <files> to UNSTAGE"; git restore --staged ' 
 alias gcm='echo "// git commit -m <text>"; git commit -m ' 
 
 #// to see a list of stashed patches
