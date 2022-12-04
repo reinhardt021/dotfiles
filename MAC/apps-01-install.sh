@@ -78,6 +78,12 @@
     # []- add extension: momentum // both
     # []- add extension: rescuetime // both
     # []- add extension: vimium // both
+        # []- vimium options >> Custom key mappings: 
+        #   # Insert your preferred key mappings here.
+        #   unmap x
+        #   unmap X
+        #   map q removeTab
+        #   map Q restoreTab
     # []- add extension: honey // both
     # []- add extension: colorzilla // both
     # []- add extension: tubebuddy // both
