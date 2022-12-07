@@ -22,6 +22,7 @@ set shiftwidth=4
 set cursorline
 " highlights the current column but slows vim for biggers files
 "set cursorcolumn
+" // can set this in :set cursorcolumn!
 
 " adds syntax highlighting
 syntax on
