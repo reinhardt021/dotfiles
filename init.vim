@@ -9,14 +9,16 @@ set relativenumber
 " set line length soft limit
 set colorcolumn=80,120
 
-" adds tabs and expands them to spaces
-set tabstop=2
-set expandtab
-
 " allows auto indentation
 set autoindent
-" make the indents a single 'tab'
-set shiftwidth=4
+" spaces used for indenting even when pressing TAB
+set expandtab 
+
+" best to have these matching
+" num of spaces for a line indent
+set tabstop=2
+" identation when using `>>` or `<<` (4=single 'tab')
+set shiftwidth=2
 
 " highlights the current line
 set cursorline
