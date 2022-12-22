@@ -314,6 +314,9 @@ call plug#begin('~/.config/nvim/plugged')
     " cs'<q> // to change from ' to <q> and </q>
     " cst{ // to change from <any-tag> to } with a space
 
+    " // React syntax highlighting
+    Plug 'mxw/vim-jsx'
+
     " //to install any plugins
     " :source % //to register a newly added plugin
     " :PlugInstall 
