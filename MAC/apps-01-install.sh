@@ -39,6 +39,12 @@
 # []- disable Lookup for 'force' mouse click
 # // System Preferences > Trackpad > Point & Click > Lookup & Data Detectors > change to 'Tap with three fingers'
 
+# []- change default swipes for moving back and forth
+# // System Settings > Trackpad > More Gestures > Swipe Between pages = Swipe with three fingers
+# // System Settings > Trackpad > More Gestures > Swipe Between full-screen applications = Swipe Left or Right with four fingers
+# // System Settings > Trackpad > More Gestures > Mission Control = Swipe up with four fingers
+# // System Settings > Trackpad > More Gestures > App Expose = Swipe up with four fingers
+
 # // FINDER PREFERENCES
 # []- default new tab to Downloads folder: General > New Finder windows show: Downloads
 # []- Sidebar: uncheck recent documents
