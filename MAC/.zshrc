@@ -266,6 +266,17 @@ alias wn='echo "// watch -n <secs-delay> <command+params>"; watch -n '
 #-- // to run commands in mysql from CLI 
 #-- $ mysql -h 127.0.0.1 -P 3306 -u root -p higherme -e "SHOW DATABASES;"
 
+#-- // to connect to mysql from CLI
+#DB_CONNECTION=mysql
+#DB_HOST=mysql
+#DB_PORT=3306
+#DB_DATABASE=api.getdoyo.com
+#DB_USERNAME=sail
+#DB_PASSWORD=password
+#-- $ mysql -h mysql -P 3306 -u sail -p api.getdoyo.com
+#-- $ mysql -h <host> -P <port> -u <username> -p <database>
+#-- // you will then be prompted for your password
+
 #-- // Database creation
 #-- mysql> CREATE DATABASE <database_name>;
 #-- // to see users aka roles
@@ -385,6 +396,13 @@ PATH="/Applications/Julia-1.4.app/Contents/Resources/julia/bin:${PATH}"
 
 PATH="/Users/reinhardtc/istio-1.7.3/bin:${PATH}"
 
+# DOCKER docker
+# // list docker processes
+# $ docker ps
+# // ssh into docker container
+# $ docker exec -it <id> /bin/bash
+# // ssh into volumes is the same as well so you can access the db CLI
+
 # Docker-Machine aliases
 #alias dm='echo "// docker-machine <command>": docker-machine '
 # // this doesn't work for `docker-machine ls`  bc of the alias for ls
@@ -395,6 +413,8 @@ alias dp='echo "// docker ps";docker ps'
 #alias dck='docker-compose up -d'
 #alias dcj='docker-compose down'
 alias ds='echo "// docker stop <container>"; docker stop '
+
+
 #alias dsn='docker stop higherme-node'
 # alias hm='/Users/reinhardtc/HigherMe/monorepo/develop/assistant/hmcli'
 alias hm='/Users/reinhardtc/HigherMe/assistant-cli/cli/hmcli'
