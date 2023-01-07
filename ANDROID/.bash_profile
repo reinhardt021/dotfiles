@@ -1,4 +1,5 @@
 
+alias ssha='eval $(ssh-agent); ssh-add'
 # modifying the bash prompt to something simpler
 # PS1="\u@\W\$"
 color_prompt=yes

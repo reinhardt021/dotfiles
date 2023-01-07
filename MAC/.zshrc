@@ -1,3 +1,4 @@
+alias ssha='eval $(ssh-agent); ssh-add'
 # SHELL SETUP
 
 # // how to check the shell you are using
