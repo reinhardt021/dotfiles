@@ -91,7 +91,7 @@ set showtabline=2
 function MyTabLabel(n)
   let buflist = tabpagebuflist(a:n) "// list of buff# for each window
   let winnr = tabpagewinnr(a:n) "// number of windows in tab
-  return (a:n) .. bufname(buflist[winnr - 1])[-16:-1] "// grabs last window in tab buffer
+  return '[' .. (a:n) .. ']' .. bufname(buflist[winnr - 1])[-14:-1] "// grabs last window in tab buffer
 endfunction
 function MyTabLine()
   let s = ''
@@ -120,7 +120,7 @@ function MyTabLine()
 
   return s
 endfunction
-"set tabline=%!MyTabLine() "// filenames get too big
+set tabline=%!MyTabLine() "// filenames get too big
 
 
 
