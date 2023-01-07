@@ -68,6 +68,9 @@ set nofoldenable "defaults no folding on first open
 " // to go to tab i
 " <i>gt 
 " //ex: 3gt to go to tab 3
+" // MOVE a TAB to a new position in the tab list
+" :tabmove 3
+" // note: uses 0 index
 
 " // to open current window (pane) into new tab
 " ctrl-w T
