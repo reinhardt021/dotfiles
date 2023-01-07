@@ -16,9 +16,11 @@ set expandtab
 
 " best to have these matching
 " num of spaces for a line indent
-set tabstop=2
+"set tabstop=2
+set tabstop=4
 " identation when using `>>` or `<<` (4=single 'tab')
-set shiftwidth=2
+"set shiftwidth=2
+set shiftwidth=4
 
 " highlights the current line
 set cursorline
