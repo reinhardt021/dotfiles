@@ -91,7 +91,8 @@ set showtabline=2
 function MyTabLabel(n)
   let buflist = tabpagebuflist(a:n) "// list of buff# for each window
   let winnr = tabpagewinnr(a:n) "// number of windows in tab
-  return '[' .. (a:n) .. ']' .. bufname(buflist[winnr - 1])[-14:-1] "// grabs last window in tab buffer
+   "// use [tabindex]; grabs last window in tab buffer list; use last few filename letters;
+  return '[' .. (a:n) .. ']' .. bufname(buflist[winnr - 1])[-14:-1]
 endfunction
 function MyTabLine()
   let s = ''
