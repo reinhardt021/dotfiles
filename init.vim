@@ -68,21 +68,62 @@ set nofoldenable "defaults no folding on first open
 " // to go to tab i
 " <i>gt 
 " //ex: 3gt to go to tab 3
+"
 " // MOVE a TAB to a new position in the tab list
 " :tabmove 3
 " // note: uses 0 index
-
-" // to open current window (pane) into new tab
-" ctrl-w T
-" // to open current window (pane) into new tab but keep old window as is
-" :tabnew %
-
 " // to move current tab to a certain index
 " :tabmove <index|relative-index>
 " :tabm <index|relative-index>
 " ex:
 " :tabmove 2
 " :tabm -1
+
+" // to open current window (pane) into new tab
+" ctrl-w T
+" // to open current window (pane) into new tab but keep old window as is
+" :tabnew %
+
+" // show tabs all the time
+set showtabline=2
+"set guitablabel=%N/\ %t\ %M "// doesn't work
+"set tabline=%N:%t\ %M "// removes the list of tabs
+function MyTabLabel(n)
+  let buflist = tabpagebuflist(a:n) "// list of buff# for each window
+  let winnr = tabpagewinnr(a:n) "// number of windows in tab
+  return (a:n) .. bufname(buflist[winnr - 1])[-16:-1] "// grabs last window in tab buffer
+endfunction
+function MyTabLine()
+  let s = ''
+  for i in range(tabpagenr('$'))
+    " select the highlighting
+    if i + 1 == tabpagenr()
+      let s ..= '%#TabLineSel#'
+    else
+      let s ..= '%#TabLine#'
+    endif
+
+    " set the tab page number (for mouse clicks)
+    let s ..= '%' .. (i + 1) .. 'T'
+
+    " the label is made by MyTabLabel()
+    let s ..= ' %{MyTabLabel(' .. (i + 1) .. ')} '
+  endfor
+
+  " after the last tab fill with TabLineFill and reset tab page nr
+  let s ..= '%#TabLineFill#%T'
+
+  " right-align the label to close the current tab page
+  if tabpagenr('$') > 1
+    let s ..= '%=%#TabLine#%999Xclose'
+  endif
+
+  return s
+endfunction
+"set tabline=%!MyTabLine() "// filenames get too big
+
+
+
 
 " NAVIGATION
 "   WINDOWS
