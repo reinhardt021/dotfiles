@@ -257,6 +257,7 @@ alias tkill='echo "// tmux kill-session -t <name>"; tmux kill-session -t '
 
 # WATCH
 alias wn='echo "// watch -n <secs-delay> <command+params>"; watch -n '
+# // watch -n 10 'git status'
 
 
 # MYSQL
@@ -395,6 +396,33 @@ PATH="/Users/reinhardtc/Library/Python/3.8/bin:${PATH}"
 PATH="/Applications/Julia-1.4.app/Contents/Resources/julia/bin:${PATH}"
 
 PATH="/Users/reinhardtc/istio-1.7.3/bin:${PATH}"
+
+
+# HTTPIE httpie API DEV TOOLS
+# // installs http and https CLI commands
+#
+# // Submitting forms:
+# http -f POST pie.dev/post hello=World
+#
+# // Custom HTTP method, HTTP headers and JSON data:
+# http PUT pie.dev/put X-API-Token:123 name=John
+#
+# // See the request that is being sent using one of the output options:
+# http -v pie.dev/get
+#
+# // Build and print a request without sending it using offline mode:
+# http --offline pie.dev/post hello=offline
+#
+# // Upload a file using redirected input:
+# http pie.dev/post < files/data.json
+#
+# // Download a file and save it via redirected output:
+# http pie.dev/image/png > image.png
+#
+# // Download a file wget style:
+# http --download pie.dev/image/png
+
+
 
 # DOCKER docker
 # // list docker processes

@@ -271,10 +271,13 @@
     # Sequel Pro > settings (bottom left gear) > import (plist file)
     # use environment variables on AWS S3 higherme.environment
 
+# API CLIENT
 # brew install --cask postman #// api development
     # // just log in and it will all be there Collection + env vars
     # save Postman configs >> might not need this if saved to account
     # optional as using httpie in commandline now
+# // INSTALL HTTPIE
+# brew install httpie
     
 # install openssl for .bash_profile requirements and php@7.4 dependency
 # brew install openssl
@@ -357,7 +360,7 @@
 ## DEV CRAFT - desktop 2
 # open -a "Brave"
 # open -a Firefox (deprecated optional)
-# open -a Postman (deprecated => using HTTPIE)
+# open -a Postman (deprecated => using HTTPIE) httpie
 # open -a Finder
 
 ## full screen
