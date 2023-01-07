@@ -107,7 +107,7 @@ function MyTabLine()
     let s ..= '%' .. (i + 1) .. 'T'
 
     " the label is made by MyTabLabel()
-    let s ..= ' %{MyTabLabel(' .. (i + 1) .. ')} '
+    let s ..= '%{MyTabLabel(' .. (i + 1) .. ')} '
   endfor
 
   " after the last tab fill with TabLineFill and reset tab page nr
@@ -115,7 +115,7 @@ function MyTabLine()
 
   " right-align the label to close the current tab page
   if tabpagenr('$') > 1
-    let s ..= '%=%#TabLine#%999Xclose'
+    let s ..= '%=%#TabLine#%999X[x]'
   endif
 
   return s
