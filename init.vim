@@ -1,5 +1,13 @@
 " to format JSON in a .json file
 " :%!python -m json.tool
+"
+" // how to start recording a macro
+" // where <letter> is anything from a-z
+" q <letter>
+" // to stop recording a macro
+" q
+" // to replay macro
+" @ <letter>
 
 " shows the file line numbers
 set number
