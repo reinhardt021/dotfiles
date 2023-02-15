@@ -561,3 +561,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 alias sail='echo "// trying sail command else use vendor"; [ -f sail ] && sh sail || sh vendor/bin/sail'
 
+#// laravel vapor alias
+alias vapor='echo "// php vendor/bin/vapor"; php vendor/bin/vapor'
+
