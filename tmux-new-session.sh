@@ -25,7 +25,7 @@ tmux new -s $SESSION_ID -n cmd -d;
     tmux split-window -v -t $SESSION_ID:1;
     #// split the 'command' window's top pane into a left & right pane (horizontal split) at 40/60 ratio
     tmux split-window -v -t $SESSION_ID:1.1;
-    tmux send-keys -t $SESSION_ID:1.2 "watch -n 10 kubectl config get-contexts" Enter;
+    #tmux send-keys -t $SESSION_ID:1.2 "watch -n 10 kubectl config get-contexts" Enter;
     #tmux split-window -h -l 60% -t $SESSION_ID:1.1;
     #// TODO: figure out why the resize is not working for the panes
 
