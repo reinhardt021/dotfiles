@@ -24,11 +24,11 @@ set expandtab
 
 " best to have these matching
 " num of spaces for a line indent
-"set tabstop=2
-set tabstop=4
+set tabstop=2
+"set tabstop=4
 " identation when using `>>` or `<<` (4=single 'tab')
-"set shiftwidth=2
-set shiftwidth=4
+set shiftwidth=2
+"set shiftwidth=4
 
 " highlights the current line
 set cursorline
@@ -370,7 +370,12 @@ call plug#begin('~/.config/nvim/plugged')
     " cst{ // to change from <any-tag> to } with a space
 
     " // React syntax highlighting
-    Plug 'mxw/vim-jsx'
+    "Plug 'mxw/vim-jsx'
+
+    " // Typescript syntax highlighting
+    Plug 'leafgarland/typescript-vim'
+    " // React JSX syntax highlighting for vim and Typescript
+    Plug 'peitalin/vim-jsx-typescript'
 
     " //to install any plugins
     " :source % //to register a newly added plugin
