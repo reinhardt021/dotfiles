@@ -44,6 +44,8 @@
 # // System Settings > Trackpad > More Gestures > Swipe Between full-screen applications = Swipe Left or Right with four fingers
 # // System Settings > Trackpad > More Gestures > Mission Control = Swipe up with four fingers
 # // System Settings > Trackpad > More Gestures > App Expose = Swipe up with four fingers
+# []- change dictation shortcut key to double tap function (fn) key
+# // System Settings / Preferences > Keyboard > Dictation > Shortcut > Press Fn (Function) Key Twice
 
 # // FINDER PREFERENCES
 # []- default new tab to Downloads folder: General > New Finder windows show: Downloads
@@ -267,7 +269,7 @@
 # brew install --cask sequel-pro
     # import DB configs (DBeaver / Sequel Pro)
     # copy the following file over from USB
-    # /Users/${USER}/Library/DBeaverData/workspace6/General/.dbeaver/
+    # /Users/${USER}/Library/DBjaverData/workspace6/General/.dbeaver/
     # Sequel Pro > settings (bottom left gear) > import (plist file)
     # use environment variables on AWS S3 higherme.environment
 
