@@ -376,3 +376,10 @@
 
 # []- LINK Apple Calendar to Google Calendar (optional) // so can have offline information
 
+
+# // Add this to the /etc/hosts file
+#```
+#127.0.0.1       facebook.com
+#127.0.0.1       www.facebook.com
+#```
+
