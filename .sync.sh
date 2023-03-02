@@ -11,8 +11,6 @@ echo "_______________"
 echo "// git status"
 git status
 echo "_______________"
-#echo "// git commit -m 'dotfiles sync'"
-#git commit -m "dotfiles sync"
 echo "// git commit -m '${folder} sync'"
 git commit -m "${folder} sync"
 
