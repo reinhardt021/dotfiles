@@ -9,6 +9,9 @@
 " // to replay macro
 " @ <letter>
 
+
+" SETTINGS --- --- ---
+
 " shows the file line numbers
 set number
 " enable relative line numbers
@@ -93,6 +96,9 @@ set nofoldenable "defaults no folding on first open
 " ctrl-w T
 " // to open current window (pane) into new tab but keep old window as is
 " :tabnew %
+
+
+" SCRIPTS --- --- ---
 
 " // show tabs all the time
 set showtabline=2
@@ -231,6 +237,9 @@ set tabline=%!MyTabLine() "// filenames get too big
 " P // to paste before the cursor
 " p // to paste after the cursor
 
+
+" MAPPINGS --- --- ---
+
 " (in system clipboard)
 " `"+y` // to copy
 " `"+x` // to cut
@@ -257,8 +266,7 @@ nnoremap <C-j> 3jzz
 nnoremap <C-k> 3kzz
 
 
-
-" //  PLUG-INs (using vim-plug)
+" PLUG-INs (using vim-plug) --- --- ---
 
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
     silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
@@ -395,6 +403,9 @@ set termguicolors
 " TODO CHECK IF PLUGIN INSTALLED
 colorscheme darcula
 let g:lightline = { 'colorscheme': 'darculaOriginal' }
+
+
+" PLUG-IN MAPPINGS --- --- ---
 
 " ctrl+o // to open nerd tree 
 map <C-o> :NERDTreeToggle<CR>
