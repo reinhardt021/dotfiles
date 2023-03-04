@@ -115,7 +115,8 @@ endfunction
 let status_line = ''
 
 " Status line left side.
-let status_line ..= ' %F %M %Y %R'
+"let status_line ..= ' %F %M %Y %R'
+let status_line ..= ' %f %M %R'
 " %F – Display the full path of the current file.
 " %M – Modified flag shows if file is unsaved.
 " %Y – Type of file in the buffer.
@@ -135,7 +136,7 @@ let status_line ..= '%='
 
 " Status line right side.
 "set statusline+=\ ascii[%b]\ hex[0x%B]\ row:col[%l:%c]\ (%p%%)
-let status_line ..=' [%l:%c] (%p%%)'
+let status_line ..=' [%l:%c_%p%%]'
 " %b – Shows the ASCII/Unicode character under cursor.
 " 0x%B – Shows the hexadecimal character under cursor.
 " %l – Display the row number.
@@ -144,7 +145,7 @@ let status_line ..=' [%l:%c] (%p%%)'
 
 set statusline=%!status_line
 
-" Show the status on the second to last line.
+" Always Show the status line.
 set laststatus=2
 
 
