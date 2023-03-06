@@ -116,7 +116,7 @@ let status_line = ''
 
 " Status line left side.
 "let status_line ..= ' %F %M %Y %R'
-let status_line ..= '%f %M %R'
+let status_line ..= '/%f %M %R'
 " %F – Display the full path of the current file.
 " %M – Modified flag shows if file is unsaved.
 " %Y – Type of file in the buffer.
