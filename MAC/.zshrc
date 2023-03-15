@@ -213,8 +213,11 @@ alias gld='echo "// git log diff on local not remote"; git log origin/main..main
 alias glr='echo "// git log diff on remote not local"; git log main..origin/main'
 
 # // git log GRAPH
-alias glg='echo "// git log --graph --format=.."; git log --format="%C(dim white)%d%C(reset) %s %C(dim white)[%ae %h %cr]%C(reset)" --graph'
+alias glg='echo "// git log --graph --format=.."; git log --format="%C(white)%d%C(reset) %s %C(white)[%ae %h %cr]%C(reset)" --graph'
 alias glgraph='echo "// git log --graph"; git log --graph'
+
+alias glgr='echo "// git log --graph --pretty=reference --relative-date"; git log --graph --pretty=reference --relative-date'
+alias gl1='echo "// git log --graph --oneline"; git log --graph --oneline'
 
 #@monorepo$ watch -n 5 'git log --format="%C(dim white)%d%C(reset) %s %C(dim white)[%ae %h %cr]%C(reset)" --graph'
 # // to limit the amount of commits shown use the following:
@@ -223,7 +226,7 @@ alias glgraph='echo "// git log --graph"; git log --graph'
 # $ glg -n <number of commits>
 
 # // git log FILES to see which files were updated
-alias glf='echo "// git log --name-only --oneline"; git log --name-only --oneline'
+alias glf='echo "// git log --graph --oneline --name-status"; git log --graph --oneline --name-status'
 
 # // git log PATCHES to see the diffs in each
 alias glp='echo "// git log -p"; git log -p'
