@@ -7,6 +7,14 @@ React but especially in context of NextJS meta-framework
 ## COMPONENTS
 
 - declare interactive components outside of the parent component so that they can be used in other components freely
+- ORDER OF OPERATIONS:
+  - hooks for the parent
+  - PARENT: hooks run
+  - PARENT: html components loaded
+  - CHILDREN: hooks run
+  - CHILDREN: html components loaded
+  - CHILDREN: useEffect run
+  - PARENT: useEffect run
 
 ---
 
