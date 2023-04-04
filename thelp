@@ -1,0 +1,28 @@
+.\" Manpage for thelp
+.\" Tmux aliases
+.TH thelp 8  "04 Apr 2023" "1.0" "thelp man page"
+
+.SH NAME
+thelp \~ tmux helper aliases
+.SH SYNOPSIS
+thelp 
+.SH DESCRIPTION
+thelp is just a list of aliases
+
+.SH OPTIONS
+  The thelp does not take any options.
+  what is going on here?
+  alias t='echo "// tmux <command>"; tmux '
+  alias tls='echo "// tmux ls"; tmux ls'
+  alias tns='echo "// sh ~/dotfiles/tmux-new-session.sh"; function foo(){ sh ~/dotfiles/tmux-new-session.sh $1; unset -f foo; }; foo'
+  alias tas='echo "// tmux attach-session -t <name>"; tmux attach-session -t '
+  alias trs='echo "// tmux rename-session -t <old-name> <new-name>"; tmux rename-session -t '
+  alias tkill='echo "// tmux kill-session -t <name>"; tmux kill-session -t '
+
+.SH SEE ALSO
+n/a
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Reinhardt Cagara (reinhardt.cgr@gmail.com)
+
