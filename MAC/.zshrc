@@ -284,13 +284,16 @@ alias wn='echo "// watch -n <secs-delay> <command+params>"; watch -n '
 
 #-- // Database creation
 #-- mysql> CREATE DATABASE <database_name>;
+#
 #-- // to see users aka roles
 #-- mysql> SELECT user FROM mysql.user;
 #-- // to create the needed users to create the database
 #-- mysql> CREATE user <username>@<host> identified by '<password>';
 #-- mysql> CREATE user <username>@localhost identified by '<password>';
+#
 #-- // to see user priviledges
 #-- mysql> SELECT * FROM mysql.user;
+#
 #-- // might also be good to check table columns with the DESCRIBE so we can pinpoint parts
 #-- // to see current user
 #-- mysql> SELECT user();

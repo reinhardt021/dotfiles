@@ -357,10 +357,12 @@ call plug#begin('~/.config/nvim/plugged')
     " :Git blame // to view the commit history
     "   <enter> // to view the selected commit 
     " :Gclog // to view a list of commits and what you did in them
+
     " // to manage git branches
     Plug 'sodapopcan/vim-twiggy'
     " :Twiggy
     " ERROR: Unknown function FugitiveShellCommand()
+
     " // a git commit browser
     Plug 'junegunn/gv.vim' 
     " :GV
@@ -437,6 +439,13 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'leafgarland/typescript-vim'
     " // React JSX syntax highlighting for vim and Typescript
     Plug 'peitalin/vim-jsx-typescript'
+
+    " // BLADE template highlighting
+    Plug 'jwalton512/vim-blade'
+
+    " // shows minimap on the right side for your code
+    Plug 'wfxr/minimap.vim'
+    " :MinimapToggle
 
     " //to install any plugins
     " :source % //to register a newly added plugin

@@ -216,6 +216,7 @@
     # chsh -s /bin/bash #// change default shell to bash
 # []- brew install ripgrep # // used for fzf.vim
 # []- brew install bat # // used for fzf.vim preview 
+# []- brew install code-minimap # // used for minimap.vim sidebar 
 
 # []- brew install tree # // to show directory tree
 # []- brew install watch # // to run shell to repeatedly run a cmd 
