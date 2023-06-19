@@ -17,6 +17,9 @@ set number
 " enable relative line numbers
 set relativenumber
 
+" sets the command prompt window size
+set cmdheight=1
+
 " set line length soft limit
 set colorcolumn=80,120
 
@@ -337,7 +340,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'jparise/vim-graphql' " graphQL syntax highlighting
-    Plug 'StanAngeloff/php.vim' " php syntax highlighting
+    Plug 'StanAngeloff/php.vim' " php syntax highlighting // archived DEC 2020
     Plug 'adoy/vim-php-refactoring-toolbox'
     "<Leader>rlv //rename local variable
     "<L>rcv //rename class variable
@@ -394,7 +397,13 @@ call plug#begin('~/.config/nvim/plugged')
     " // makes the start page little more informative with recent files used
     Plug 'mhinz/vim-startify'
 
+    " // Vim script for text filtering and alignment
     Plug 'godlygeek/tabular'
+    " // EX: for aligning by commas (uses regex)
+    ":Tabularize /, 
+    "Some short phrase         , some other phrase
+    "A much longer phrase here , and another long phrase
+
     " // Syntax highlighting, matching rules and mappings for the original Markdown and extensions.
     "Plug 'plasticboy/vim-markdown' " turning off for now bc it looks worse than default
 
@@ -558,6 +567,7 @@ map <C-l> :GitGutterLineHighlightsToggle<CR>
     "au FileType php nmap <buffer> <Leader>ua :PhpactorImportMissingClasses<CR>
 "augroup END
 
-let g:minimap_auto_start = 1
-let g:minimap_auto_start_win_enter = 1
+" Minimap
+"let g:minimap_auto_start = 1
+"let g:minimap_auto_start_win_enter = 1
 let g:minimap_git_colors = 1

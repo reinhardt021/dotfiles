@@ -263,6 +263,9 @@ alias tkill='echo "// tmux kill-session -t <name>"; tmux kill-session -t '
 alias wn='echo "// watch -n <secs-delay> <command+params>"; watch -n '
 # // watch -n 10 'git status'
 
+alias wgb='watch -n 10 git branch;'
+alias wgsl='watch -n 10 git stash list;'
+alias wgs='watch -n 10 git status;'
 
 # MYSQL
 #-- // to run mysql on mac
@@ -570,3 +573,5 @@ alias sail='echo "// trying sail command else use vendor"; [ -f sail ] && sh sai
 #// laravel vapor alias
 alias vapor='echo "// php vendor/bin/vapor"; php vendor/bin/vapor'
 
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
