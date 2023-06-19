@@ -14,6 +14,10 @@ alias ssha='eval $(ssh-agent); ssh-add'
 
 # // show hidden files
 # cmd + shift + .
+#
+# FORTUNE
+# // randomized database of sayings
+# $ fortune
 
 # SSH
 # # // NOTE: We can just use the ~/.ssh/config as a shortcut to ssh into servers
