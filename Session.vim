@@ -14,9 +14,10 @@ else
   set shortmess=aoO
 endif
 badd +6 LIBRARIES/google-maps.md
-badd +4 TOOLS/laravel-vapor.md
+badd +1 TOOLS/laravel-vapor.md
 badd +1 FRAMEWORKS/next-react.md
-badd +0 LIBRARIES/stripe.md
+badd +1 LIBRARIES/stripe.md
+badd +1 LANGUAGES/javascript.md
 argglobal
 %argdel
 edit TOOLS/laravel-vapor.md
@@ -27,7 +28,10 @@ wincmd _ | wincmd |
 vsplit
 wincmd _ | wincmd |
 vsplit
-2wincmd h
+wincmd _ | wincmd |
+vsplit
+3wincmd h
+wincmd w
 wincmd w
 wincmd w
 let &splitbelow = s:save_splitbelow
@@ -39,9 +43,10 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 63 + 95) / 191)
-exe 'vert 2resize ' . ((&columns * 63 + 95) / 191)
-exe 'vert 3resize ' . ((&columns * 63 + 95) / 191)
+exe 'vert 1resize ' . ((&columns * 47 + 95) / 191)
+exe 'vert 2resize ' . ((&columns * 47 + 95) / 191)
+exe 'vert 3resize ' . ((&columns * 47 + 95) / 191)
+exe 'vert 4resize ' . ((&columns * 47 + 95) / 191)
 argglobal
 balt FRAMEWORKS/next-react.md
 setlocal fdm=indent
@@ -52,11 +57,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 4 - ((3 * winheight(0) + 21) / 43)
+let s:l = 2 - ((1 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 4
+keepjumps 2
 normal! 0
 wincmd w
 argglobal
@@ -73,11 +78,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 21) / 43)
+let s:l = 7 - ((6 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 7
 normal! 0
 wincmd w
 argglobal
@@ -94,16 +99,39 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 21) / 43)
+let s:l = 1 - ((0 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 1
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 63 + 95) / 191)
-exe 'vert 2resize ' . ((&columns * 63 + 95) / 191)
-exe 'vert 3resize ' . ((&columns * 63 + 95) / 191)
+argglobal
+if bufexists(fnamemodify("LANGUAGES/javascript.md", ":p")) | buffer LANGUAGES/javascript.md | else | edit LANGUAGES/javascript.md | endif
+if &buftype ==# 'terminal'
+  silent file LANGUAGES/javascript.md
+endif
+balt LIBRARIES/stripe.md
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+let s:l = 11 - ((10 * winheight(0) + 22) / 44)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 11
+normal! 012|
+wincmd w
+4wincmd w
+exe 'vert 1resize ' . ((&columns * 47 + 95) / 191)
+exe 'vert 2resize ' . ((&columns * 47 + 95) / 191)
+exe 'vert 3resize ' . ((&columns * 47 + 95) / 191)
+exe 'vert 4resize ' . ((&columns * 47 + 95) / 191)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
