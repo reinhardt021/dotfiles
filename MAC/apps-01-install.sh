@@ -217,6 +217,7 @@
 # []- brew install ripgrep # // used for fzf.vim
 # []- brew install bat # // used for fzf.vim preview 
 # []- brew install code-minimap # // used for minimap.vim sidebar 
+# []- brew install sc-im # // used for spreadsheets in commandline like vim 
 
 # []- brew install tree # // to show directory tree
 # []- brew install watch # // to run shell to repeatedly run a cmd 
