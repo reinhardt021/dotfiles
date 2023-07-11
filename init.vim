@@ -413,6 +413,17 @@ call plug#begin('~/.config/nvim/plugged')
     " // Distraction free writing by removing UI elements and centering everything
     Plug 'junegunn/goyo.vim'
     " :Goyo // to toggle
+    " // CALENDAR app for vim - calendar
+    Plug 'itchyny/calendar.vim'
+    " :Calendar
+    " // Press E key to view the event list,
+    " // and T key to view the task list.
+    " // Also, press ? key to view a quick help
+    " :Calendar 2000 1 1
+    " :Calendar -view=year
+    " :Calendar -view=year -split=vertical -width=27
+    " :Calendar -view=year -split=horizontal -position=below -height=12
+    " :Calendar -view=clock
 
     " // provides syntax highlighting and improved indentation
     Plug 'pangloss/vim-javascript'
