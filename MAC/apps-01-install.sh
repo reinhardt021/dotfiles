@@ -214,7 +214,7 @@
     # TODO: export these configs
     # TODO: save config to cloud & USB backups
 
-# []- brew install tmux
+# []- brew install tmux #// configure plugins see .tmux.conf
 # []- brew install neovim
 # []- configure all with the ~/dotfiles/MAC/apps-02-config.sh
 #  // chsh -s /bin/bash #// change default shell to bash (fine with zsh now)
