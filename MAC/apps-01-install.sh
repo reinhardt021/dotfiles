@@ -52,25 +52,24 @@
 # []- Shortcut='Press Fn (Function) Key Twice'(has dedicated key now)
 
 # FINDER SETTINGS
-# []- default new tab to Downloads folder: General > New Finder windows show: Downloads
+# []- GENERAL: New Finder Windows show=Downloads
 # []- SIDEBAR: Recents=OFF
 # []- Sidebar: Documents=OFF
 # []- ADVANCED: Show all filename extensions=ON
 # []- show all hidden files: cmd + shift + .
 
 
-# // install PERSONAL applications
+# // INSTALL PERSONAL applications
 # // note: these all will live in /Applications not the user specific one
 
-# // INSTALL from APP STORE
-# []- install Magnet // for screen partitioning
-# []- install OmmWriter // for writing
-# []- install XCode // for iOS App development
-# []- install Twitter // for inspiration generators on dedicated desktop space
+# APP STORE
+# []- Magnet // for screen partitioning
+# []- OmmWriter // for writing
+# []- XCode // for iOS App development
 
-# //  INSTALL from BROWSER downloads
-# []- install Brave (chromium) from Safari (primary browser)
-# []- install Firefox from Safari (optional secondary browser)
+# BROWSER downloads (not app store)
+# []- Brave (chromium) from Safari (primary browser)
+# []- Firefox from Safari (optional secondary browser)
 # // SETUP browsers
     # []- add extension: bitwarden // both
     # []- login to BITWARDEN for creds // both
