@@ -1,4 +1,5 @@
 # MACBOOK SETUP
+# approx 2.75 hrs
 # // ca. MacOS Ventura 13.0.1
 
 # [x]- Authorize Apple ID // iCloud sync and for access to TV / Notes / ...
