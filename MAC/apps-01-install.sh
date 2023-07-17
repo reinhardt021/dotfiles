@@ -2,18 +2,18 @@
 # approx 2.75 hrs
 # // ca. MacOS Ventura 13.4.1
 
-# [x]- Authorize Apple ID // iCloud sync and for access to TV / Notes / ...
-# [x]- turn ON FileVault // file encryption
+# []- Authorize Apple ID // iCloud sync and for access to TV / Notes / ...
+# []- turn ON FileVault // file encryption
 
 
 # SYSTEM SETTINGS
-# [x]- change background (Desktop & ScreenSaver) to adaptive landscape // for light & dark modes) 
-# [x]- change all active notifactions to banner & no sound no badges (Notifications & Focus) // so they show but are then hidden
+# []- change background (Desktop & ScreenSaver) to adaptive landscape // for light & dark modes) 
+# []- change all active notifactions to banner & no sound no badges (Notifications & Focus) // so they show but are then hidden
 
 # SYSTEM SETTINGS > DESKTOP & DOCK
 # []- Desktop & Dock: Automatically rearrange Spaces based on most recent use=OFF
-# [x]- remove all apps from the dock
-# [x]- DOCK: Show recent applications in Dock=OFF
+# []- remove all apps from the dock
+# []- DOCK: Show recent applications in Dock=OFF
 # []- DOCK: Automatically hide and show the Dock=ON
 # []- MENU: Automatically hide and show the menu bar=ALWAYS
 # SYSTEM SETTINGS > CONTROL CENTER
@@ -108,34 +108,34 @@
     # []- Preferences > Advanced > Appearance: Show ExpressVPN icon in Menu Bar only 
 # []- install f.lux // for less blue light at night [brew install --cask flux - brew command doesn't work]
 
-# [x]- install NOTION // not until they have offline feature .. w/e super helpful anyway
-# [x]- install Ommwriter // disk image in dropbox or through APP STORE
+# []- install NOTION // not until they have offline feature .. w/e super helpful anyway
+# []- install Ommwriter // disk image in dropbox or through APP STORE
 # []- install Ommbits // disk image in dropbox or through APP STORE (optional)
 # []- brew install --cask evernote // Note > Note Width > Optimize for Readability (optional)
 
 # []- install Discord // for inspiration generators on dedicated desktop space
 
-# [x]- install HP Easy Start to use the HP Deskjet 2130 (print scan copy)
+# []- install HP Easy Start to use the HP Deskjet 2130 (print scan copy)
 
 
 # // TERMINAL || SHELL
 
-# [x]- make screenshots default to save into custom Downloads folder; note: absolute path not relative
+# []- make screenshots default to save into custom Downloads folder; note: absolute path not relative
 # $ mkdir ~/Downloads/SCREENSHOTS
 # $ defaults write com.apple.screencapture location /Users/reinhardt021/Downloads/SCREENSHOTS
 # OR
 # $ mkdir ~/Library/Mobile Documents/com~apple~CloudDocs/SCREENSHOTS
 # $ defaults write com.apple.screencapture location /Users/reinhardt021/Library/Mobile\ Documents/com~apple~CloudDocs/SCREENSHOTS
 
-# [x]- install HOMEBREW:
+# []- install HOMEBREW:
 # // can check website -> https://brew.sh/
 # $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# [x]- brew install --cask caffeine // prevents system from going to sleep
-# [x]- brew install --cask rescuetime // time optimizing application - login to turn it on for system and firefox
+# []- brew install --cask caffeine // prevents system from going to sleep
+# []- brew install --cask rescuetime // time optimizing application - login to turn it on for system and firefox
 # []- install RescueTime Assistant // to have better control of focus sessions
 
-# [x]- install Zoom zoom ZOOM // video communication platform - through calendar event
+# []- install Zoom zoom ZOOM // video communication platform - through calendar event
 # []- insatll Skype skype SKYPE (optional) // not really necessary I feel
 
 # []- install Loom loom LOOM (optional) // for screen recording
