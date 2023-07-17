@@ -7,32 +7,34 @@
 
 # // SYSTEM SETTINGS
 # [x]- change background (Desktop & ScreenSaver) to adaptive landscape // for light & dark modes) 
-# [x]- change all active notifactions to banner & no sound (Notifications & Focus) // so they show but are then hidden
+# [x]- change all active notifactions to banner & no sound no badges (Notifications & Focus) // so they show but are then hidden
 
-# []- Desktop & Dock: Automatically rearrange Spaces based on most recent use = OFF
+# SYSTEM SETTINGS > DESKTOP & DOCK
+# []- Desktop & Dock: Automatically rearrange Spaces based on most recent use=OFF
 # [x]- remove all apps from the dock
-# [x]- do NOT show recent apps (Dock & Menu Bar)
-# []- Automatically hide and show the Dock
-# []- Automatically hide and show the menu bar on desktop
-# []- do NOT show in Menu Bar: Display
-# []- DO show in Menu Bar the Battery: Percentage
-# []- DO show in Menu Bar the Clock: Use a 24-hour Clock
-# []- DO show in Menu Bar the Clock: Display the time with seconds
-# []- do NOT show in Menu Bar: Spotlight
-# []- DO show in Menu Bar: Time Machine
+# [x]- DOCK: Show recent applications in Dock=OFF
+# []- DOCK: Automatically hide and show the Dock=ON
+# []- MENU: Automatically hide and show the menu bar=ALWAYS
+# SYSTEM SETTINGS > CONTROL CENTER
+# []- MODULES: Display = Don't Show in Menu Bar
+# []- MODULES: Battery = Show in Menu Bar=ON; Show Percentage=ON
+# []- Menu Bar Only: Clock = Show date When Space Allows; Use 24hour clock=ON; Display the time with seconds=ON
+# []- Menu Bar Only: Spotlight = Don't Show in Menu Bar
+# []- Menu Bar Only: Time Machine = Show in Menu Bar
 # []- Shortcuts... : Show Desktop = '-'
 
+# SYSTEM SETTINGS > BATTERY
+# []- Low power mode=ALWAYS
 # []- Battery: Enable Power Nap while on battery power
-# []- Battery: Low power mode
-# []- Power Adapter: Prevent your Mac from automatically sleeping when the display is off
 # []- Power Adapter: Low power mode
+# []- Power Adapter: Prevent your Mac from automatically sleeping when the display is off
 
-# []- Language & Region > General: Time Format: 24-Hour Time
+# SYSTEM SETTINGS > GENERAL
+# []- Date & Time: 24-Hour Time=ON
 
-# []- make Notifications shortcut: cmd + shift + =
-	# System Preferences > Keyboard > Shortcuts > Mission Control > Show Notification Center 
-# []- make LaunchPad shortcut: cmd + shift + -
-	# System Preferences > Keyboard > Shortcuts > Launchpad & Dock > Show Launchpad 
+# SYSTEM SETTINGS > KEYBOARD > KEYBOARD SHORTCUTS
+# []- Keyboard Shortcuts > Mission Control > Show Notification Center = cmd+shift+= 
+# []- Keyboard Shortcuts > Launchpad & Dock > Show Launchpad = cmd+shift+- 
 
 # []- edit Notification Center: Clock widget to show times of 4 cities relevant to you
 

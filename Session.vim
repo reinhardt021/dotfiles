@@ -18,8 +18,12 @@ badd +1 TOOLS/laravel-vapor.md
 badd +1 FRAMEWORKS/next-react.md
 badd +1 LIBRARIES/stripe.md
 badd +1 LANGUAGES/javascript.md
+badd +1 MAC/config-sh.sh
+badd +0 MAC/apps-01-install.sh
 argglobal
 %argdel
+tabnew +setlocal\ bufhidden=wipe
+tabrewind
 edit TOOLS/laravel-vapor.md
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
@@ -57,7 +61,7 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 2 - ((1 * winheight(0) + 22) / 44)
+let s:l = 2 - ((1 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -78,7 +82,7 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 7 - ((6 * winheight(0) + 22) / 44)
+let s:l = 7 - ((6 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -99,7 +103,7 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 22) / 44)
+let s:l = 1 - ((0 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -120,27 +124,42 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 11 - ((10 * winheight(0) + 22) / 44)
+let s:l = 10 - ((9 * winheight(0) + 21) / 42)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 11
+keepjumps 10
 normal! 012|
 wincmd w
-4wincmd w
 exe 'vert 1resize ' . ((&columns * 47 + 95) / 191)
 exe 'vert 2resize ' . ((&columns * 47 + 95) / 191)
 exe 'vert 3resize ' . ((&columns * 47 + 95) / 191)
 exe 'vert 4resize ' . ((&columns * 47 + 95) / 191)
-tabnext 1
+tabnext
+edit MAC/apps-01-install.sh
+argglobal
+balt MAC/config-sh.sh
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+let s:l = 38 - ((19 * winheight(0) + 21) / 42)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 38
+normal! 0
+tabnext 2
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
-let &winminheight = s:save_winminheight
-let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
