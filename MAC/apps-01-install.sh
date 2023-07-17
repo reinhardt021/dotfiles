@@ -36,24 +36,26 @@
 # []- Keyboard Shortcuts > Mission Control > Show Notification Center = cmd+shift+= 
 # []- Keyboard Shortcuts > Launchpad & Dock > Show Launchpad = cmd+shift+- 
 
-# []- edit Notification Center: Clock widget to show times of 4 cities relevant to you
+# NOTIFICATION CENTER
+# []- Clock Widget: show times of 4 cities relevant to you
 
-# []- disable Lookup for 'force' mouse click
-# // System Preferences > Trackpad > Point & Click > Lookup & Data Detectors > change to 'Tap with three fingers'
-
+# SYSTEM SETTINGS > TRACKPAD
+# []- Point & Click > Lookup & Data Detectors='Tap with three fingers'
+#   // disable Lookup for 'force' mouse click
 # []- change default swipes for moving back and forth
-# // System Settings > Trackpad > More Gestures > Swipe Between pages = Swipe with three fingers
-# // System Settings > Trackpad > More Gestures > Swipe Between full-screen applications = Swipe Left or Right with four fingers
-# // System Settings > Trackpad > More Gestures > Mission Control = Swipe up with four fingers
-# // System Settings > Trackpad > More Gestures > App Expose = Swipe up with four fingers
-# []- change dictation shortcut key to double tap function (fn) key
-# // System Settings / Preferences > Keyboard > Dictation > Shortcut > Press Fn (Function) Key Twice
+# // More Gestures > Swipe Between pages='Swipe with three fingers'
+# // More Gestures > Swipe Between full-screen applications='Swipe Left or Right with four fingers'
+# // More Gestures > Mission Control='Swipe up with four fingers'
+# // More Gestures > App Expose='Swipe up with four fingers'
 
-# // FINDER PREFERENCES
+# SYSTEM SETTINGS > KEYBOARD > DICTATION
+# []- Shortcut='Press Fn (Function) Key Twice'(has dedicated key now)
+
+# FINDER SETTINGS
 # []- default new tab to Downloads folder: General > New Finder windows show: Downloads
-# []- Sidebar: uncheck recent documents
-# []- Sidebar: uncheck documents
-# []- Advanced: show all filename extensions
+# []- SIDEBAR: Recents=OFF
+# []- Sidebar: Documents=OFF
+# []- ADVANCED: Show all filename extensions=ON
 # []- show all hidden files: cmd + shift + .
 
 
