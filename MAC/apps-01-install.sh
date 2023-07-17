@@ -1,12 +1,12 @@
 # MACBOOK SETUP
 # approx 2.75 hrs
-# // ca. MacOS Ventura 13.0.1
+# // ca. MacOS Ventura 13.4.1
 
 # [x]- Authorize Apple ID // iCloud sync and for access to TV / Notes / ...
 # [x]- turn ON FileVault // file encryption
 
 
-# // SYSTEM SETTINGS
+# SYSTEM SETTINGS
 # [x]- change background (Desktop & ScreenSaver) to adaptive landscape // for light & dark modes) 
 # [x]- change all active notifactions to banner & no sound no badges (Notifications & Focus) // so they show but are then hidden
 
@@ -216,8 +216,8 @@
 
 # []- brew install tmux
 # []- brew install neovim
-# []- configure all with the setup-config-MAC.sh
-    # chsh -s /bin/bash #// change default shell to bash
+# []- configure all with the ~/dotfiles/MAC/apps-02-config.sh
+#  // chsh -s /bin/bash #// change default shell to bash (fine with zsh now)
 # []- brew install ripgrep # // used for fzf.vim
 # []- brew install bat # // used for fzf.vim preview 
 # []- brew install code-minimap # // used for minimap.vim sidebar 
