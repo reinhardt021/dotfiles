@@ -347,7 +347,8 @@
 
 # // install RVM to have the proper version ~2.7.0
 # $ curl -sSL https://get.rvm.io | bash -s stable --ruby
-# // reference: https://rvm.io/rvm/install
+# // reference:
+# https://rvm.io/rvm/install
 
 # // install rails
 # $ gem install rails
