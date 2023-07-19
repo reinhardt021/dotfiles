@@ -133,6 +133,7 @@
 # $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # []- brew install --cask caffeine // prevents system from going to sleep
+# // ^ may require you to install Rosetta for Apple Silicon
 # []- brew install --cask rescuetime // time optimizing application - login to turn it on for system and firefox
 # []- install RescueTime Assistant // to have better control of focus sessions
 
