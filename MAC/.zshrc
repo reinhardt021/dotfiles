@@ -115,7 +115,10 @@ alias gwd='echo "// pwd |pbcopy"; pwd |pbcopy'
 alias n='echo "// nvim <command>"; nvim'
 alias nv='echo "// nvim <command>"; nvim'
 
-# GIT
+# GIT VERSION CONTROL
+#alias shs='. ./.sync' #//doesn't quite work - might be because of relative path?
+# TODO: CHECK IF FILE EXISTS BEFORE RUNNING
+
 alias g='echo "// git <command>"; git'
 alias gb='echo "// git branch"; git branch'
 # TODO: CHECK IF MAC OS
