@@ -14,7 +14,10 @@ alias ssha='eval $(ssh-agent); ssh-add'
 
 # // show hidden files
 # cmd + shift + .
-#
+
+# SYNC IF SYNC FILE EXISTS
+alias sy='echo "// trying sync script"; [ -f .sync.sh ] && sh .sync.sh || echo "> no .sync.sh file"'
+
 # FORTUNE
 # // randomized database of sayings
 # $ fortune
