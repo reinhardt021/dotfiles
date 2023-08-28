@@ -591,3 +591,12 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 #export PATH="$ANDROID_HOME/platform-tools:$PATH"
+
+
+#// filepath for DBngin database servers for Laravel projects
+export PATH=/Users/Shared/DBngin/mysql/8.0.33/bin:$PATH
+
+
+
+#.
+
