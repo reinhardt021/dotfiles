@@ -64,6 +64,8 @@ tmux new -s $SESSION_ID -n cmd -d;
     #// WINDOW: MISC
     #// create a new window as a sandbax / tinkering / misc
     tmux new-window -t $SESSION_ID:5 -n x; 
+    #// split the top window into a left and right pane at 27/73 ratio
+    tmux split-window -h -t $SESSION_ID:5;
 fi
 echo "The new TMUX session ($SESSION_ID) is ready to ATTACH to now:"
 echo "$ tmux attach -t <session-name>"
