@@ -22,18 +22,28 @@ echo "No worries if we can't find your session. Lets create a new session.\n"
 #// with first window called cmd (aka command center)
 tmux new -s $SESSION_ID -n cmd -d;
     #// WINDOW: CMD
+    # |_____|
+    # |__|__|
+    # |_____|
     #// split the 'command' window
     #// into a top & bottom pane (vertical split) 
     tmux split-window -v -t $SESSION_ID:1;
     #// split the 'command' window's top pane
+    tmux split-window -v -t $SESSION_ID:1.1;
+    #// split the 'command' window's 2nd pane
+    #// into a left & right pane (horizontal split)
+    tmux split-window -h -t $SESSION_ID:1.2;
+    #// split the 'command' window's top pane
     #// into a left & right pane (horizontal split)
     #// at 40/60 ratio
-    tmux split-window -v -t $SESSION_ID:1.1;
-    #tmux send-keys -t $SESSION_ID:1.2 "watch -n 10 kubectl config get-contexts" Enter;
     #tmux split-window -h -l 60% -t $SESSION_ID:1.1;
+    #tmux send-keys -t $SESSION_ID:1.2 "watch -n 10 kubectl config get-contexts" Enter;
     #// TODO: figure out why the resize is not working for the panes
 
     #// WINDOW: DB 
+    # |_____|
+    # |_____|
+    # |_____|
     tmux new-window -t $SESSION_ID:2 -n db;
     #// split the 'database' window
     #// into a top & bottom pane (vertical split) 
@@ -43,6 +53,9 @@ tmux new -s $SESSION_ID -n cmd -d;
     tmux split-window -v -t $SESSION_ID:2.1;
     
     #// WINDOW: GIT
+    # |___|_|
+    # |___|_|
+    # |_____|
     #// create a new window
     #// for source control called 'git'
     #// (at window index 2 on session 'ps')
@@ -69,6 +82,9 @@ tmux new -s $SESSION_ID -n cmd -d;
     tmux send-keys -t $SESSION_ID:3.4 "watch -n 10 git status" Enter;
     
     #// WINDOW: CODE
+    # |_____|
+    # |_____|
+    # |_____|
     #// create a new window
     #// for coding called 'CODE'
     #// (at window index 1 on session 'ps')
@@ -77,6 +93,9 @@ tmux new -s $SESSION_ID -n cmd -d;
     #tmux send-keys -t $SESSION_ID:4.1 "C-o"; # // can't seem to send this second command right away
 
     #// WINDOW: MISC
+    # |__|__|
+    # |__|__|
+    # |__|__|
     #// create a new window
     #// as a sandbax / tinkering / misc
     tmux new-window -t $SESSION_ID:5 -n x; 
