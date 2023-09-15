@@ -22,9 +22,9 @@ echo "No worries if we can't find your session. Lets create a new session.\n"
 #// with first window called cmd (aka command center)
 tmux new -s $SESSION_ID -n cmd -d;
     #// WINDOW: CMD
-    # |_____|
-    # |__|__|
-    # |_____|
+    # |__1__|
+    # |_2|_3|
+    # |__4__|
     #// split the 'command' window
     #// into a top & bottom pane (vertical split) 
     tmux split-window -v -t $SESSION_ID:1;
@@ -41,9 +41,9 @@ tmux new -s $SESSION_ID -n cmd -d;
     #// TODO: figure out why the resize is not working for the panes
 
     #// WINDOW: DB 
-    # |_____|
-    # |_____|
-    # |_____|
+    # |__1__|
+    # |__2__|
+    # |__3__|
     tmux new-window -t $SESSION_ID:2 -n db;
     #// split the 'database' window
     #// into a top & bottom pane (vertical split) 
@@ -53,9 +53,9 @@ tmux new -s $SESSION_ID -n cmd -d;
     tmux split-window -v -t $SESSION_ID:2.1;
     
     #// WINDOW: GIT
-    # |___|_|
-    # |___|_|
-    # |_____|
+    # |_1_|2|
+    # |___|3|
+    # |__4__|
     #// create a new window
     #// for source control called 'git'
     #// (at window index 2 on session 'ps')
@@ -83,7 +83,7 @@ tmux new -s $SESSION_ID -n cmd -d;
     
     #// WINDOW: CODE
     # |_____|
-    # |_____|
+    # |__1__|
     # |_____|
     #// create a new window
     #// for coding called 'CODE'
@@ -94,7 +94,7 @@ tmux new -s $SESSION_ID -n cmd -d;
 
     #// WINDOW: MISC
     # |__|__|
-    # |__|__|
+    # |_1|_2|
     # |__|__|
     #// create a new window
     #// as a sandbax / tinkering / misc
