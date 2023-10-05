@@ -586,6 +586,9 @@ alias sail='echo "// trying sail command else use vendor"; [ -f sail ] && sh sai
 #// laravel vapor alias
 alias vapor='echo "// php vendor/bin/vapor"; php vendor/bin/vapor'
 
+# /Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home"
+
 #/Users/reinhardt021/Library/Android/sdk
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH=$PATH:$ANDROID_HOME/emulator
