@@ -21,7 +21,8 @@ badd +1 LANGUAGES/javascript.md
 badd +1 MAC/config-sh.sh
 badd +1 MAC/apps-01-install.sh
 badd +2 MAC/.zshrc
-badd +0 .tmux.conf
+badd +171 .tmux.conf
+badd +29 init.vim
 argglobal
 %argdel
 tabnew +setlocal\ bufhidden=wipe
@@ -169,16 +170,34 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 567 - ((19 * winheight(0) + 19) / 38)
+let s:l = 594 - ((14 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 567
-normal! 0
+keepjumps 594
+normal! 059|
 tabnext
-edit .tmux.conf
+edit init.vim
+let s:save_splitbelow = &splitbelow
+let s:save_splitright = &splitright
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+let &splitbelow = s:save_splitbelow
+let &splitright = s:save_splitright
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 75 + 75) / 150)
+exe 'vert 2resize ' . ((&columns * 74 + 75) / 150)
 argglobal
-balt MAC/.zshrc
+balt .tmux.conf
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -187,12 +206,36 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 171 - ((17 * winheight(0) + 19) / 38)
+let s:l = 125 - ((18 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 125
+normal! 05|
+wincmd w
+argglobal
+if bufexists(fnamemodify(".tmux.conf", ":p")) | buffer .tmux.conf | else | edit .tmux.conf | endif
+if &buftype ==# 'terminal'
+  silent file .tmux.conf
+endif
+balt init.vim
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+let s:l = 171 - ((16 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 171
 normal! 0
+wincmd w
+exe 'vert 1resize ' . ((&columns * 75 + 75) / 150)
+exe 'vert 2resize ' . ((&columns * 74 + 75) / 150)
 tabnext 4
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -200,6 +243,8 @@ endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20
 let &shortmess = s:shortmess_save
+let &winminheight = s:save_winminheight
+let &winminwidth = s:save_winminwidth
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
