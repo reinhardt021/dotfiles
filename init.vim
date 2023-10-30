@@ -86,8 +86,8 @@ set nofoldenable "defaults no folding on first open
 " //ex: 3gt to go to tab 3
 "
 " // MOVE a TAB to a new position in the tab list
-" :tabmove 3
 " // note: uses 0 index
+" :tabmove 3
 " // to move current tab to a certain index
 " :tabmove <index|relative-index>
 " :tabm <index|relative-index>
