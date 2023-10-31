@@ -20,9 +20,11 @@ badd +1 LIBRARIES/stripe.md
 badd +1 LANGUAGES/javascript.md
 badd +1 MAC/config-sh.sh
 badd +1 MAC/apps-01-install.sh
-badd +2 MAC/.zshrc
+badd +594 MAC/.zshrc
 badd +171 .tmux.conf
-badd +29 init.vim
+badd +1 init.vim
+badd +1 ANDROID/.bash_profile
+badd +10 ANDROID/apps-01-install.sh
 argglobal
 %argdel
 tabnew +setlocal\ bufhidden=wipe
@@ -159,8 +161,47 @@ normal! zt
 keepjumps 217
 normal! 027|
 tabnext
-edit MAC/.zshrc
+edit ANDROID/.bash_profile
+let s:save_splitbelow = &splitbelow
+let s:save_splitright = &splitright
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+let &splitbelow = s:save_splitbelow
+let &splitright = s:save_splitright
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 75 + 75) / 150)
+exe 'vert 2resize ' . ((&columns * 74 + 75) / 150)
 argglobal
+balt ANDROID/apps-01-install.sh
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+let s:l = 1 - ((0 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+wincmd w
+argglobal
+if bufexists(fnamemodify("MAC/.zshrc", ":p")) | buffer MAC/.zshrc | else | edit MAC/.zshrc | endif
+if &buftype ==# 'terminal'
+  silent file MAC/.zshrc
+endif
 balt MAC/apps-01-install.sh
 setlocal fdm=indent
 setlocal fde=0
@@ -170,12 +211,15 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 594 - ((14 * winheight(0) + 19) / 38)
+let s:l = 594 - ((16 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 594
 normal! 059|
+wincmd w
+exe 'vert 1resize ' . ((&columns * 75 + 75) / 150)
+exe 'vert 2resize ' . ((&columns * 74 + 75) / 150)
 tabnext
 edit init.vim
 let s:save_splitbelow = &splitbelow
@@ -236,7 +280,7 @@ normal! 0
 wincmd w
 exe 'vert 1resize ' . ((&columns * 75 + 75) / 150)
 exe 'vert 2resize ' . ((&columns * 74 + 75) / 150)
-tabnext 4
+tabnext 3
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
