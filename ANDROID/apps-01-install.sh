@@ -17,3 +17,9 @@ pkg install neovim;
 
 # // for better SSH when on mobile or just for spotty connections
 pkg install mosh;
+
+# to run scripts
+pkg install ruby;
+
+# to see files
+pkg install tree;
