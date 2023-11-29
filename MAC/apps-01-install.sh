@@ -103,6 +103,7 @@
     # []- add extension: adblock plus - free ad blocker // both
     # []- add extension: cookie autodelete // both
     # []- add extension: disconnect // both
+    # []- add extension: unhook // both - blocks youtube features to prevent time sink
     # []- change default search to duck duck go // both
 
 # []- install ExpressVPN // to protect internet traffic - https://www.expressvpn.com/latest?utm_source=mac_app
