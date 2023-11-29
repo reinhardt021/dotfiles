@@ -104,6 +104,7 @@
     # []- add extension: cookie autodelete // both
     # []- add extension: disconnect // both
     # []- add extension: unhook // both - blocks youtube features to prevent time sink
+    # []- add extension: JSON Formatter // both - clearly shows API JSON in readable format
     # []- change default search to duck duck go // both
 
 # []- install ExpressVPN // to protect internet traffic - https://www.expressvpn.com/latest?utm_source=mac_app
