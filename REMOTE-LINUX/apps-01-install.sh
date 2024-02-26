@@ -8,6 +8,9 @@ sudo apt-get install tmux #// only Ubuntu & Debian
 # INSTALL NEOVIM [2]
 sudo apt install neovim #// only Ubuntu
 
+# INSTALL RIPGREP [2a] for navigating code
+sudo apt-get ripgrep
+
 # CREATE SSH KEY [3a]
 # passphrase = hima
 
