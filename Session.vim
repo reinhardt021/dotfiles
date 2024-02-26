@@ -28,7 +28,7 @@ badd +10 ANDROID/apps-01-install.sh
 badd +1 config-tmux.sh
 badd +1 config-vim.sh
 badd +98 tmux-new-session.sh
-badd +0 REMOTE-LINUX/apps-01-install.sh
+badd +1 REMOTE-LINUX/apps-01-install.sh
 argglobal
 %argdel
 tabnew +setlocal\ bufhidden=wipe
@@ -183,12 +183,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 11 - ((10 * winheight(0) + 21) / 43)
+let s:l = 10 - ((9 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 11
-normal! 042|
+keepjumps 10
+normal! 0
 wincmd w
 argglobal
 if bufexists(fnamemodify("MAC/apps-01-install.sh", ":p")) | buffer MAC/apps-01-install.sh | else | edit MAC/apps-01-install.sh | endif
