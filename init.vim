@@ -479,12 +479,16 @@ call plug#end()
 syntax enable
 filetype plugin indent on
 
-" adds Truecolor to the terminal if supported
-set termguicolors
+function! s:tweak_darcula_colors()
+  " darcula customizations
+  " adds Truecolor to the terminal if supported
+  set termguicolors
+  let g:lightline = { 'colorscheme': 'darculaOriginal' }
+endfunction
+autocmd! ColorScheme darcula call s:tweak_darcula_colors()
 " prefered syntax color scheme
 " TODO CHECK IF PLUGIN INSTALLED
 colorscheme darcula
-let g:lightline = { 'colorscheme': 'darculaOriginal' }
 
 
 " PLUG-IN MAPPINGS --- --- ---
