@@ -22,6 +22,8 @@ echo "// git fetch"
 git fetch
 
 #TODO: get the current branch name
+#alias gbc='echo "// git branch --show-current | pbcopy"; git branch --show-current | pbcopy'
+
 echo "_______________"
 echo "// git rebase origin/main"
 git rebase origin/main
