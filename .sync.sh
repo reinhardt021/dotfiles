@@ -10,6 +10,8 @@ git add .
 echo "_______________"
 echo "// git status"
 git status
+
+#TODO: get the message of what was worked on 
 echo "_______________"
 echo "// git commit -m '${folder} sync'"
 git commit -m "${folder} sync"
@@ -18,6 +20,8 @@ git commit -m "${folder} sync"
 echo "_______________"
 echo "// git fetch"
 git fetch
+
+#TODO: get the current branch name
 echo "_______________"
 echo "// git rebase origin/main"
 git rebase origin/main
