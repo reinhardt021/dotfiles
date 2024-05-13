@@ -18,6 +18,9 @@ alias ssha='eval $(ssh-agent); ssh-add'
 # SYNC IF SYNC FILE EXISTS
 alias sy='echo "// trying sync script"; [ -f .sync.sh ] && sh .sync.sh || echo "> no .sync.sh file"'
 
+#TODO: create vim man pages for hotkeys?
+#TODO: shell man pages for hotkeys?
+
 # FORTUNE
 # // randomized database of sayings
 # $ fortune
