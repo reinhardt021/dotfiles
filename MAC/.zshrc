@@ -157,7 +157,9 @@ alias gdc='echo "// git diff --cached"; git diff --cached' #// to see staged (ad
 alias ga='echo "// git add <files>"; git add ' 
 alias grs='echo "// git restore --staged <files> to UNSTAGE"; git restore --staged ' 
 
-alias gcm='echo "// git commit -m <text>"; git commit -m ' 
+#alias gcm='echo "// git commit -m <text>"; git commit -m ' 
+# GIT COMMIT IF GIT COMMIT SCRIPT FILE EXISTS
+alias gcm='echo "// trying commit script"; [ -f ~/dotfiles/.gitcommit.sh ] && sh ~/dotfiles/.gitcommit.sh || echo "> no ~/dotfiles/.gitcommit.sh file"'
 
 #// to push changes into the stash
 alias gspush='echo "// git stash push"; git stash push'
