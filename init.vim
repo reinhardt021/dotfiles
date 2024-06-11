@@ -27,8 +27,11 @@ set colorcolumn=80,120
 set autoindent
 " spaces used for indenting even when pressing TAB
 set expandtab 
-" toggle between spaces & tabs
+" //toggle between spaces & tabs
 " set expandtab!
+" //show tabs or spaces
+" set list //show tabs
+" set nolist //hide tabs
 
 " best to have these matching
 " num of spaces for a line indent
