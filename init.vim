@@ -105,6 +105,25 @@ set nofoldenable "defaults no folding on first open
 " // to open current window (pane) into new tab but keep old window as is
 " :tabnew %
 
+""""""""""""""" 
+" NORMAL MODE
+""""""""""""""" 
+" // to jump between brackes
+" %
+
+
+""""""""""""""" 
+" VISUAL MODE
+""""""""""""""" 
+" // to jump to beginning or end of selection
+" o || O
+
+
+""""""""""""""" 
+" INSERT MODE
+""""""""""""""" 
+
+
 
 " STATUS LINE
 
