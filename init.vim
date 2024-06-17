@@ -110,6 +110,8 @@ set nofoldenable "defaults no folding on first open
 """"""""""""""" 
 " // to jump between brackes
 " %
+" // to show cursor
+" cmd + /
 
 
 """"""""""""""" 
