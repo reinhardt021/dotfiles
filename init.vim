@@ -106,6 +106,11 @@ set nofoldenable "defaults no folding on first open
 " :tabnew %
 
 """"""""""""""" 
+" COMMAND MODE
+""""""""""""""" 
+" :w //saves changes
+
+""""""""""""""" 
 " NORMAL MODE
 """"""""""""""" 
 " // to jump between brackes
@@ -113,6 +118,8 @@ set nofoldenable "defaults no folding on first open
 " // to show cursor
 " cmd + /
 
+" // repeats the command you did recently
+" .
 
 """"""""""""""" 
 " VISUAL MODE
