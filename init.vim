@@ -12,9 +12,14 @@
 """"""""""""""" 
 " COMMAND MODE
 """"""""""""""" 
-" :w //saves changes
+" :w // to save changes from a buffer
 
-" SETTINGS --- --- ---
+" :q // to CLOSE a VIM window
+" :qa // to CLOSE ALL of VIM
+
+"" SETTINGS
+
+" :set wrap! // toggle text WRAP
 
 " shows the file line numbers
 set number
@@ -33,6 +38,7 @@ set autoindent
 set expandtab 
 " //toggle between spaces & tabs
 " set expandtab!
+
 " //show tabs or spaces
 " set list //show tabs
 " set nolist //hide tabs
@@ -65,35 +71,34 @@ set nofoldenable "defaults no folding on first open
     "zr //to have REDUCED fold levels
         "zR //to have the MOST REDUCED fold levels
 
-" // toggle text WRAP
-" :set wrap!
 
-" // to CLOSE a VIM window
-" :q
-" // to save changes from a buffer
-" :w
-" // to CLOSE ALL of VIM
-" :qa
-
-" SESSIONS
+"" SESSIONS
 "
 " // to save session (all buffers /panes as before)
 " :mksession path/to/file/<filename>.vim
-" // short form
-" :mks! ...
+" :mks! ... // short form
 "
-" // to resotre session
+" // to restore session
 " :source path/to/file/<filename>.vim
 
-" TABS
+"" TABS
+"
 " // to list the tabs open
 " :tabs
+"
 " // to create a new tab
 " :tabnew
+" // to open current window (pane) into new tab but keep old window as is
+" :tabnew %
+" // to open current window (pane) into new tab
+" ctrl-w T
+"
 " // to go to next tab
 " gt (or :tabn)
+"
 " // to go to previous tab
 " gT (or :tabp)
+"
 " // to go to tab i
 " <i>gt 
 " //ex: 3gt to go to tab 3
@@ -108,10 +113,8 @@ set nofoldenable "defaults no folding on first open
 " :tabmove 2
 " :tabm -1
 
-" // to open current window (pane) into new tab
-" ctrl-w T
-" // to open current window (pane) into new tab but keep old window as is
-" :tabnew %
+
+" :tabclose // to close all panes on tab
 
 
 """"""""""""""" 
@@ -125,6 +128,103 @@ set nofoldenable "defaults no folding on first open
 " // repeats the command you did recently
 " .
 
+"" NAVIGATION
+"   WINDOWS
+" // to open new VIM window next to the existing one
+" ctrl+w v
+" // to open new VIM window below the existing one
+" ctrl+w s
+
+""   PANES
+" // to go between panes/windows in vim 
+" ctrl+w w 
+" // to go [left/down/up/right] between panes
+" ctrl+w [h/j/k/l]
+
+"" BUFFERS
+" :ls // to see active buffers (or :buffers / :files)
+" :bufferN // to open buffer# N
+" ctrl+shift+^ // to toggle between last buffer
+" :bdelete | :bd // to delete a buffer
+" :%bdelete|edit#|bd# // to delete all open buffers and reopens current buffer/file
+"   :%bd|e#|bd#
+" :w // to save changes to file
+
+"" RESIZE
+" // to resize the width of a pane
+" :vertical resize (+/-) n
+" // to resize by 1 character wider or narrower
+" <C-w> (>/<)
+"
+" // to resize the height of a pane
+" :resize (+/-) n
+" :res (+/-) n 
+" // to vertical resize by 1 line 
+" <C-w> (+/-)
+"
+" // to equalize width and height 
+" <C-w> = 
+
+"" SEARCH
+" (in file)
+" `/` // to search forward
+" `?` // to search backward
+" n // to go to next occurence
+" N // to go to previous occurence
+
+" (in project)
+" :Rg
+" // can then type to complete and find file needed
+
+"" INSERT
+" I // to insert at beginning of line
+" i // to insert at current position
+" a // to append just after current position
+" A // to append at end of line
+
+" O // to open new live above the current line
+" o // to open new line below the current line
+
+"" EDIT
+" J // to simplify and merge the next line with your current line
+
+"" DELETE
+" x // to delete a character
+" dw // to delete a word
+" dd // to delete a line
+
+"" ADVANCED COMMANDS
+" ~ // toggle character casing
+" 0 // go to start of line
+" $ // go to end of line
+" ctrl+a // increment number
+" ctrl+x // decrement number
+" t<char> // till character
+" f<char> // on character
+" vi<char> // visual mode (select) in character
+" ci<char> // change in character 
+"     - ex: ci" means change (replace characters in ")
+" di<char> // delete in character - ex: di{ means delete all within {}
+" da<char> // delete all in and including character 
+"     - ex: da{ means delete {} and everything in them
+" vi{~ // COMBO: select everything in { and toggle casing
+" f.ct( // COMBO: on character . change everything until (
+
+"" SELECT + INDENT/ COPY/ CUT/ PASTE
+" v // to select a character
+" shift+v // to select a line
+" [j/k] // move [up/down] 
+
+" > // to indent
+
+" (in vim clipboard)
+" y // to copy
+" d // to cut
+" P // to paste before the cursor
+" p // to paste after the cursor
+
+
+
 """"""""""""""" 
 " VISUAL MODE
 """"""""""""""" 
@@ -132,9 +232,11 @@ set nofoldenable "defaults no folding on first open
 " o || O
 
 
+
 """"""""""""""" 
 " INSERT MODE
 """"""""""""""" 
+" just type normally
 
 
 
@@ -234,101 +336,6 @@ set tabline=%!MyTabLine() "// filenames get too big
 
 
 
-
-" NAVIGATION
-"   WINDOWS
-" // to open new VIM window next to the existing one
-" ctrl+w v
-" // to open new VIM window below the existing one
-" ctrl+w s
-
-"   PANES
-" // to go between panes/windows in vim 
-" ctrl+w w 
-" // to go [left/down/up/right] between panes
-" ctrl+w [h/j/k/l]
-
-" BUFFERS
-" :ls // to see active buffers (or :buffers / :files)
-" :bufferN // to open buffer# N
-" ctrl+shift+^ // to toggle between last buffer
-" :bdelete | :bd // to delete a buffer
-" :%bdelete|edit#|bd# // to delete all open buffers and reopens current buffer/file
-"   :%bd|e#|bd#
-" :w // to save changes to file
-
-" RESIZE
-" // to resize the width of a pane
-" :vertical resize (+/-) n
-" // to resize by 1 character wider or narrower
-" <C-w> (>/<)
-"
-" // to resize the height of a pane
-" :resize (+/-) n
-" :res (+/-) n 
-" // to vertical resize by 1 line 
-" <C-w> (+/-)
-"
-" // to equalize width and height 
-" <C-w> = 
-
-" SEARCH
-" (in file)
-" `/` // to search forward
-" `?` // to search backward
-" n // to go to next occurence
-" N // to go to previous occurence
-
-" (in project)
-" :Rg
-" // can then type to complete and find file needed
-
-" INSERT
-" I // to insert at beginning of line
-" i // to insert at current position
-" a // to append just after current position
-" A // to append at end of line
-
-" O // to open new live above the current line
-" o // to open new line below the current line
-
-" EDIT
-" J // to simplify and merge the next line with your current line
-
-" DELETE
-" x // to delete a character
-" dw // to delete a word
-" dd // to delete a line
-
-" ADVANCED COMMANDS
-" ~ // toggle character casing
-" 0 // go to start of line
-" $ // go to end of line
-" ctrl+a // increment number
-" ctrl+x // decrement number
-" t<char> // till character
-" f<char> // on character
-" vi<char> // visual mode (select) in character
-" ci<char> // change in character 
-"     - ex: ci" means change (replace characters in ")
-" di<char> // delete in character - ex: di{ means delete all within {}
-" da<char> // delete all in and including character 
-"     - ex: da{ means delete {} and everything in them
-" vi{~ // COMBO: select everything in { and toggle casing
-" f.ct( // COMBO: on character . change everything until (
-
-" SELECT + INDENT/ COPY/ CUT/ PASTE
-" v // to select a character
-" shift+v // to select a line
-" [j/k] // move [up/down] 
-
-" > // to indent
-
-" (in vim clipboard)
-" y // to copy
-" d // to cut
-" P // to paste before the cursor
-" p // to paste after the cursor
 
 
 " MAPPINGS --- --- ---
