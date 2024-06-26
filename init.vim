@@ -9,6 +9,10 @@
 " // to replay macro
 " @ <letter>
 
+""""""""""""""" 
+" COMMAND MODE
+""""""""""""""" 
+" :w //saves changes
 
 " SETTINGS --- --- ---
 
@@ -72,8 +76,12 @@ set nofoldenable "defaults no folding on first open
 " :qa
 
 " SESSIONS
+"
 " // to save session (all buffers /panes as before)
 " :mksession path/to/file/<filename>.vim
+" // short form
+" :mks! ...
+"
 " // to resotre session
 " :source path/to/file/<filename>.vim
 
@@ -105,10 +113,6 @@ set nofoldenable "defaults no folding on first open
 " // to open current window (pane) into new tab but keep old window as is
 " :tabnew %
 
-""""""""""""""" 
-" COMMAND MODE
-""""""""""""""" 
-" :w //saves changes
 
 """"""""""""""" 
 " NORMAL MODE
