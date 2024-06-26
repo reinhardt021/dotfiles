@@ -240,7 +240,9 @@ set nofoldenable "defaults no folding on first open
 
 
 
+""""""""""""""" 
 " STATUS LINE
+""""""""""""""" 
 
 function! GitGetCurrentBranch()
     let branch_name = system("git rev-parse --abbrev-ref HEAD")
@@ -292,7 +294,9 @@ set laststatus=2
 
 
 
-" SCRIPTS --- --- ---
+""""""""""""""" 
+" SCRIPTS
+""""""""""""""" 
 
 " // show tabs all the time
 set showtabline=2
@@ -338,7 +342,9 @@ set tabline=%!MyTabLine() "// filenames get too big
 
 
 
-" MAPPINGS --- --- ---
+""""""""""""""" 
+" MAPPINGS
+""""""""""""""" 
 
 " (in system clipboard)
 " `"+y` // to copy
@@ -347,14 +353,14 @@ set tabline=%!MyTabLine() "// filenames get too big
 vnoremap <C-y> "+y
 vnoremap <C-x> "+x
 
-" SELECT ALL
+"" SELECT ALL
 " ggVG 
 " // `gg` to go to top of page
 " // `V` to select line
 " // `G` to go to bottom of the page
 nnoremap <C-a> ggVG
 
-" TIMETRAVEL
+"" TIMETRAVEL
 " u // to undo recent change
 " ctrl+r // to redo change
 
@@ -366,7 +372,9 @@ nnoremap <C-j> 3jzz
 nnoremap <C-k> 3kzz
 
 
-" PLUG-INs (using vim-plug) --- --- ---
+""""""""""""""" 
+" PLUG-INs (using vim-plug)
+""""""""""""""" 
 
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
     silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
@@ -535,7 +543,9 @@ autocmd! ColorScheme darcula call s:tweak_darcula_colors()
 colorscheme darcula
 
 
-" PLUG-IN MAPPINGS --- --- ---
+""""""""""""""" 
+" PLUG-IN MAPPINGS
+""""""""""""""" 
 
 " ctrl+o // to open nerd tree 
 map <C-o> :NERDTreeToggle<CR>
