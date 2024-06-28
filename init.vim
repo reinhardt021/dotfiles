@@ -168,6 +168,11 @@ set nofoldenable "defaults no folding on first open
 " HOW TO DELETE INACTIVE BUFFERS
 ":for buf in filter(range(1, bufnr('$')), 'buflisted(v:val) && !bufloaded(v:val)') | execute 'bdelete' buf | endfor
 
+" EXAMPLE:
+"1088 // buffers
+"870 // inactive
+"=218 // remaining
+
 
 
 "" RESIZE
