@@ -71,6 +71,8 @@ set nofoldenable "defaults no folding on first open
     "zr //to have REDUCED fold levels
         "zR //to have the MOST REDUCED fold levels
 
+" // one line setup
+"set number relativenumber colorcolumn=80,120 autoindent expandtab tabstop=2 shiftwidth=2 cursorline
 
 "" SESSIONS
 "
