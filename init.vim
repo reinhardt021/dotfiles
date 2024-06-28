@@ -165,9 +165,7 @@ set nofoldenable "defaults no folding on first open
 " GET COUNT OF INACTIVE BUFFERS
 ":echo len(filter(range(1, bufnr('$')), 'buflisted(v:val) && !bufloaded(v:val)'))
 
-
-
-"" HOW TO DELETE INACTIVE BUFFERS
+" HOW TO DELETE INACTIVE BUFFERS
 ":for buf in filter(range(1, bufnr('$')), 'buflisted(v:val) && !bufloaded(v:val)') | execute 'bdelete' buf | endfor
 
 
