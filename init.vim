@@ -26,8 +26,11 @@
 "" SETTINGS
 "
 " // ONE LINE SETUP for REMOTE LINUX
-"set number relativenumber colorcolumn=80,120 autoindent expandtab tabstop=2 shiftwidth=2 cursorline
+"set number relativenumber expandtab tabstop=2 shiftwidth=2 autoindent
 
+"colorcolumn=80,120 "//doesn't work
+"cursorline "//doesn't work
+"cursorcolumn "//doesn't work
 
 " :set wrap! // toggle text WRAP
 
