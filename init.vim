@@ -168,7 +168,7 @@ set nofoldenable "defaults no folding on first open
 
 
 "" HOW TO DELETE INACTIVE BUFFERS
-" :for buf in filter(range(1, bufnr('$')), 'buflisted(v:val) && !bufloaded(v:val)') | execute 'bdelete' buf | endfor
+":for buf in filter(range(1, bufnr('$')), 'buflisted(v:val) && !bufloaded(v:val)') | execute 'bdelete' buf | endfor
 
 
 
