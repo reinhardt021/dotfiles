@@ -159,6 +159,14 @@ set nofoldenable "defaults no folding on first open
 "   :%bd|e#|bd#
 " :w // to save changes to file
 
+" GET COUNT OF BUFFERS
+":echo len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
+
+" GET COUNT OF INACTIVE BUFFERS
+":echo len(filter(range(1, bufnr('$')), 'buflisted(v:val) && !bufloaded(v:val)'))
+
+
+
 "" HOW TO DELETE INACTIVE BUFFERS
 " :for buf in filter(range(1, bufnr('$')), 'buflisted(v:val) && !bufloaded(v:val)') | execute 'bdelete' buf | endfor
 
