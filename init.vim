@@ -24,6 +24,10 @@
 " :qa // to CLOSE ALL of VIM
 
 "" SETTINGS
+"
+" // ONE LINE SETUP for REMOTE LINUX
+"set number relativenumber colorcolumn=80,120 autoindent expandtab tabstop=2 shiftwidth=2 cursorline
+
 
 " :set wrap! // toggle text WRAP
 
@@ -76,9 +80,6 @@ set nofoldenable "defaults no folding on first open
         "zM //to have the MOST fold levels
     "zr //to have REDUCED fold levels
         "zR //to have the MOST REDUCED fold levels
-
-" // one line setup
-"set number relativenumber colorcolumn=80,120 autoindent expandtab tabstop=2 shiftwidth=2 cursorline
 
 "" SESSIONS
 "
@@ -157,6 +158,11 @@ set nofoldenable "defaults no folding on first open
 " :%bdelete|edit#|bd# // to delete all open buffers and reopens current buffer/file
 "   :%bd|e#|bd#
 " :w // to save changes to file
+
+"" HOW TO DELETE INACTIVE BUFFERS
+" :for buf in filter(range(1, bufnr('$')), 'buflisted(v:val) && !bufloaded(v:val)') | execute 'bdelete' buf | endfor
+
+
 
 "" RESIZE
 " // to resize the width of a pane
