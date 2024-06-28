@@ -1,3 +1,9 @@
+""""""""""""""" 
+" VIM SETUP
+""""""""""""""" 
+" not that this is the file to setup nvim
+" .vimrc is for regular vim
+"
 " to format JSON in a .json file
 " :%!python -m json.tool
 "
