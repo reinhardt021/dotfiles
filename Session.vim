@@ -422,12 +422,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 165 - ((3 * winheight(0) + 12) / 25)
+let s:l = 164 - ((2 * winheight(0) + 12) / 25)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 165
-normal! 0
+keepjumps 164
+normal! 03|
 wincmd w
 argglobal
 if bufexists(fnamemodify(".tmux.conf", ":p")) | buffer .tmux.conf | else | edit .tmux.conf | endif
