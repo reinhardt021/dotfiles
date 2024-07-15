@@ -13,23 +13,17 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +6 LIBRARIES/google-maps.md
 badd +1 TOOLS/laravel-vapor.md
 badd +1 FRAMEWORKS/next-react.md
 badd +1 LIBRARIES/stripe.md
 badd +1 LANGUAGES/javascript.md
-badd +1 MAC/config-sh.sh
 badd +229 MAC/apps-01-install.sh
 badd +201 MAC/.zshrc
 badd +171 .tmux.conf
-badd +274 init.vim
-badd +71 ANDROID/.bash_profile
-badd +10 ANDROID/apps-01-install.sh
-badd +1 config-tmux.sh
-badd +1 config-vim.sh
+badd +1 init.vim
+badd +1 ANDROID/.bash_profile
 badd +98 tmux-new-session.sh
 badd +1 REMOTE-LINUX/apps-01-install.sh
-badd +15 .sync.sh
 badd +2 .gitcommit.sh
 argglobal
 %argdel
@@ -65,7 +59,7 @@ exe 'vert 1resize ' . ((&columns * 40 + 107) / 214)
 exe '2resize ' . ((&lines * 40 + 27) / 54)
 exe 'vert 2resize ' . ((&columns * 40 + 107) / 214)
 exe '3resize ' . ((&lines * 40 + 27) / 54)
-exe 'vert 3resize ' . ((&columns * 64 + 107) / 214)
+exe 'vert 3resize ' . ((&columns * 91 + 107) / 214)
 exe '4resize ' . ((&lines * 40 + 27) / 54)
 exe 'vert 4resize ' . ((&columns * 40 + 107) / 214)
 argglobal
@@ -153,7 +147,7 @@ exe 'vert 1resize ' . ((&columns * 40 + 107) / 214)
 exe '2resize ' . ((&lines * 40 + 27) / 54)
 exe 'vert 2resize ' . ((&columns * 40 + 107) / 214)
 exe '3resize ' . ((&lines * 40 + 27) / 54)
-exe 'vert 3resize ' . ((&columns * 64 + 107) / 214)
+exe 'vert 3resize ' . ((&columns * 91 + 107) / 214)
 exe '4resize ' . ((&lines * 40 + 27) / 54)
 exe 'vert 4resize ' . ((&columns * 40 + 107) / 214)
 tabnext
@@ -179,7 +173,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe '1resize ' . ((&lines * 40 + 27) / 54)
-exe 'vert 1resize ' . ((&columns * 105 + 107) / 214)
+exe 'vert 1resize ' . ((&columns * 132 + 107) / 214)
 exe '2resize ' . ((&lines * 19 + 27) / 54)
 exe 'vert 2resize ' . ((&columns * 81 + 107) / 214)
 exe '3resize ' . ((&lines * 20 + 27) / 54)
@@ -206,7 +200,6 @@ if bufexists(fnamemodify("MAC/apps-01-install.sh", ":p")) | buffer MAC/apps-01-i
 if &buftype ==# 'terminal'
   silent file MAC/apps-01-install.sh
 endif
-balt MAC/config-sh.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -227,7 +220,6 @@ if bufexists(fnamemodify("MAC/apps-01-install.sh", ":p")) | buffer MAC/apps-01-i
 if &buftype ==# 'terminal'
   silent file MAC/apps-01-install.sh
 endif
-balt MAC/config-sh.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -244,7 +236,7 @@ keepjumps 230
 normal! 024|
 wincmd w
 exe '1resize ' . ((&lines * 40 + 27) / 54)
-exe 'vert 1resize ' . ((&columns * 105 + 107) / 214)
+exe 'vert 1resize ' . ((&columns * 132 + 107) / 214)
 exe '2resize ' . ((&lines * 19 + 27) / 54)
 exe 'vert 2resize ' . ((&columns * 81 + 107) / 214)
 exe '3resize ' . ((&lines * 20 + 27) / 54)
@@ -277,13 +269,12 @@ set winwidth=1
 exe '1resize ' . ((&lines * 45 + 27) / 54)
 exe 'vert 1resize ' . ((&columns * 62 + 107) / 214)
 exe '2resize ' . ((&lines * 22 + 27) / 54)
-exe 'vert 2resize ' . ((&columns * 61 + 107) / 214)
+exe 'vert 2resize ' . ((&columns * 88 + 107) / 214)
 exe '3resize ' . ((&lines * 22 + 27) / 54)
-exe 'vert 3resize ' . ((&columns * 61 + 107) / 214)
+exe 'vert 3resize ' . ((&columns * 88 + 107) / 214)
 exe '4resize ' . ((&lines * 45 + 27) / 54)
 exe 'vert 4resize ' . ((&columns * 62 + 107) / 214)
 argglobal
-balt ANDROID/apps-01-install.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -346,7 +337,6 @@ if bufexists(fnamemodify(".gitcommit.sh", ":p")) | buffer .gitcommit.sh | else |
 if &buftype ==# 'terminal'
   silent file .gitcommit.sh
 endif
-balt .sync.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -365,9 +355,9 @@ wincmd w
 exe '1resize ' . ((&lines * 45 + 27) / 54)
 exe 'vert 1resize ' . ((&columns * 62 + 107) / 214)
 exe '2resize ' . ((&lines * 22 + 27) / 54)
-exe 'vert 2resize ' . ((&columns * 61 + 107) / 214)
+exe 'vert 2resize ' . ((&columns * 88 + 107) / 214)
 exe '3resize ' . ((&lines * 22 + 27) / 54)
-exe 'vert 3resize ' . ((&columns * 61 + 107) / 214)
+exe 'vert 3resize ' . ((&columns * 88 + 107) / 214)
 exe '4resize ' . ((&lines * 45 + 27) / 54)
 exe 'vert 4resize ' . ((&columns * 62 + 107) / 214)
 tabnext
@@ -380,6 +370,10 @@ vsplit
 wincmd _ | wincmd |
 vsplit
 2wincmd h
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
 wincmd w
 wincmd w
 let &splitbelow = s:save_splitbelow
@@ -391,9 +385,12 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
+exe '1resize ' . ((&lines * 25 + 27) / 54)
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
+exe '2resize ' . ((&lines * 25 + 27) / 54)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
-exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
+exe 'vert 3resize ' . ((&columns * 71 + 107) / 214)
+exe 'vert 4resize ' . ((&columns * 70 + 107) / 214)
 argglobal
 balt .tmux.conf
 setlocal fdm=indent
@@ -404,11 +401,32 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 244 - ((25 * winheight(0) + 25) / 51)
+let s:l = 28 - ((12 * winheight(0) + 12) / 25)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 244
+keepjumps 28
+normal! 0
+wincmd w
+argglobal
+if bufexists(fnamemodify("init.vim", ":p")) | buffer init.vim | else | edit init.vim | endif
+if &buftype ==# 'terminal'
+  silent file init.vim
+endif
+balt .tmux.conf
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+let s:l = 165 - ((3 * winheight(0) + 12) / 25)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 165
 normal! 0
 wincmd w
 argglobal
@@ -425,11 +443,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 171 - ((0 * winheight(0) + 25) / 51)
+let s:l = 181 - ((13 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 171
+keepjumps 181
 normal! 0
 wincmd w
 argglobal
@@ -437,7 +455,6 @@ if bufexists(fnamemodify("tmux-new-session.sh", ":p")) | buffer tmux-new-session
 if &buftype ==# 'terminal'
   silent file tmux-new-session.sh
 endif
-balt config-vim.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -446,16 +463,20 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 4 - ((3 * winheight(0) + 25) / 51)
+let s:l = 4 - ((0 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 4
 normal! 0
 wincmd w
+2wincmd w
+exe '1resize ' . ((&lines * 25 + 27) / 54)
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
+exe '2resize ' . ((&lines * 25 + 27) / 54)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
-exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
+exe 'vert 3resize ' . ((&columns * 71 + 107) / 214)
+exe 'vert 4resize ' . ((&columns * 70 + 107) / 214)
 tabnext 4
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
