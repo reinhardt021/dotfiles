@@ -155,6 +155,7 @@ alias gd='echo "// git diff";git diff'
 alias gdc='echo "// git diff --cached"; git diff --cached' #// to see staged (added) changes (hunk)
 
 alias ga='echo "// git add <files>"; git add ' 
+alias gaa='echo "// git add . (ALL)"; git add .;' 
 alias grs='echo "// git restore --staged <files> to UNSTAGE"; git restore --staged ' 
 
 #alias gcm='echo "// git commit -m <text>"; git commit -m ' 
