@@ -179,8 +179,6 @@ set nofoldenable "defaults no folding on first open
 " GET BUFFER COUNTS
 ":echo 'buffers['.len(filter(range(1, bufnr('$')), 'buflisted(v:val)')).'] active['.len(filter(range(1, bufnr('$')), 'buflisted(v:val) && bufloaded(v:val)')).'] inactive['.len(filter(range(1, bufnr('$')), 'buflisted(v:val) && !bufloaded(v:val)')).']'
 
-
-
 " HOW TO DELETE INACTIVE BUFFERS
 ":for buf in filter(range(1, bufnr('$')), 'buflisted(v:val) && !bufloaded(v:val)') | execute 'bdelete' buf | endfor
 
