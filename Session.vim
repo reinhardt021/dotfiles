@@ -20,12 +20,12 @@ badd +1 LANGUAGES/javascript.md
 badd +229 MAC/apps-01-install.sh
 badd +201 MAC/.zshrc
 badd +171 .tmux.conf
-badd +166 init.vim
-badd +66 ANDROID/.bash_profile
+badd +1 init.vim
+badd +1 ANDROID/.bash_profile
 badd +98 tmux-new-session.sh
 badd +1 REMOTE-LINUX/apps-01-install.sh
 badd +3 .gitcommit.sh
-badd +0 MAC/config-sh.sh
+badd +1 MAC/config-sh.sh
 argglobal
 %argdel
 tabnew +setlocal\ bufhidden=wipe
@@ -432,7 +432,7 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 239 - ((12 * winheight(0) + 12) / 25)
+let s:l = 239 - ((0 * winheight(0) + 12) / 25)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -453,12 +453,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 182 - ((7 * winheight(0) + 12) / 25)
+let s:l = 181 - ((0 * winheight(0) + 12) / 25)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 182
-normal! 03|
+keepjumps 181
+normal! 0
 wincmd w
 argglobal
 if bufexists(fnamemodify(".tmux.conf", ":p")) | buffer .tmux.conf | else | edit .tmux.conf | endif
@@ -474,12 +474,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 167 - ((8 * winheight(0) + 25) / 51)
+let s:l = 174 - ((31 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 167
-normal! 030|
+keepjumps 174
+normal! 015|
 wincmd w
 argglobal
 if bufexists(fnamemodify("tmux-new-session.sh", ":p")) | buffer tmux-new-session.sh | else | edit tmux-new-session.sh | endif
@@ -495,14 +495,14 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 4 - ((3 * winheight(0) + 25) / 51)
+let s:l = 4 - ((0 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 4
 normal! 0
 wincmd w
-2wincmd w
+3wincmd w
 exe '1resize ' . ((&lines * 25 + 27) / 54)
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
 exe '2resize ' . ((&lines * 25 + 27) / 54)
