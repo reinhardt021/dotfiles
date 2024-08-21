@@ -250,6 +250,13 @@ alias glp='echo "// git log -p"; git log -p'
 # // just another alias to make t easier to view changes
 alias glshow='echo "// git log -p"; git log -p'
 
+# to RESET a SINGLE FILE in a PR
+# git reset <commit-ID>
+#- recommit the changes you want
+#- stash the changes you don't want
+#- force push to rebase the remote branch
+#git push -f origin <branch>
+
 # // to reset to a previous commit but careful as you lose everything 
 # git reset --hard <commit-ID || HEAD>
 
