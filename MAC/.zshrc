@@ -253,7 +253,11 @@ alias glshow='echo "// git log -p"; git log -p'
 # to RESET a SINGLE FILE in a PR
 # git reset <commit-ID>
 #- recommit the changes you want
+# git add <files>
 #- stash the changes you don't want
+# git stash push .
+#- drop the unwanted changes
+# git stash drop 0
 #- force push to rebase the remote branch
 #git push -f origin <branch>
 
