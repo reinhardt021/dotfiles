@@ -188,6 +188,8 @@ set nofoldenable "defaults no folding on first open
 "=218 // remaining
 
 
+"" WINDOWS COMMAND MODE
+" <C-w> ...
 
 "" RESIZE
 " // to resize the width of a pane
