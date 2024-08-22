@@ -204,6 +204,12 @@ set nofoldenable "defaults no folding on first open
 " // to equalize width and height 
 " <C-w> = 
 
+"" REORGANIZE
+" // to rotate the panes count-clockwise
+" <C-w> r
+" // to rotate the panes clockwise
+" <C-w> R
+
 "" SEARCH
 " (in file)
 " `/` // to search forward
