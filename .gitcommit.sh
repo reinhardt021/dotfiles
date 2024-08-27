@@ -1,13 +1,11 @@
 echo "_______________"
-echo "Why did you make these changes?"
-echo "_______________"
+echo "Why did you make these changes?..."
 read message
 echo "_______________"
-echo "What prefix do you want?"
-echo "_______________"
+echo "What prefix do you want?..."
 read prefix
 
-if [ $prefix != "" ]
+if [ "$prefix" != "" ]
 then
   message="[${prefix}] ${message}"
 fi
