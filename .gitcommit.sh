@@ -7,7 +7,7 @@ read prefix
 
 if [ "$prefix" != "" ]
 then
-  message="[${prefix}] ${message}"
+  message="${prefix}${message}"
 fi
 
 echo "_______________"
