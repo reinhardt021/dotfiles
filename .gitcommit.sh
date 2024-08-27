@@ -7,7 +7,7 @@ echo "What prefix do you want?"
 echo "_______________"
 read prefix
 
-if [ -n "$prefix"]
+if [ $prefix != "" ]
 then
   message="[${prefix}] ${message}"
 fi
