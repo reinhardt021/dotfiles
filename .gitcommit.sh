@@ -10,6 +10,7 @@ then
   message="[${prefix}] ${message}"
 fi
 
+echo "_______________"
 echo "// git commit -m '${message}'"
 git commit -m "${message}"
 
