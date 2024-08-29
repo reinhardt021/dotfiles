@@ -21,7 +21,10 @@ fi
 if [ "$prefix" != "" ]
 then
   message="${prefix}${separator} ${message}"
-else
+fi
+
+if [ "$first_word" != "" ]
+then
   message="${first_word}${separator} ${message}"
 fi
 
