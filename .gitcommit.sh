@@ -11,6 +11,7 @@ fi
 
 prefix_prompt="___ADD A PREFIX?___"
 echo "$prefix_prompt"
+
 if [[ -z "$first_word" ]]; then
   read prefix
 else
