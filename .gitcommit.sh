@@ -22,9 +22,8 @@ fi
 if [ "$prefix" != "" ]
 then
   message="${prefix}${separator} ${message}"
-fi
 
-if [ "$first_word" != "" ]
+elif [ "$first_word" != "" ]
 then
   message="${first_word}${separator} ${message}"
 fi

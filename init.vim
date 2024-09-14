@@ -387,6 +387,10 @@ set tabline=%!MyTabLine() "// filenames get too big
 
 
 
+" how to get the path of the current file opened in buffer
+":let @" = expand("%:p")
+"%" // for relative file path
+"%:p" // for full file path not relative
 
 
 """"""""""""""" 
