@@ -409,7 +409,8 @@ vnoremap <C-x> "+x
 " // `gg` to go to top of page
 " // `V` to select line
 " // `G` to go to bottom of the page
-nnoremap <C-a> ggVG
+"nnoremap <C-a> ggVG
+" // turn off for now
 
 "" TIMETRAVEL
 " u // to undo recent change
