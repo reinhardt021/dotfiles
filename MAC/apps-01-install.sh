@@ -15,7 +15,7 @@
 # []- remove all apps from the dock
 # []- DOCK: Show recent applications in Dock=OFF
 # []- DOCK: Automatically hide and show the Dock=ON
-# []- MENU: Automatically hide and show the menu bar=ALWAYS
+# []- MENU: Automatically hide and show the menu bar='In Full Screen Only'
 # []- MISSION CONTROL: Automatically rearrange Spaces based on most recent use=OFF
 # SYSTEM SETTINGS > CONTROL CENTER
 # []- MODULES: Display = Don't Show in Menu Bar
