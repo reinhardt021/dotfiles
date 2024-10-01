@@ -69,6 +69,10 @@ alias gld='echo "// git log diff b/w remote"; git log origin/main..main'
 alias glg='echo "// git log --graph --format=.."; git log --pretty=format:"%C(dim white)%d%C(reset) %s %C(dim white)[%h %ae %cr]%C(reset)" --graph'
 alias glgraph='echo "// git log --graph"; git log --graph'
 
+alias glgr='echo "// git log --graph --pretty=reference --relative-date"; git log --graph --pretty=reference --relative-date'
+alias gl1='echo "// git log --graph --oneline"; git log --graph --oneline'
+
+
 # // git log FILES to see which files were updated
 alias glf='echo "// git log --name-only --oneline"; git log --name-only --oneline'
 
