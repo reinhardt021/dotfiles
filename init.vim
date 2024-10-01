@@ -244,8 +244,8 @@ set nofoldenable "defaults no folding on first open
 " ~ // toggle character casing
 " 0 // go to start of line
 " $ // go to end of line
-" ctrl+a // increment number
-" ctrl+x // decrement number
+" ctrl+a <C-a> // increment number
+" ctrl+x <C-x> // decrement number
 " t<char> // till character
 " f<char> // on character
 " vi<char> // visual mode (select) in character
@@ -256,6 +256,11 @@ set nofoldenable "defaults no folding on first open
 "     - ex: da{ means delete {} and everything in them
 " vi{~ // COMBO: select everything in { and toggle casing
 " f.ct( // COMBO: on character . change everything until (
+
+"" UPPERCASE & lowercase
+" visual mode select characters
+" U for UPPERCASE
+" u for lowercase
 
 "" SELECT + INDENT/ COPY/ CUT/ PASTE
 " v // to select a character
