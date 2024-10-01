@@ -3,5 +3,5 @@
 #// TODO: check for dependencies needed to run these configs
 #// TODO: call the other sh files
 sh ./config-bash.sh
-sh ~/dotfiles/config-tmux.sh
-sh ~/dotfiles/config-vim.sh
+sh ~/dotfiles/SCRIPTS/config-tmux.sh
+sh ~/dotfiles/SCRIPTS/config-vim.sh
