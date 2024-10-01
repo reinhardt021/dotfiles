@@ -444,7 +444,11 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'doums/darcula' " my prefered syntax color scheme 
     Plug 'preservim/nerdtree' " to see filetree
     Plug 'airblade/vim-gitgutter' " to see git if line changed
+
     Plug 'preservim/nerdcommenter' " allows commenting out 
+    " ,cc //to comment all within thin same column
+    " ,ci //to comment invert (toggle)
+
     "Plug 'ctrlpvim/ctrlp.vim' " using fzf instead now
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
