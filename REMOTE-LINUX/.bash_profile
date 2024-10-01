@@ -34,6 +34,7 @@ alias cdd='echo "// cd ~/dotfiles"; cd ~/dotfiles'
 
 
 # get working directory
+# // no such thing as pbcopy in linux
 alias gwd='echo "// pwd |pbcopy"; pwd |pbcopy'
 
 # alias to open neovim quickly
@@ -48,10 +49,14 @@ alias gb='echo "// git branch"; git branch'
 
 alias gc='echo "// git checkout <branch>"; git checkout'
 
-alias ga='echo "// git add <files>"; git add ' 
 alias gs='echo "// git status"; git status'
 alias gd='echo "// git diff";git diff'
 alias gdc='echo "// git diff --cached"; git diff --cached' #// to see staged (added) changes (hunk)
+
+alias ga='echo "// git add <files>"; git add ' 
+alias gaa='echo "// git add . (ALL)"; git add .;' 
+alias grs='echo "// git restore --staged <files> to UNSTAGE"; git restore --staged ' 
+alias gcm='echo "// git commit -m <text>"; git commit -m ' 
 
 #// to push changes into the stash
 alias gspush='echo "// git stash push"; git stash push'
