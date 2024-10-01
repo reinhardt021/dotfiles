@@ -19,6 +19,7 @@ sudo apt-get ripgrep
 
 # CLONE DOTFILES [3c]
 git clone git@github.com:reinhardtcgr/dotfiles.git
+#git clone git@github.com:reinhardt021/firefly-next.git
 
 # >>
 # you can then ssh into the server
