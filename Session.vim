@@ -18,10 +18,10 @@ badd +1 FRAMEWORKS/next-react.md
 badd +1 LIBRARIES/stripe.md
 badd +1 LANGUAGES/javascript.md
 badd +229 MAC/apps-01-install.sh
-badd +242 MAC/.zshrc
+badd +158 MAC/.zshrc
 badd +169 .tmux.conf
 badd +1 init.vim
-badd +99 ANDROID/.bash_profile
+badd +33 ANDROID/.bash_profile
 badd +98 tmux-new-session.sh
 badd +1 REMOTE-LINUX/apps-01-install.sh
 badd +22 .gitcommit.sh
@@ -238,7 +238,7 @@ exe 'vert 2resize ' . ((&columns * 106 + 107) / 214)
 exe '3resize ' . ((&lines * 40 + 27) / 54)
 exe 'vert 3resize ' . ((&columns * 106 + 107) / 214)
 tabnext
-edit REMOTE-LINUX/.bash_profile
+edit MAC/.zshrc
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -249,10 +249,6 @@ vsplit
 2wincmd h
 wincmd w
 wincmd w
-wincmd _ | wincmd |
-split
-1wincmd k
-wincmd w
 let &splitbelow = s:save_splitbelow
 let &splitright = s:save_splitright
 wincmd t
@@ -262,12 +258,9 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
+exe 'vert 1resize ' . ((&columns * 70 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
-exe '3resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
-exe '4resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 4resize ' . ((&columns * 70 + 107) / 214)
+exe 'vert 3resize ' . ((&columns * 71 + 107) / 214)
 argglobal
 balt ANDROID/.bash_profile
 setlocal fdm=indent
@@ -278,11 +271,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 120 - ((32 * winheight(0) + 25) / 51)
+let s:l = 155 - ((23 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 120
+keepjumps 155
 normal! 0
 wincmd w
 argglobal
@@ -290,6 +283,7 @@ if bufexists(fnamemodify("ANDROID/.bash_profile", ":p")) | buffer ANDROID/.bash_
 if &buftype ==# 'terminal'
   silent file ANDROID/.bash_profile
 endif
+balt MAC/.zshrc
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -298,19 +292,19 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 72 - ((14 * winheight(0) + 25) / 51)
+let s:l = 39 - ((24 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 72
+keepjumps 39
 normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("MAC/.zshrc", ":p")) | buffer MAC/.zshrc | else | edit MAC/.zshrc | endif
+if bufexists(fnamemodify("REMOTE-LINUX/.bash_profile", ":p")) | buffer REMOTE-LINUX/.bash_profile | else | edit REMOTE-LINUX/.bash_profile | endif
 if &buftype ==# 'terminal'
-  silent file MAC/.zshrc
+  silent file REMOTE-LINUX/.bash_profile
 endif
-balt MAC/apps-01-install.sh
+balt ANDROID/.bash_profile
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -319,40 +313,17 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 241 - ((3 * winheight(0) + 12) / 25)
+let s:l = 54 - ((24 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 241
-normal! 04|
-wincmd w
-argglobal
-if bufexists(fnamemodify("MAC/.zshrc", ":p")) | buffer MAC/.zshrc | else | edit MAC/.zshrc | endif
-if &buftype ==# 'terminal'
-  silent file MAC/.zshrc
-endif
-balt MAC/apps-01-install.sh
-setlocal fdm=indent
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-let s:l = 8 - ((0 * winheight(0) + 12) / 25)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 8
+keepjumps 54
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
+3wincmd w
+exe 'vert 1resize ' . ((&columns * 70 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
-exe '3resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
-exe '4resize ' . ((&lines * 25 + 27) / 54)
-exe 'vert 4resize ' . ((&columns * 70 + 107) / 214)
+exe 'vert 3resize ' . ((&columns * 71 + 107) / 214)
 tabnext
 edit config-vim.sh
 let s:save_splitbelow = &splitbelow
@@ -475,12 +446,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 617 - ((8 * winheight(0) + 20) / 40)
+let s:l = 449 - ((8 * winheight(0) + 20) / 40)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 617
-normal! 0
+keepjumps 449
+normal! 038|
 wincmd w
 argglobal
 if bufexists(fnamemodify(".tmux.conf", ":p")) | buffer .tmux.conf | else | edit .tmux.conf | endif
