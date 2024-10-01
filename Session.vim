@@ -413,7 +413,7 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 25) / 51)
+let s:l = 1 - ((0 * winheight(0) + 6) / 12)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -434,7 +434,7 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 168 - ((22 * winheight(0) + 25) / 51)
+let s:l = 168 - ((4 * winheight(0) + 6) / 12)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -455,13 +455,14 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 259 - ((38 * winheight(0) + 25) / 51)
+let s:l = 180 - ((2 * winheight(0) + 6) / 12)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 259
-normal! 0
+keepjumps 180
+normal! 03|
 wincmd w
+3wincmd w
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 70 + 107) / 214)
 exe 'vert 3resize ' . ((&columns * 71 + 107) / 214)
