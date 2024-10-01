@@ -16,7 +16,7 @@ endif
 badd +1 TOOLS/laravel-vapor.md
 badd +5 FRAMEWORKS/next-react.md
 badd +2 LIBRARIES/stripe.md
-badd +11 LANGUAGES/javascript.md
+badd +1 LANGUAGES/javascript.md
 badd +223 MAC/apps-01-install.sh
 badd +282 MAC/.zshrc
 badd +167 .tmux.conf
@@ -29,7 +29,7 @@ badd +1 MAC/config-sh.sh
 badd +10 config-vim.sh
 badd +161 REMOTE-LINUX/.bash_profile
 badd +1 ANDROID/apps-01-install.sh
-badd +5 OS/config-vim.sh
+badd +1 OS/config-vim.sh
 badd +2 config-tmux.sh
 badd +1 OS/config-tmux.sh
 badd +1 test.sh
@@ -40,28 +40,47 @@ badd +1 config-hooks.sh
 badd +1 git-hooks/pre-commit
 badd +6 MAC/apps-02-config.sh
 badd +5 ANDROID/apps-02-config.sh
-badd +0 SCRIPTS/tmux-new-session.sh
+badd +1 SCRIPTS/tmux-new-session.sh
 badd +1 SCRIPTS/config-hooks.sh
 badd +5 REMOTE-LINUX/apps-02-config.sh
 badd +2 ANDROID/config-bash.sh
 badd +2 REMOTE-LINUX/config-bash.sh
-badd +10 os-MAC/config-sh.sh
+badd +1 os-MAC/config-sh.sh
 badd +5 os-MAC/apps-02-config.sh
 badd +8 os-ANDROID/config-bash.sh
 badd +3 os-ANDROID/apps-02-config.sh
 badd +5 os-LINUX-remote/apps-02-config.sh
 badd +5 os-LINUX-remote/config-bash.sh
 badd +1 README.md
-badd +0 os-MAC/.zshrc
-badd +0 os-ANDROID/.bash_profile
-badd +0 os-LINUX-remote/.bash_profile
+badd +1 os-MAC/.zshrc
+badd +1 os-ANDROID/.bash_profile
+badd +1 os-LINUX-remote/.bash_profile
 argglobal
 %argdel
 tabnew +setlocal\ bufhidden=wipe
 tabnew +setlocal\ bufhidden=wipe
 tabnew +setlocal\ bufhidden=wipe
 tabnew +setlocal\ bufhidden=wipe
+tabnew +setlocal\ bufhidden=wipe
 tabrewind
+edit README.md
+argglobal
+balt LANGUAGES/javascript.md
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+let s:l = 1 - ((0 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+tabnext
 edit LANGUAGES/javascript.md
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
@@ -99,12 +118,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 11 - ((10 * winheight(0) + 25) / 51)
+let s:l = 6 - ((5 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 11
-normal! 012|
+keepjumps 6
+normal! 06|
 wincmd w
 argglobal
 if bufexists(fnamemodify("LIBRARIES/stripe.md", ":p")) | buffer LIBRARIES/stripe.md | else | edit LIBRARIES/stripe.md | endif
@@ -342,7 +361,6 @@ normal! zt
 keepjumps 1
 normal! 0
 wincmd w
-3wincmd w
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
@@ -466,11 +484,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 2 - ((1 * winheight(0) + 25) / 51)
+let s:l = 1 - ((0 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 2
+keepjumps 1
 normal! 0
 wincmd w
 argglobal
@@ -518,7 +536,7 @@ wincmd w
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
-tabnext 3
+tabnext 6
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
