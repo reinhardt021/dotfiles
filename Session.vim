@@ -18,16 +18,16 @@ badd +5 FRAMEWORKS/next-react.md
 badd +2 LIBRARIES/stripe.md
 badd +11 LANGUAGES/javascript.md
 badd +223 MAC/apps-01-install.sh
-badd +163 MAC/.zshrc
+badd +282 MAC/.zshrc
 badd +167 .tmux.conf
 badd +449 init.vim
-badd +113 ANDROID/.bash_profile
+badd +107 ANDROID/.bash_profile
 badd +1 tmux-new-session.sh
-badd +2 REMOTE-LINUX/apps-01-install.sh
+badd +38 REMOTE-LINUX/apps-01-install.sh
 badd +1 .gitcommit.sh
 badd +1 MAC/config-sh.sh
 badd +10 config-vim.sh
-badd +0 REMOTE-LINUX/.bash_profile
+badd +161 REMOTE-LINUX/.bash_profile
 badd +1 ANDROID/apps-01-install.sh
 badd +5 OS/config-vim.sh
 badd +2 config-tmux.sh
@@ -39,8 +39,22 @@ badd +2 SCRIPTS/.gitcommit.sh
 badd +1 config-hooks.sh
 badd +1 git-hooks/pre-commit
 badd +6 MAC/apps-02-config.sh
-badd +1 ANDROID/apps-02-config.sh
+badd +5 ANDROID/apps-02-config.sh
 badd +0 SCRIPTS/tmux-new-session.sh
+badd +1 SCRIPTS/config-hooks.sh
+badd +5 REMOTE-LINUX/apps-02-config.sh
+badd +2 ANDROID/config-bash.sh
+badd +2 REMOTE-LINUX/config-bash.sh
+badd +10 os-MAC/config-sh.sh
+badd +5 os-MAC/apps-02-config.sh
+badd +8 os-ANDROID/config-bash.sh
+badd +3 os-ANDROID/apps-02-config.sh
+badd +5 os-LINUX-remote/apps-02-config.sh
+badd +5 os-LINUX-remote/config-bash.sh
+badd +1 README.md
+badd +0 os-MAC/.zshrc
+badd +0 os-ANDROID/.bash_profile
+badd +0 os-LINUX-remote/.bash_profile
 argglobal
 %argdel
 tabnew +setlocal\ bufhidden=wipe
@@ -160,7 +174,7 @@ exe 'vert 2resize ' . ((&columns * 52 + 107) / 214)
 exe 'vert 3resize ' . ((&columns * 53 + 107) / 214)
 exe 'vert 4resize ' . ((&columns * 53 + 107) / 214)
 tabnext
-edit MAC/apps-02-config.sh
+edit os-MAC/config-sh.sh
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -184,7 +198,7 @@ exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
 argglobal
-balt MAC/apps-01-install.sh
+balt os-MAC/apps-02-config.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -193,19 +207,126 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 4 - ((3 * winheight(0) + 25) / 51)
+let s:l = 10 - ((9 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 4
+keepjumps 10
+normal! 020|
+wincmd w
+argglobal
+if bufexists(fnamemodify("os-ANDROID/config-bash.sh", ":p")) | buffer os-ANDROID/config-bash.sh | else | edit os-ANDROID/config-bash.sh | endif
+if &buftype ==# 'terminal'
+  silent file os-ANDROID/config-bash.sh
+endif
+balt os-ANDROID/apps-02-config.sh
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+let s:l = 8 - ((7 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 8
+normal! 020|
+wincmd w
+argglobal
+if bufexists(fnamemodify("os-LINUX-remote/config-bash.sh", ":p")) | buffer os-LINUX-remote/config-bash.sh | else | edit os-LINUX-remote/config-bash.sh | endif
+if &buftype ==# 'terminal'
+  silent file os-LINUX-remote/config-bash.sh
+endif
+balt os-LINUX-remote/apps-02-config.sh
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+let s:l = 5 - ((4 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 5
+normal! 019|
+wincmd w
+exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
+exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
+exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
+tabnext
+edit os-MAC/.zshrc
+let s:save_splitbelow = &splitbelow
+let s:save_splitright = &splitright
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+wincmd _ | wincmd |
+vsplit
+2wincmd h
+wincmd w
+wincmd w
+let &splitbelow = s:save_splitbelow
+let &splitright = s:save_splitright
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
+exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
+exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
+argglobal
+balt README.md
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+let s:l = 160 - ((22 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 160
 normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("ANDROID/apps-02-config.sh", ":p")) | buffer ANDROID/apps-02-config.sh | else | edit ANDROID/apps-02-config.sh | endif
+if bufexists(fnamemodify("os-ANDROID/.bash_profile", ":p")) | buffer os-ANDROID/.bash_profile | else | edit os-ANDROID/.bash_profile | endif
 if &buftype ==# 'terminal'
-  silent file ANDROID/apps-02-config.sh
+  silent file os-ANDROID/.bash_profile
 endif
-balt ANDROID/apps-01-install.sh
+balt README.md
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+let s:l = 2 - ((1 * winheight(0) + 25) / 51)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 2
+normal! 0
+wincmd w
+argglobal
+if bufexists(fnamemodify("os-LINUX-remote/.bash_profile", ":p")) | buffer os-LINUX-remote/.bash_profile | else | edit os-LINUX-remote/.bash_profile | endif
+if &buftype ==# 'terminal'
+  silent file os-LINUX-remote/.bash_profile
+endif
+balt README.md
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -221,113 +342,7 @@ normal! zt
 keepjumps 1
 normal! 0
 wincmd w
-argglobal
-if bufexists(fnamemodify("REMOTE-LINUX/apps-01-install.sh", ":p")) | buffer REMOTE-LINUX/apps-01-install.sh | else | edit REMOTE-LINUX/apps-01-install.sh | endif
-if &buftype ==# 'terminal'
-  silent file REMOTE-LINUX/apps-01-install.sh
-endif
-balt MAC/apps-01-install.sh
-setlocal fdm=indent
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-let s:l = 37 - ((36 * winheight(0) + 25) / 51)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 37
-normal! 03|
-wincmd w
-exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
-exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
-exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
-tabnext
-edit MAC/.zshrc
-let s:save_splitbelow = &splitbelow
-let s:save_splitright = &splitright
-set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-wincmd _ | wincmd |
-vsplit
-2wincmd h
-wincmd w
-wincmd w
-let &splitbelow = s:save_splitbelow
-let &splitright = s:save_splitright
-wincmd t
-let s:save_winminheight = &winminheight
-let s:save_winminwidth = &winminwidth
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
-exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
-exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
-argglobal
-balt ANDROID/.bash_profile
-setlocal fdm=indent
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-let s:l = 283 - ((21 * winheight(0) + 25) / 51)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 283
-normal! 0103|
-wincmd w
-argglobal
-if bufexists(fnamemodify("ANDROID/.bash_profile", ":p")) | buffer ANDROID/.bash_profile | else | edit ANDROID/.bash_profile | endif
-if &buftype ==# 'terminal'
-  silent file ANDROID/.bash_profile
-endif
-balt config-hooks.sh
-setlocal fdm=indent
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-let s:l = 109 - ((23 * winheight(0) + 25) / 51)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 109
-normal! 034|
-wincmd w
-argglobal
-if bufexists(fnamemodify("REMOTE-LINUX/.bash_profile", ":p")) | buffer REMOTE-LINUX/.bash_profile | else | edit REMOTE-LINUX/.bash_profile | endif
-if &buftype ==# 'terminal'
-  silent file REMOTE-LINUX/.bash_profile
-endif
-balt ANDROID/.bash_profile
-setlocal fdm=indent
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-let s:l = 164 - ((20 * winheight(0) + 25) / 51)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 164
-normal! 0103|
-wincmd w
+3wincmd w
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
@@ -386,11 +401,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 2 - ((1 * winheight(0) + 25) / 51)
+let s:l = 1 - ((0 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 2
+keepjumps 1
 normal! 0
 wincmd w
 argglobal
@@ -398,7 +413,7 @@ if bufexists(fnamemodify("SCRIPTS/.gitcommit.sh", ":p")) | buffer SCRIPTS/.gitco
 if &buftype ==# 'terminal'
   silent file SCRIPTS/.gitcommit.sh
 endif
-balt ANDROID/.bash_profile
+balt SCRIPTS/config-hooks.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -451,11 +466,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 25) / 51)
+let s:l = 2 - ((1 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 2
 normal! 0
 wincmd w
 argglobal
@@ -503,7 +518,7 @@ wincmd w
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
-tabnext 5
+tabnext 3
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
