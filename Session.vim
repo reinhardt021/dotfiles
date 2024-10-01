@@ -17,39 +17,14 @@ badd +1 TOOLS/laravel-vapor.md
 badd +5 FRAMEWORKS/next-react.md
 badd +2 LIBRARIES/stripe.md
 badd +1 LANGUAGES/javascript.md
-badd +223 MAC/apps-01-install.sh
-badd +282 MAC/.zshrc
 badd +167 .tmux.conf
 badd +449 init.vim
-badd +107 ANDROID/.bash_profile
-badd +1 tmux-new-session.sh
-badd +38 REMOTE-LINUX/apps-01-install.sh
-badd +1 .gitcommit.sh
-badd +1 MAC/config-sh.sh
-badd +10 config-vim.sh
-badd +161 REMOTE-LINUX/.bash_profile
-badd +1 ANDROID/apps-01-install.sh
 badd +1 OS/config-vim.sh
-badd +2 config-tmux.sh
 badd +1 OS/config-tmux.sh
-badd +1 test.sh
-badd +1 thelp
-badd +2 SCRIPTS/test.sh
 badd +2 SCRIPTS/.gitcommit.sh
-badd +1 config-hooks.sh
-badd +1 git-hooks/pre-commit
-badd +6 MAC/apps-02-config.sh
-badd +5 ANDROID/apps-02-config.sh
 badd +1 SCRIPTS/tmux-new-session.sh
-badd +1 SCRIPTS/config-hooks.sh
-badd +5 REMOTE-LINUX/apps-02-config.sh
-badd +2 ANDROID/config-bash.sh
-badd +2 REMOTE-LINUX/config-bash.sh
 badd +1 os-MAC/config-sh.sh
-badd +5 os-MAC/apps-02-config.sh
 badd +8 os-ANDROID/config-bash.sh
-badd +3 os-ANDROID/apps-02-config.sh
-badd +5 os-LINUX-remote/apps-02-config.sh
 badd +5 os-LINUX-remote/config-bash.sh
 badd +1 README.md
 badd +1 os-MAC/.zshrc
@@ -217,7 +192,6 @@ exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
 argglobal
-balt os-MAC/apps-02-config.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -238,7 +212,6 @@ if bufexists(fnamemodify("os-ANDROID/config-bash.sh", ":p")) | buffer os-ANDROID
 if &buftype ==# 'terminal'
   silent file os-ANDROID/config-bash.sh
 endif
-balt os-ANDROID/apps-02-config.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -259,7 +232,6 @@ if bufexists(fnamemodify("os-LINUX-remote/config-bash.sh", ":p")) | buffer os-LI
 if &buftype ==# 'terminal'
   silent file os-LINUX-remote/config-bash.sh
 endif
-balt os-LINUX-remote/apps-02-config.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -389,7 +361,6 @@ exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
 argglobal
-balt .gitcommit.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -410,7 +381,6 @@ if bufexists(fnamemodify("OS/config-tmux.sh", ":p")) | buffer OS/config-tmux.sh 
 if &buftype ==# 'terminal'
   silent file OS/config-tmux.sh
 endif
-balt git-hooks/pre-commit
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -431,7 +401,6 @@ if bufexists(fnamemodify("SCRIPTS/.gitcommit.sh", ":p")) | buffer SCRIPTS/.gitco
 if &buftype ==# 'terminal'
   silent file SCRIPTS/.gitcommit.sh
 endif
-balt SCRIPTS/config-hooks.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -496,7 +465,6 @@ if bufexists(fnamemodify(".tmux.conf", ":p")) | buffer .tmux.conf | else | edit 
 if &buftype ==# 'terminal'
   silent file .tmux.conf
 endif
-balt tmux-new-session.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -505,7 +473,7 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 168 - ((23 * winheight(0) + 25) / 51)
+let s:l = 168 - ((0 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -526,13 +494,14 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 180 - ((7 * winheight(0) + 25) / 51)
+let s:l = 183 - ((10 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 180
+keepjumps 183
 normal! 03|
 wincmd w
+3wincmd w
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
