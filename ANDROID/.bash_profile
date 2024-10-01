@@ -106,7 +106,7 @@ alias nv='nvim'
 
 alias t='echo "// tmux <command>"; tmux '
 alias tls='echo "// tmux ls"; tmux ls'
-alias tns='sh ~/dotfiles/tmux-new-session.sh'
+alias tns='sh ~/dotfiles/SCRIPTS/tmux-new-session.sh'
 alias tas='echo "// tmux attach-session -t <name>"; tmux attach-session -t '
 alias trs='echo "// tmux rename-session -t <old-name> <new-name>"; tmux rename-session -t '
 alias tkill='echo "// tmux kill-session -t <name>"; tmux kill-session -t '
