@@ -112,7 +112,7 @@ alias trs='echo "// tmux rename-session -t <old-name> <new-name>"; tmux rename-s
 alias tkill='echo "// tmux kill-session -t <name>"; tmux kill-session -t '
 
 # SYNC IF SYNC FILE EXISTS
-alias sy='echo "// trying sync script"; [ -f .sync.sh ] && sh .sync.sh || echo "> no .sync.sh file"'
+alias sy='echo "// trying sync script"; [ -f ~/dotfiles/SCRIPTS/.sync.sh ] && sh ~/dotfiles/SCRIPTS/.sync.sh || echo "> no ~/dotfiles/SCRIPTS/.sync.sh file"'
 
 
 

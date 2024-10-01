@@ -153,6 +153,9 @@ alias glshow='echo "// git log -p"; git log -p'
 #// to cherry pick a commit from another branch
 # git cherry-pick <commmit-hash>
 
+# SYNC IF SYNC FILE EXISTS
+alias sy='echo "// trying sync script"; [ -f ~/dotfiles/SCRIPTS/.sync.sh ] && sh ~/dotfiles/SCRIPTS/.sync.sh || echo "> no ~/dotfiles/SCRIPTS/.sync.sh file"'
+
 
 
 # TMUX
