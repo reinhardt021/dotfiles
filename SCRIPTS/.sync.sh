@@ -21,8 +21,9 @@ echo "_______________"
 echo "// git fetch"
 git fetch
 
+remote_name="origin"
 branch_name=$(git branch --show-current)
-remote_branch="origin/$branch_name"
+remote_branch="$remote_name/$branch_name"
 
 echo "_______________"
 echo "// git rebase $remote_branch"
@@ -33,8 +34,8 @@ echo "// git log --graph --name-only --oneline -n 2"
 git log --graph --name-only --oneline -n 2
 
 echo "_______________"
-echo "// git push origin $branch_name"
-git push origin $branch_name
+echo "// git push $remote_name $branch_name"
+git push $remote_name $branch_name
 echo "_______________"
 echo "// git log --graph --name-only --oneline -n 2"
 git log --graph --name-only --oneline -n 2
