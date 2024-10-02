@@ -19,8 +19,8 @@ if ! tmux has-session -t $SESSION_ID; then
 echo "No worries if we can't find your session. Lets create a new session.\n"
 #// create new tmux session for the project
 #// called '$SESSION_ID' (project session)
-#// with first window called cmd (aka command center)
-tmux new -s $SESSION_ID -n cmd -d;
+#// with first window called CMD (aka command center)
+tmux new -s $SESSION_ID -n CMD -d;
     #// WINDOW: CMD
     # |__1__|
     # |_2|_3|
@@ -44,7 +44,7 @@ tmux new -s $SESSION_ID -n cmd -d;
     # |__1__|
     # |__2__|
     # |__3__|
-    tmux new-window -t $SESSION_ID:2 -n db;
+    tmux new-window -t $SESSION_ID:2 -n DB;
     #// split the 'database' window
     #// into a top & bottom pane (vertical split) 
     tmux split-window -v -t $SESSION_ID:2;
@@ -57,9 +57,9 @@ tmux new -s $SESSION_ID -n cmd -d;
     # |___|3|
     # |__4__|
     #// create a new window
-    #// for source control called 'git'
+    #// for source control called 'GIT'
     #// (at window index 2 on session 'ps')
-    tmux new-window -t $SESSION_ID:3 -n git;
+    tmux new-window -t $SESSION_ID:3 -n GIT;
     #// split the window
     #// into large top & small bottom
     tmux split-window -v -l 20% -t $SESSION_ID:3; 
@@ -88,7 +88,7 @@ tmux new -s $SESSION_ID -n cmd -d;
     #// create a new window
     #// for coding called 'CODE'
     #// (at window index 1 on session 'ps')
-    tmux new-window -t $SESSION_ID:4 -n app;
+    tmux new-window -t $SESSION_ID:4 -n CDE;
     tmux send-keys -t $SESSION_ID:4.1 "nv" Enter;
     #tmux send-keys -t $SESSION_ID:4.1 "C-o"; # // can't seem to send this second command right away
 
@@ -98,7 +98,7 @@ tmux new -s $SESSION_ID -n cmd -d;
     # |__|__|
     #// create a new window
     #// as a sandbax / tinkering / misc
-    tmux new-window -t $SESSION_ID:5 -n x; 
+    tmux new-window -t $SESSION_ID:5 -n X; 
     #// split the top window
     #// into a left & right pane
     #// at 27/73 ratio
