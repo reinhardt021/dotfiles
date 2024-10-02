@@ -25,7 +25,7 @@ badd +2 SCRIPTS/.gitcommit.sh
 badd +1 SCRIPTS/tmux-new-session.sh
 badd +1 os-MAC/config-sh.sh
 badd +8 os-ANDROID/config-bash.sh
-badd +5 os-LINUX-remote/config-bash.sh
+badd +8 os-LINUX-remote/config-bash.sh
 badd +1 README.md
 badd +1 os-MAC/.zshrc
 badd +1 os-ANDROID/.bash_profile
@@ -188,8 +188,11 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
+exe '1resize ' . ((&lines * 12 + 27) / 54)
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
+exe '2resize ' . ((&lines * 12 + 27) / 54)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
+exe '3resize ' . ((&lines * 12 + 27) / 54)
 exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
 argglobal
 setlocal fdm=indent
@@ -200,11 +203,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 10 - ((9 * winheight(0) + 25) / 51)
+let s:l = 9 - ((0 * winheight(0) + 6) / 12)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 10
+keepjumps 9
 normal! 020|
 wincmd w
 argglobal
@@ -212,6 +215,7 @@ if bufexists(fnamemodify("os-ANDROID/config-bash.sh", ":p")) | buffer os-ANDROID
 if &buftype ==# 'terminal'
   silent file os-ANDROID/config-bash.sh
 endif
+balt os-MAC/config-sh.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -220,18 +224,19 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 8 - ((7 * winheight(0) + 25) / 51)
+let s:l = 4 - ((3 * winheight(0) + 6) / 12)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 8
-normal! 020|
+keepjumps 4
+normal! 0
 wincmd w
 argglobal
 if bufexists(fnamemodify("os-LINUX-remote/config-bash.sh", ":p")) | buffer os-LINUX-remote/config-bash.sh | else | edit os-LINUX-remote/config-bash.sh | endif
 if &buftype ==# 'terminal'
   silent file os-LINUX-remote/config-bash.sh
 endif
+balt os-MAC/config-sh.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -240,15 +245,18 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 5 - ((4 * winheight(0) + 25) / 51)
+let s:l = 7 - ((6 * winheight(0) + 6) / 12)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 5
-normal! 019|
+keepjumps 7
+normal! 032|
 wincmd w
+exe '1resize ' . ((&lines * 12 + 27) / 54)
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
+exe '2resize ' . ((&lines * 12 + 27) / 54)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
+exe '3resize ' . ((&lines * 12 + 27) / 54)
 exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
 tabnext
 edit os-MAC/.zshrc
@@ -284,11 +292,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 160 - ((22 * winheight(0) + 25) / 51)
+let s:l = 48 - ((21 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 160
+keepjumps 48
 normal! 0
 wincmd w
 argglobal
@@ -305,12 +313,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 2 - ((1 * winheight(0) + 25) / 51)
+let s:l = 13 - ((12 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 2
-normal! 0
+keepjumps 13
+normal! 03|
 wincmd w
 argglobal
 if bufexists(fnamemodify("os-LINUX-remote/.bash_profile", ":p")) | buffer os-LINUX-remote/.bash_profile | else | edit os-LINUX-remote/.bash_profile | endif
@@ -326,12 +334,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 25) / 51)
+let s:l = 12 - ((11 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 0
+keepjumps 12
+normal! 03|
 wincmd w
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
@@ -381,6 +389,7 @@ if bufexists(fnamemodify("OS/config-tmux.sh", ":p")) | buffer OS/config-tmux.sh 
 if &buftype ==# 'terminal'
   silent file OS/config-tmux.sh
 endif
+balt OS/config-vim.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -401,6 +410,7 @@ if bufexists(fnamemodify("SCRIPTS/.gitcommit.sh", ":p")) | buffer SCRIPTS/.gitco
 if &buftype ==# 'terminal'
   silent file SCRIPTS/.gitcommit.sh
 endif
+balt OS/config-vim.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -465,6 +475,7 @@ if bufexists(fnamemodify(".tmux.conf", ":p")) | buffer .tmux.conf | else | edit 
 if &buftype ==# 'terminal'
   silent file .tmux.conf
 endif
+balt SCRIPTS/tmux-new-session.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -473,11 +484,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 168 - ((0 * winheight(0) + 25) / 51)
+let s:l = 42 - ((41 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 168
+keepjumps 42
 normal! 0
 wincmd w
 argglobal
@@ -494,14 +505,14 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 183 - ((10 * winheight(0) + 25) / 51)
+let s:l = 181 - ((8 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 183
-normal! 03|
+keepjumps 181
+normal! 0
 wincmd w
-3wincmd w
+2wincmd w
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
