@@ -171,6 +171,8 @@ alias trs='echo "// tmux rename-session -t <old-name> <new-name>"; tmux rename-s
 alias tkill='echo "// tmux kill-session -t <name>"; tmux kill-session -t '
 
 
+export FZF_DEFAULT_COMMAND='rg --files --hidden --heading'
+
 
 # END OF FILE
 
