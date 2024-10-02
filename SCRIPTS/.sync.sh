@@ -21,20 +21,19 @@ echo "_______________"
 echo "// git fetch"
 git fetch
 
-#TODO: get the current branch name
-#alias gbc='echo "// git branch --show-current | pbcopy"; git branch --show-current | pbcopy'
+branch_name=$(git branch --show-current)
 
 echo "_______________"
-echo "// git rebase origin/main"
-git rebase origin/main
+echo "// git rebase origin/$branch_name"
+git rebase origin/branch_name
 
 echo "_______________"
 echo "// git log --graph --name-only --oneline -n 2"
 git log --graph --name-only --oneline -n 2
 
 echo "_______________"
-echo "// git push origin main"
-git push origin main
+echo "// git push origin $branch_name"
+git push origin branch_name
 echo "_______________"
 echo "// git log --graph --name-only --oneline -n 2"
 git log --graph --name-only --oneline -n 2
