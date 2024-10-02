@@ -1,5 +1,7 @@
 # SHELL SETUP
 
+alias ssha='eval $(ssh-agent); ssh-add'
+
 # // to see OS from command line
 # $ uname
 # $ echo $OSTYPE

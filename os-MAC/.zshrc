@@ -1,5 +1,6 @@
-alias ssha='eval $(ssh-agent); ssh-add'
 # SHELL SETUP
+
+alias ssha='eval $(ssh-agent); ssh-add'
 
 # // how to check the shell you are using
 # $ echo $SHELL
