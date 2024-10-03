@@ -18,18 +18,23 @@ badd +5 FRAMEWORKS/next-react.md
 badd +2 LIBRARIES/stripe.md
 badd +1 LANGUAGES/javascript.md
 badd +167 .tmux.conf
-badd +449 init.vim
+badd +290 init.vim
 badd +1 OS/config-vim.sh
 badd +1 OS/config-tmux.sh
-badd +2 SCRIPTS/.gitcommit.sh
+badd +1 SCRIPTS/.gitcommit.sh
 badd +1 SCRIPTS/tmux-new-session.sh
-badd +1 os-MAC/config-sh.sh
-badd +8 os-ANDROID/config-bash.sh
-badd +8 os-LINUX-remote/config-bash.sh
+badd +6 os-MAC/config-sh.sh
+badd +3 os-ANDROID/config-bash.sh
+badd +6 os-LINUX-remote/config-bash.sh
 badd +1 README.md
 badd +1 os-MAC/.zshrc
 badd +1 os-ANDROID/.bash_profile
 badd +1 os-LINUX-remote/.bash_profile
+badd +37 SCRIPTS/.sync.sh
+badd +1 os-MAC/apps-02-config.sh
+badd +0 os-MAC/apps-01-install.sh
+badd +0 os-ANDROID/apps-01-install.sh
+badd +0 os-LINUX-remote/apps-01-install.sh
 argglobal
 %argdel
 tabnew +setlocal\ bufhidden=wipe
@@ -168,7 +173,7 @@ exe 'vert 2resize ' . ((&columns * 52 + 107) / 214)
 exe 'vert 3resize ' . ((&columns * 53 + 107) / 214)
 exe 'vert 4resize ' . ((&columns * 53 + 107) / 214)
 tabnext
-edit os-MAC/config-sh.sh
+edit os-MAC/apps-01-install.sh
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -188,13 +193,11 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 12 + 27) / 54)
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
-exe '2resize ' . ((&lines * 12 + 27) / 54)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
-exe '3resize ' . ((&lines * 12 + 27) / 54)
 exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
 argglobal
+balt os-MAC/apps-02-config.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -203,19 +206,19 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 9 - ((0 * winheight(0) + 6) / 12)
+let s:l = 222 - ((15 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 9
-normal! 020|
+keepjumps 222
+normal! 022|
 wincmd w
 argglobal
-if bufexists(fnamemodify("os-ANDROID/config-bash.sh", ":p")) | buffer os-ANDROID/config-bash.sh | else | edit os-ANDROID/config-bash.sh | endif
+if bufexists(fnamemodify("os-ANDROID/apps-01-install.sh", ":p")) | buffer os-ANDROID/apps-01-install.sh | else | edit os-ANDROID/apps-01-install.sh | endif
 if &buftype ==# 'terminal'
-  silent file os-ANDROID/config-bash.sh
+  silent file os-ANDROID/apps-01-install.sh
 endif
-balt os-MAC/config-sh.sh
+balt os-ANDROID/config-bash.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -224,19 +227,19 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 4 - ((3 * winheight(0) + 6) / 12)
+let s:l = 1 - ((0 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 4
+keepjumps 1
 normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("os-LINUX-remote/config-bash.sh", ":p")) | buffer os-LINUX-remote/config-bash.sh | else | edit os-LINUX-remote/config-bash.sh | endif
+if bufexists(fnamemodify("os-LINUX-remote/apps-01-install.sh", ":p")) | buffer os-LINUX-remote/apps-01-install.sh | else | edit os-LINUX-remote/apps-01-install.sh | endif
 if &buftype ==# 'terminal'
-  silent file os-LINUX-remote/config-bash.sh
+  silent file os-LINUX-remote/apps-01-install.sh
 endif
-balt os-MAC/config-sh.sh
+balt os-LINUX-remote/config-bash.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -245,18 +248,15 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 7 - ((6 * winheight(0) + 6) / 12)
+let s:l = 13 - ((12 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 7
-normal! 032|
+keepjumps 13
+normal! 021|
 wincmd w
-exe '1resize ' . ((&lines * 12 + 27) / 54)
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
-exe '2resize ' . ((&lines * 12 + 27) / 54)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
-exe '3resize ' . ((&lines * 12 + 27) / 54)
 exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
 tabnext
 edit os-MAC/.zshrc
@@ -292,11 +292,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 48 - ((21 * winheight(0) + 25) / 51)
+let s:l = 16 - ((15 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 48
+keepjumps 16
 normal! 0
 wincmd w
 argglobal
@@ -313,12 +313,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 13 - ((12 * winheight(0) + 25) / 51)
+let s:l = 120 - ((7 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 13
-normal! 03|
+keepjumps 120
+normal! 0
 wincmd w
 argglobal
 if bufexists(fnamemodify("os-LINUX-remote/.bash_profile", ":p")) | buffer os-LINUX-remote/.bash_profile | else | edit os-LINUX-remote/.bash_profile | endif
@@ -334,12 +334,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 12 - ((11 * winheight(0) + 25) / 51)
+let s:l = 172 - ((34 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 12
-normal! 03|
+keepjumps 172
+normal! 0
 wincmd w
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
@@ -369,6 +369,7 @@ exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
 argglobal
+balt SCRIPTS/.sync.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -406,11 +407,11 @@ keepjumps 1
 normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("SCRIPTS/.gitcommit.sh", ":p")) | buffer SCRIPTS/.gitcommit.sh | else | edit SCRIPTS/.gitcommit.sh | endif
+if bufexists(fnamemodify("SCRIPTS/.sync.sh", ":p")) | buffer SCRIPTS/.sync.sh | else | edit SCRIPTS/.sync.sh | endif
 if &buftype ==# 'terminal'
-  silent file SCRIPTS/.gitcommit.sh
+  silent file SCRIPTS/.sync.sh
 endif
-balt OS/config-vim.sh
+balt SCRIPTS/.gitcommit.sh
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -419,11 +420,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 25) / 51)
+let s:l = 18 - ((17 * winheight(0) + 25) / 51)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 18
 normal! 0
 wincmd w
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
@@ -463,11 +464,11 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 1 - ((0 * winheight(0) + 25) / 51)
+let s:l = 2 - ((1 * winheight(0) + 6) / 12)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
+keepjumps 2
 normal! 0
 wincmd w
 argglobal
@@ -484,12 +485,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 42 - ((41 * winheight(0) + 25) / 51)
+let s:l = 57 - ((8 * winheight(0) + 6) / 12)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 42
-normal! 0
+keepjumps 57
+normal! 058|
 wincmd w
 argglobal
 if bufexists(fnamemodify("init.vim", ":p")) | buffer init.vim | else | edit init.vim | endif
@@ -505,14 +506,14 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-let s:l = 181 - ((8 * winheight(0) + 25) / 51)
+let s:l = 184 - ((1 * winheight(0) + 6) / 12)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 181
-normal! 0
+keepjumps 184
+normal! 03|
 wincmd w
-2wincmd w
+3wincmd w
 exe 'vert 1resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 2resize ' . ((&columns * 71 + 107) / 214)
 exe 'vert 3resize ' . ((&columns * 70 + 107) / 214)
