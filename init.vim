@@ -29,6 +29,8 @@
 " :q // to CLOSE a VIM window
 " :qa // to CLOSE ALL of VIM
 
+" :let @" = expand("%:p") // copy current file path
+
 "" SETTINGS
 "
 " // ONE LINE SETUP for REMOTE LINUX
