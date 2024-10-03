@@ -16,6 +16,11 @@
 " // to replay macro
 " @ <letter>
 
+" // to suspend vim 
+" C-z (ctrl-z)
+" // to re-active vim 
+" fg
+
 """"""""""""""" 
 " COMMAND MODE
 """"""""""""""" 
