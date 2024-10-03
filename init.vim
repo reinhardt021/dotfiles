@@ -282,6 +282,10 @@ set nofoldenable "defaults no folding on first open
 """"""""""""""" 
 " // to jump to beginning or end of selection
 " o || O
+" // vertically select column of items
+" C-v (ctrl-v)
+" // then can go up or down with j/k
+" great for incrementing a list (ex: week dates)
 
 
 
