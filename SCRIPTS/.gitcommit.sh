@@ -1,6 +1,8 @@
 # GIT COMMIT PROMPTS
-message_prompt="___WHY DID YOU MAKE CHANGES?___"
+message_prompt="___WHY did you make CHANGES?___"
 echo "$message_prompt"
+message_start="___I did these changes BECAUSE..."
+echo "$message_start"
 read message
 
 separator=":"
