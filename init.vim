@@ -29,7 +29,9 @@
 " :q // to CLOSE a VIM window
 " :qa // to CLOSE ALL of VIM
 
-" :let @" = expand("%:p") // copy current file path
+" :echo expand('%') // for relative path
+" :echo expand('%:p') // for absolute path
+" :let @" = expand("%:p") // copy current file path / filename
 
 "" SETTINGS
 "
